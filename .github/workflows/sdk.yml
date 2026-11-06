@@ -40,11 +40,6 @@ jobs:
           cd java
           mise exec -- java tools/Generate.java --check
           mise exec -- mvn -B test
-      - name: C# .NET 8
-        run: |
-          mise exec -- python3 csharp/tools/gen.py --check
-          mise exec -- python3 csharp/tools/test_gen.py
-          mise exec -- dotnet test csharp/tests/Authgebra.Client.Tests -c Release
       - name: Zig 0.17.0
         run: |
           mise exec -- python3 zig/tools/gen_admin.py --check

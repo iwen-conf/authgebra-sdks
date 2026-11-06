@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independently bind reviewed OpenAPI fields to declarations in six generated SDKs.
+"""Independently bind reviewed OpenAPI fields to declarations in five generated SDKs.
 
 No generator is imported. Manifests provide candidate locations; actual source declarations,
 JSON names, schema shapes and open-JSON exceptions are checked against the reviewed document.
@@ -22,12 +22,11 @@ MANIFESTS = {
     "zig": "sdks/zig/src/models.provenance.json",
     "java": "sdks/java/src/main/java/com/authgebra/client/models.provenance.json",
     "rust": "sdks/rust/src/generated/models.provenance.json",
-    "csharp": "sdks/csharp/src/Authgebra.Client/Generated/Models.provenance.json",
 }
 OPERATION_FILES = {
     "go": "sdks/go/ops_gen.go", "python": "sdks/python/src/authgebra/_generated/sync.py",
     "zig": "sdks/zig/src/admin_ops.zig", "java": "sdks/java/src/main/java/com/authgebra/client/AdminClient.java",
-    "rust": "sdks/rust/src/generated/admin.rs", "csharp": "sdks/csharp/src/Authgebra.Client/Generated/Api.g.cs",
+    "rust": "sdks/rust/src/generated/admin.rs",
 }
 EXCEPTION_TEST_FILES = {
     "go": "sdks/go/model_semantics_test.go",
@@ -35,7 +34,6 @@ EXCEPTION_TEST_FILES = {
     "zig": "sdks/zig/src/model_roundtrip_test.zig",
     "java": "sdks/java/src/test/java/com/authgebra/client/ModelSemanticsTest.java",
     "rust": "sdks/rust/tests/model_semantics.rs",
-    "csharp": "sdks/csharp/tests/Authgebra.Client.Tests/ModelGenerationTests.cs",
 }
 CONSTRAINTS = (
     "type", "format", "default", "enum", "const", "minimum", "maximum", "exclusiveMinimum",
@@ -288,13 +286,6 @@ def source_fields(language, source, filename):
                         json_name = renamed.group(1)
                     elif name != json_name and not (name.endswith("_") and name[:-1] == json_name):
                         raise ValueError(f"{filename}:{index + offset + 1}: Rust JSON field name mismatch")
-            elif language == "csharp":
-                found = re.search(r'^\s*public\s+(?:required\s+)?(.+?)\s+(\w+)\s*\{\s*get;', declaration)
-                if found:
-                    typ, name = found.groups()
-                    attributes = "\n".join(lines[index + 1:index + offset])
-                    renamed = re.search(r'JsonPropertyName\("([^"]+)"\)', attributes)
-                    json_name = renamed.group(1) if renamed else name
             if found:
                 result[pointer] = {"type": typ.strip(), "name": name, "json_name": json_name,
                                    "line": index + offset + 1, "file": filename}
@@ -463,10 +454,7 @@ def operation_bindings(root, document, operations, language, models, fields):
             if alias:
                 declaration += "\n" + alias.group(0)
         else:
-            marker = re.search(r"operationId <c>" + re.escape(identifier) + r"</c>", source)
-            if not marker:
-                raise ValueError(f"csharp: operation marker absent: {identifier}")
-            declaration = source[marker.end():source.find(";", marker.end())]
+            raise ValueError(f"unsupported SDK language: {language}")
         if language == "go":
             expanded = set()
             while True:
@@ -485,8 +473,10 @@ def operation_bindings(root, document, operations, language, models, fields):
             wire = re.search(r'"' + re.escape(identifier) + r'",\s*"' + method + r'",\s*"' + path + '"', source)
         elif language == "java":
             wire = re.search(r'new Http.Operation\("' + re.escape(identifier) + r'",\s*"' + method + r'",\s*"' + path + '"', source)
-        else:
+        elif language == "python":
             wire = re.search(r'["\']' + method + '["\']', declaration) and re.search(r'["\']' + path + '["\']', declaration)
+        else:
+            raise ValueError(f"unsupported SDK language: {language}")
         if not wire:
             raise ValueError(f"{language}: operation HTTP method/path mapping differs: {identifier}")
         request_type = None

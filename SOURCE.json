@@ -5,7 +5,7 @@
   "files": [
     {
       "path": ".github/workflows/sdk.yml",
-      "sha256": "7978275cab3efdc9f87d0e269c8e0fe5dbc894969160b01c20d4b349992af27a"
+      "sha256": "17d3f5c314ef7ffdcb87bcedd38c2e76bb0745fcaea5556a589620af31dbc5e9"
     },
     {
       "path": ".gitignore",
@@ -17,11 +17,11 @@
     },
     {
       "path": "README.md",
-      "sha256": "92098f166ff2c5bf0edb087b662d353f5428dd4b58e26c54f1287055ad19c599"
+      "sha256": "7f113010c50463321d9c4a91a10cb48e1e20b63be40109870944debfd5ea102c"
     },
     {
       "path": "scripts/ci/sdk-type-coverage.py",
-      "sha256": "52c486bc5c505b88f5a34cf87e9fa775449d404d3af795b08f42c7e05e2383ee"
+      "sha256": "e4e6d15d6a79a60811971a8d886fc64d6960bb14143ebe1e84cee1631a97e68e"
     },
     {
       "path": "scripts/ci/test_sdk_type_coverage.py",
@@ -33,15 +33,15 @@
     },
     {
       "path": "sdks/DISTRIBUTION.md",
-      "sha256": "f57a0953b850b023b8d236ee288f21dcbdcd35e2c187812ed703fc4761aa167a"
+      "sha256": "c101d3c1a4c9f378f7166bca74a9e28baccecb2aa002fffc0d9add24036c8b62"
     },
     {
       "path": "sdks/README.md",
-      "sha256": "44b3f3c913a1a7c6d9b12c2db9bfcad63fd4317cb00416ca8d095b2e425d8f52"
+      "sha256": "f8d027e66fa515e121875c4ce5a463e47bb0ff3d7aab7727f09fc9d9b053520a"
     },
     {
       "path": "sdks/STATUS.md",
-      "sha256": "8e404e641fc2daa7baef0aaaf0dd840c6c428e164eff31d32d38001cef23b413"
+      "sha256": "a659ef7b575cdede01c5b6b4ceaf5fd2c35441f5dd8e6e5799de0cd54ee460c0"
     },
     {
       "path": "sdks/contracts/README.md",
@@ -57,155 +57,7 @@
     },
     {
       "path": "sdks/contracts/type-coverage.json",
-      "sha256": "2d3582e78a339b73c380266e30f894c33485f5364a1ef209ccae347a5763df16"
-    },
-    {
-      "path": "sdks/csharp/.gitignore",
-      "sha256": "8e013a32e39d82bd8262b4bfd1012d7aabc6f7dbd95781f86bf305274389148f"
-    },
-    {
-      "path": "sdks/csharp/Authgebra.sln",
-      "sha256": "d240958eeff758ada341d9cb9a1dc0b31cf727737ba06aed61f3bb6fd05af349"
-    },
-    {
-      "path": "sdks/csharp/CHANGELOG.md",
-      "sha256": "1f4d4eafb88e9e08ea112b6127fd211abdde3c799ab1c2ae374032b6487dae72"
-    },
-    {
-      "path": "sdks/csharp/LICENSE",
-      "sha256": "807f508c010d769c207b0b6392a1d050dd06da096177ccb55d379941da8321cf"
-    },
-    {
-      "path": "sdks/csharp/README.md",
-      "sha256": "2eabe4b757312475546b9bfc93bc400b611a0c69ee0b775b8e73b5ac0bc2e967"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/AdminClient.cs",
-      "sha256": "c0dddbb16bf18072ce32cc0bfaec2fab18e8b66130e2689ae46b38c4eac49ade"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/ApiResult.cs",
-      "sha256": "35d00ddda2cb2f7a496f68187b5b06aa414974abc50566d3abc295d4157890ba"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/Authgebra.Client.csproj",
-      "sha256": "b35d989f4784566cdcdcb882d87b12b93f4fe38fda7ed88000d39d6718c8566a"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/AuthgebraClient.cs",
-      "sha256": "fa09bc9a9b987b9fdc43fdaa4e838fdff13a6c7f0e332d0cb5d19c61f0affb5d"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/AuthgebraClientOptions.cs",
-      "sha256": "4df6125889ef37c8cd511a447ca658288a1781f774baaed4e5440d925a041508"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/AuthorizationClient.cs",
-      "sha256": "6dceb758f811b3bde88428f688f3c942d54d26697bad8c091bcfe83a92766e53"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/ContractModel.cs",
-      "sha256": "0c8097d7520128ef714b7f2059c158aa81cf83cc733846edd6c1b5767aff5d65"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/Exceptions.cs",
-      "sha256": "740f5c8893386246a6c1cf57ae43d23c38b48f1312813345101af0892edf52e0"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/Generated/Api.g.cs",
-      "sha256": "1e5d145f4ab2247e6061429f23b47b7f8c2b0a60bb8d766eb689053cfa7a263d"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/Generated/Models.g.cs",
-      "sha256": "825bd1f05d01cb4b0f404b05b43da7393e73d11d6af4738a20dad35f2366b2aa"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/Generated/Models.provenance.json",
-      "sha256": "9313c2145c92f9a406854b08a71152bbbb3b35abdc792dbc9aa9d5f1109d6161"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/ITokenProvider.cs",
-      "sha256": "dd2fa3c84a9a2ff6f0690bcaa6d8b0927e7821abb674ed6db991cb38fef29709"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/Json.cs",
-      "sha256": "841faac4be8525e45c4ebc9af81ddf7df7873adbbbf54d48816854e5a4c98aae"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/JsonValue.cs",
-      "sha256": "57d205ed1408e69613b2367d76d8ed7d2398401f49d0ba88281ccc5d10f89068"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/Optional.cs",
-      "sha256": "fa55cc0be616c26f702041391b31b031d1ba548064fb5ce35821a02248f485b0"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/RequestOptions.cs",
-      "sha256": "1d0bba8a65513bad88bdd7f5a282610d84ad819440a324fff3ac4a7f4c8b2619"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/RequestSpec.cs",
-      "sha256": "fb9a1a2d5ce6bf533dd78813f8f8d86e95091bef04d40d8ea3af274a0a16882c"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/RetryPolicy.cs",
-      "sha256": "b1075aad2cd1713cf4d19cf69c5f2d5b6e5213c5f613b00c03173b5a3516e467"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/ServiceCollectionExtensions.cs",
-      "sha256": "87fe5b460b5a5f316f6580a7eadf55c121808d9fdc8c3cf99c4553963afb927c"
-    },
-    {
-      "path": "sdks/csharp/src/Authgebra.Client/Tracing.cs",
-      "sha256": "23215403f43b10b3c21a302bc8624543d7a8288da350c96b13d56dab783f6227"
-    },
-    {
-      "path": "sdks/csharp/tests/Authgebra.Client.Tests/Authgebra.Client.Tests.csproj",
-      "sha256": "4ed84cf71f23c0f92332729f9b81593b59bd94c5c7c56fb591cb19e2e782e01e"
-    },
-    {
-      "path": "sdks/csharp/tests/Authgebra.Client.Tests/BehaviorTests.cs",
-      "sha256": "3bf77c8f1c1dc7d03fd605dd33c25ed6a724794934cd90eed57bba3ea6d122e2"
-    },
-    {
-      "path": "sdks/csharp/tests/Authgebra.Client.Tests/ContractTests.cs",
-      "sha256": "da53fc2a3f53513601fefa80bd4fdeb049fecc7dc9fb4f2066557d3fe78f16c3"
-    },
-    {
-      "path": "sdks/csharp/tests/Authgebra.Client.Tests/DependencyInjectionTests.cs",
-      "sha256": "5bf03c84644d27293219d5f123a158e5f1d67d1022bcc9b5c2e228be236a1d4e"
-    },
-    {
-      "path": "sdks/csharp/tests/Authgebra.Client.Tests/FixtureTests.cs",
-      "sha256": "3c99f1176707b2bb14910bf2ef87265ffaef88cd7e2246c148e747e78f2bdb96"
-    },
-    {
-      "path": "sdks/csharp/tests/Authgebra.Client.Tests/IntegrationTests.cs",
-      "sha256": "abe4ce578cd3471d46ce4147e54806dd3d13b2e81241da7ef5d2ee3a759a1397"
-    },
-    {
-      "path": "sdks/csharp/tests/Authgebra.Client.Tests/ModelGenerationTests.cs",
-      "sha256": "dd9077ff206003838c2d3b003acb7e47d9ab0690ca99d2a0004d5bd55a6a9c97"
-    },
-    {
-      "path": "sdks/csharp/tests/Authgebra.Client.Tests/PagerTests.cs",
-      "sha256": "385f361fb8ebc4ff3691392266c8bddcb1588e9363141b41880e7f15c3029ab1"
-    },
-    {
-      "path": "sdks/csharp/tests/Authgebra.Client.Tests/Support.cs",
-      "sha256": "9000a72404feead582c2e395d8c45fa57f7027d85595444db69b76b24b50c5c4"
-    },
-    {
-      "path": "sdks/csharp/tests/Authgebra.Client.Tests/TlsTests.cs",
-      "sha256": "b3bc31c39f5ae8f0c0e97c11d89cb3681f48eb00540c28537d9aeb23890efc9c"
-    },
-    {
-      "path": "sdks/csharp/tools/gen.py",
-      "sha256": "41d2c739a0b4ee8b493a1cda96315033cc0606978e7a9c79ac904752f0801bad"
-    },
-    {
-      "path": "sdks/csharp/tools/test_gen.py",
-      "sha256": "f187657584898786ea9cdb545bc710796a5c6a021b62afe70a7b6a2ee02db2a6"
+      "sha256": "156ff395b3aac2ecd408adff428f2b9a6b1335fa87d61eac86e8f44c4bea9de0"
     },
     {
       "path": "sdks/fixtures/cases/01-deny-is-success.json",
@@ -705,7 +557,7 @@
     },
     {
       "path": "sdks/mise.toml",
-      "sha256": "ade9d4b703988700097c4eee55cc15a123fc86fc2cdf85206391987a9e928e85"
+      "sha256": "e3aa585037702bba5366cccccf936bfb7d9e041c16ddf28e6ace23209f15fedf"
     },
     {
       "path": "sdks/python/.gitignore",
@@ -1097,5 +949,8 @@
     }
   ],
   "export_policy": "SDK source, reviewed contracts and fixtures only; SDK-only public documentation; no server or private history.",
-  "signing_key_fingerprint": "8AD333B2299768BD48C59B3826FB55A540AA6F51"
+  "signing_key_fingerprint": "8AD333B2299768BD48C59B3826FB55A540AA6F51",
+  "withdrawals": {
+    "csharp": "2026-11-06: SDK source and release package withdrawn by owner; historical tags retained."
+  }
 }

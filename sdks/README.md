@@ -4,7 +4,7 @@ SDK `0.1.0` 的公开分发仓库为 [authgebra-sdks](https://github.com/iwen-co
 保留专有商业许可证；各语言安装方法与 registry 边界见 [DISTRIBUTION.md](DISTRIBUTION.md)。
 This public SDK-only mirror contains SDKs, contracts and fixtures; it contains no server source.
 
-六个语言的 SDK 是同一套 `/api/v1` HTTP API 的薄封装：**不做任何授权计算**（不实现 RBAC/ABAC/ReBAC）。
+五个语言的 SDK 是同一套 `/api/v1` HTTP API 的薄封装：**不做任何授权计算**（不实现 RBAC/ABAC/ReBAC）。
 
 唯一契约来源：`Rust DTO → OpenAPI`，受审导出物 `contracts/openapi.json`（`contracts/openapi.sha256` 记录摘要）。禁止在 SDK 里另写协议定义；模型以它为准，更新它必须人工评审，工具不得自动覆盖。
 
@@ -12,7 +12,7 @@ This public SDK-only mirror contains SDKs, contracts and fixtures; it contains n
 |---|---|
 | `contracts/` | OpenAPI 导出物与摘要 |
 | `fixtures/cases/*.json` | 跨语言一致性夹具（本文件「夹具格式」） |
-| `go/ rust/ python/ java/ zig/ csharp/` | 各语言 SDK |
+| `go/ rust/ python/ java/ zig/` | 各语言 SDK |
 
 ## 夹具格式（每个 SDK 的测试必须逐个跑通 `fixtures/cases/*.json`）
 
@@ -38,7 +38,7 @@ This public SDK-only mirror contains SDKs, contracts and fixtures; it contains n
 - 响应侧：`request_id` 以响应头 `X-Request-ID` 为准，头缺失/非法时回退 body；二者不一致时保留头值并暴露 `request_id_mismatch`。`trace_id` 取 body `error.trace_id`，缺席时取合法的 `X-Trace-ID` 头；非法头一律忽略。三个标识（request_id / trace_id / span_id）不混用。
 
 **版本与精度**
-- `authz_revision` / `snapshot_generation` 是 64 位整数，**必须无损**（Go `int64`、Rust `i64`、Java `long`、C# `long`、Python `int`、Zig `i64`）。管理读取没有 `meta` 时暴露为“无”，**绝不填 0**。
+- `authz_revision` / `snapshot_generation` 是 64 位整数，**必须无损**（Go `int64`、Rust `i64`、Java `long`、Python `int`、Zig `i64`）。管理读取没有 `meta` 时暴露为“无”，**绝不填 0**。
 - 请求体 UTF-8 原样；不得自动补默认值、不得把缺省字段改写成 `null`。
 
 **重试（默认保守）** — 「读/写」按**是否改变服务端状态**划分，不按 HTTP 方法；只读 POST 的传输失败不声明 `commit_state`。
