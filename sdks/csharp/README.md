@@ -17,8 +17,12 @@ it calls the server and **never computes authorization itself** (no RBAC/ABAC/Re
 
 ```bash
 # Place Authgebra.Client.0.1.0.nupkg in ./packages
-dotnet add package Authgebra.Client --version 0.1.0 --source ./packages
+dotnet nuget add source "$PWD/packages" --name authgebra-sdk
+dotnet add package Authgebra.Client --version 0.1.0
 ```
+
+Keep the default NuGet.org source enabled for `Microsoft.Extensions.Http` and its dependencies.
+Using only `--source ./packages` fails on a clean machine because that directory contains only the SDK.
 
 or reference `src/Authgebra.Client/Authgebra.Client.csproj` directly.
 

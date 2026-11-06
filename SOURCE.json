@@ -77,7 +77,7 @@
     },
     {
       "path": "sdks/csharp/README.md",
-      "sha256": "2d2882a8b3de74170fd5e9fffb1c282dfe899eef44195e6c03f3514e8d1eb10f"
+      "sha256": "2eabe4b757312475546b9bfc93bc400b611a0c69ee0b775b8e73b5ac0bc2e967"
     },
     {
       "path": "sdks/csharp/src/Authgebra.Client/AdminClient.cs",
