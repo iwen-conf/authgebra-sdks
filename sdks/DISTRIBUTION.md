@@ -25,10 +25,14 @@ https://github.com/iwen-conf/authgebra-sdks/releases/tag/v0.1.0.
 | Rust | `authgebra-client-0.1.0.crate`, or git dependency on tag `v0.1.0` |
 | Zig | `authgebra-zig-0.1.0.tar.gz` (`zig fetch --save=authgebra_zig <URL>`) |
 
-PyPI, crates.io and Maven Central are separate publication channels.
-Their publication requires registry credentials / namespace ownership and is not implied
-by a GitHub Release. Registry installation remains NOT_RUN until a successful upload
-and independent download are recorded. Package hashes and consumer checks accompany
-the GitHub Release.
+## Registry status
+
+- PyPI: **PUBLISHED** — https://pypi.org/project/authgebra/0.1.0/; `python -m pip install authgebra==0.1.0`. Official downloads match the signed packages; fresh installation passed.
+- crates.io: **PUBLISHED** — https://crates.io/crates/authgebra-client/0.1.0; `cargo add authgebra-client@=0.1.0`. Official metadata and anonymous package download match the signed crate.
+- Maven Central: **CANCELLED** at the maintainer’s request on 2026-11-06. Java source and GitHub packages remain available; no Central package was uploaded.
+- NuGet: **CANCELLED**; C# source and the GitHub package were withdrawn. Historical Git tags remain unchanged.
+
+Registry publication is separate from GitHub distribution. Independent registry consumer
+checks are recorded separately from package download verification.
 
 No server deployment or server production-readiness claim is part of this SDK release.
