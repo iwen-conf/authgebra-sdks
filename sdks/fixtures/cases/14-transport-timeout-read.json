@@ -1,0 +1,12 @@
+{
+  "id": "14-transport-timeout-read",
+  "description": "读请求连接/读取超时",
+  "operation": "authz.check",
+  "request": {},
+  "fault": "timeout",
+  "expect": {
+    "kind": "transport_error",
+    "error": "timeout",
+    "commit_state": null
+  }
+}

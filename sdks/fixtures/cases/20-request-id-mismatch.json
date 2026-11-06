@@ -1,0 +1,32 @@
+{
+  "id": "20-request-id-mismatch",
+  "operation": "authz.check",
+  "request": {},
+  "response": {
+    "status": 403,
+    "headers": {
+      "x-request-id": "req-header-0001"
+    },
+    "body": {
+      "error": {
+        "code": "FORBIDDEN",
+        "message": "m",
+        "request_id": "req-body-0001"
+      }
+    }
+  },
+  "expect": {
+    "kind": "api_error",
+    "status": 403,
+    "code": "FORBIDDEN",
+    "known_code": true,
+    "request_id": "req-header-0001",
+    "body_request_id": "req-body-0001",
+    "request_id_mismatch": true,
+    "trace_id": null,
+    "retryable": null,
+    "retry_after_seconds": null,
+    "commit_state": null
+  },
+  "description": "头与体 request_id 不一致：以头为准，同时暴露 mismatch 标记"
+}

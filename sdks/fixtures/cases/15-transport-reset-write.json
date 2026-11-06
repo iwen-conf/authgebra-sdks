@@ -1,0 +1,19 @@
+{
+  "id": "15-transport-reset-write",
+  "description": "写请求连接中断：unknown",
+  "operation": "users.create",
+  "request": {
+    "method": "POST",
+    "path": "/api/v1/users",
+    "idempotency_key": "idem-0001",
+    "body": {
+      "username": "alice"
+    }
+  },
+  "fault": "reset",
+  "expect": {
+    "kind": "transport_error",
+    "error": "connection_reset",
+    "commit_state": "unknown"
+  }
+}

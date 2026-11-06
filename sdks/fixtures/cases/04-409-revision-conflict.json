@@ -1,0 +1,31 @@
+{
+  "id": "04-409-revision-conflict",
+  "operation": "users.update",
+  "request": {},
+  "response": {
+    "status": 409,
+    "headers": {
+      "x-request-id": "req-abcdefgh"
+    },
+    "body": {
+      "error": {
+        "code": "REVISION_CONFLICT",
+        "message": "m",
+        "request_id": "req-abcdefgh",
+        "retryable": false
+      }
+    }
+  },
+  "expect": {
+    "kind": "api_error",
+    "status": 409,
+    "code": "REVISION_CONFLICT",
+    "known_code": true,
+    "request_id": "req-abcdefgh",
+    "trace_id": null,
+    "retryable": false,
+    "retry_after_seconds": null,
+    "commit_state": null
+  },
+  "description": "409 REVISION_CONFLICT"
+}

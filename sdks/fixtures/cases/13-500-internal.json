@@ -1,0 +1,30 @@
+{
+  "id": "13-500-internal",
+  "operation": "authz.check",
+  "request": {},
+  "response": {
+    "status": 500,
+    "headers": {
+      "x-request-id": "req-abcdefgh"
+    },
+    "body": {
+      "error": {
+        "code": "INTERNAL_ERROR",
+        "message": "m",
+        "request_id": "req-abcdefgh"
+      }
+    }
+  },
+  "expect": {
+    "kind": "api_error",
+    "status": 500,
+    "code": "INTERNAL_ERROR",
+    "known_code": true,
+    "request_id": "req-abcdefgh",
+    "trace_id": null,
+    "retryable": null,
+    "retry_after_seconds": null,
+    "commit_state": null
+  },
+  "description": "500 INTERNAL_ERROR：不判断可重试"
+}

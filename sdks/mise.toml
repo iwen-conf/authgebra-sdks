@@ -1,0 +1,8 @@
+# Native qualification minima; rust is the formatter toolchain, not the SDK MSRV (Cargo.toml).
+[tools]
+go = "1.22.12"
+python = "3.10.22"
+java = "temurin-17.0.19+10"
+rust = "1.98.0"
+zig = "0.17.0"
+dotnet = "8.0.427"

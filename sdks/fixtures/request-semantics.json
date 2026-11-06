@@ -1,0 +1,13 @@
+{
+  "request_ids": [
+    {"value": "caller-valid-0001", "valid": true},
+    {"value": "12345678", "valid": true},
+    {"value": "valid-end-newline\n", "valid": false},
+    {"value": "bad", "valid": false},
+    {"value": "bad id with spaces", "valid": false},
+    {"value": "caller-id\r\nInjected: yes", "valid": false},
+    {"value": "调用方请求标识", "valid": false}
+  ],
+  "patch_values": [null, false, 0, "", [], {}, {"nested": [0, false, null]}],
+  "integer_values": [9223372036854775807, -9223372036854775808, 9007199254740993, 18446744073709551615]
+}

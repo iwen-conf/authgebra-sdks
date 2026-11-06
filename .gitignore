@@ -1,0 +1,11 @@
+.arc/
+.ai-code-index/
+.venv/
+__pycache__/
+*.egg-info/
+target/
+bin/
+obj/
+.zig-cache/
+zig-out/
+*.pyc

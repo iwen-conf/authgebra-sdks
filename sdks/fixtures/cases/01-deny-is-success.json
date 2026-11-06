@@ -1,0 +1,32 @@
+{
+  "id": "01-deny-is-success",
+  "description": "HTTP 200 decision=deny 是成功结果，不是错误",
+  "operation": "authz.check",
+  "request": {},
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-request-id": "req-abcdefgh",
+      "x-trace-id": "4bf92f3577b34da6a3ce929d0e0e4736",
+      "traceparent": "00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01"
+    },
+    "body": {
+      "data": {
+        "decision": "deny",
+        "reason_code": "default_deny"
+      },
+      "meta": {
+        "authz_revision": 1024,
+        "snapshot_generation": 1024
+      }
+    }
+  },
+  "expect": {
+    "kind": "ok",
+    "decision": "deny",
+    "authz_revision": 1024,
+    "snapshot_generation": 1024,
+    "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
+    "request_id": "req-abcdefgh"
+  }
+}

@@ -1,0 +1,5860 @@
+{
+  "dynamicExceptions": [
+    {
+      "pointer": "#/components/schemas/ApiErrorPayload/properties/details",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/ApiResponse_Value/properties/data",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/AttributeAssignmentDto/properties/value",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/AuditEventDto/properties/metadata/additionalProperties",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/BatchCheckRequest/properties/context/additionalProperties",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/CheckRequest/properties/context/additionalProperties",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/CompilePreviewDto/properties/warnings/items",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/CreatePolicyRequest/properties/expression",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/ExplainRequest/properties/context/additionalProperties",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/ListResourcesRequest/properties/context/additionalProperties",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/PagedResponse_Value/properties/data/items",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/PatchPolicyRequest/properties/expression",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/PolicyValidationDto/properties/warnings/items",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/PolicyVersionDto/properties/expression",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    },
+    {
+      "pointer": "#/components/schemas/ValidatePolicyRequest/properties/expression",
+      "reason": "The reviewed schema allows arbitrary JSON values",
+      "test": "model_semantics::open_json_preserves_all_kinds",
+      "type": "serde_json::Value"
+    }
+  ],
+  "schemas": [
+    {
+      "fields": [
+        {
+          "json_name": "error",
+          "name": "error",
+          "pointer": "#/components/schemas/ApiErrorBody/properties/error",
+          "type": "ApiErrorPayload"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiErrorBody",
+      "type": "ApiErrorBody"
+    },
+    {
+      "fields": [],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiErrorCode",
+      "type": "ApiErrorCode"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/ApiErrorPayload/properties/code",
+          "type": "ApiErrorCode"
+        },
+        {
+          "json_name": "commit_state",
+          "name": "commit_state",
+          "pointer": "#/components/schemas/ApiErrorPayload/properties/commit_state",
+          "type": "Option<Option<CommitState>>"
+        },
+        {
+          "json_name": "details",
+          "name": "details",
+          "pointer": "#/components/schemas/ApiErrorPayload/properties/details",
+          "type": "Option<Option<serde_json::Value>>"
+        },
+        {
+          "json_name": "message",
+          "name": "message",
+          "pointer": "#/components/schemas/ApiErrorPayload/properties/message",
+          "type": "String"
+        },
+        {
+          "json_name": "request_id",
+          "name": "request_id",
+          "pointer": "#/components/schemas/ApiErrorPayload/properties/request_id",
+          "type": "String"
+        },
+        {
+          "json_name": "retry_after_seconds",
+          "name": "retry_after_seconds",
+          "pointer": "#/components/schemas/ApiErrorPayload/properties/retry_after_seconds",
+          "type": "Option<Option<i64>>"
+        },
+        {
+          "json_name": "retryable",
+          "name": "retryable",
+          "pointer": "#/components/schemas/ApiErrorPayload/properties/retryable",
+          "type": "Option<Option<bool>>"
+        },
+        {
+          "json_name": "trace_id",
+          "name": "trace_id",
+          "pointer": "#/components/schemas/ApiErrorPayload/properties/trace_id",
+          "type": "Option<Option<String>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiErrorPayload",
+      "type": "ApiErrorPayload"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_AttributeDto/properties/data",
+          "type": "AttributeDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_AttributeDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_AttributeDto",
+      "type": "ApiResponseAttributeDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_AttributesDto/properties/data",
+          "type": "AttributesDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_AttributesDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_AttributesDto",
+      "type": "ApiResponseAttributesDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_AttributesStatsDto/properties/data",
+          "type": "AttributesStatsDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_AttributesStatsDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_AttributesStatsDto",
+      "type": "ApiResponseAttributesStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_AuditStatsDto/properties/data",
+          "type": "AuditStatsDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_AuditStatsDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_AuditStatsDto",
+      "type": "ApiResponseAuditStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_AuthOkDto/properties/data",
+          "type": "AuthOkDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_AuthOkDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_AuthOkDto",
+      "type": "ApiResponseAuthOkDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_BatchCheckResponse/properties/data",
+          "type": "BatchCheckResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_BatchCheckResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_BatchCheckResponse",
+      "type": "ApiResponseBatchCheckResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_BindingsStatsDto/properties/data",
+          "type": "BindingsStatsDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_BindingsStatsDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_BindingsStatsDto",
+      "type": "ApiResponseBindingsStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_CheckResponse/properties/data",
+          "type": "CheckResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_CheckResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_CheckResponse",
+      "type": "ApiResponseCheckResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_CompilePreviewDto/properties/data",
+          "type": "CompilePreviewDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_CompilePreviewDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_CompilePreviewDto",
+      "type": "ApiResponseCompilePreviewDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_DashboardSummaryDto/properties/data",
+          "type": "DashboardSummaryDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_DashboardSummaryDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_DashboardSummaryDto",
+      "type": "ApiResponseDashboardSummaryDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_EffectivePermissionsDto/properties/data",
+          "type": "EffectivePermissionsDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_EffectivePermissionsDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_EffectivePermissionsDto",
+      "type": "ApiResponseEffectivePermissionsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_EnrollmentStartResponse/properties/data",
+          "type": "EnrollmentStartResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_EnrollmentStartResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_EnrollmentStartResponse",
+      "type": "ApiResponseEnrollmentStartResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_EnrollmentVerifyResponse/properties/data",
+          "type": "EnrollmentVerifyResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_EnrollmentVerifyResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_EnrollmentVerifyResponse",
+      "type": "ApiResponseEnrollmentVerifyResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_ExplainResponse/properties/data",
+          "type": "ExplainResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_ExplainResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_ExplainResponse",
+      "type": "ApiResponseExplainResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_ImpactPreviewDto/properties/data",
+          "type": "ImpactPreviewDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_ImpactPreviewDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_ImpactPreviewDto",
+      "type": "ApiResponseImpactPreviewDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_LoginResponse/properties/data",
+          "type": "LoginResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_LoginResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_LoginResponse",
+      "type": "ApiResponseLoginResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_MeResponse/properties/data",
+          "type": "MeResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_MeResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_MeResponse",
+      "type": "ApiResponseMeResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_MfaEnrollResponse/properties/data",
+          "type": "MfaEnrollResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_MfaEnrollResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_MfaEnrollResponse",
+      "type": "ApiResponseMfaEnrollResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_MfaRecoveryCodesResponse/properties/data",
+          "type": "MfaRecoveryCodesResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_MfaRecoveryCodesResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_MfaRecoveryCodesResponse",
+      "type": "ApiResponseMfaRecoveryCodesResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_MfaStatusResponse/properties/data",
+          "type": "MfaStatusResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_MfaStatusResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_MfaStatusResponse",
+      "type": "ApiResponseMfaStatusResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_MutationAckDto/properties/data",
+          "type": "MutationAckDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_MutationAckDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_MutationAckDto",
+      "type": "ApiResponseMutationAckDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_PermissionDto/properties/data",
+          "type": "PermissionDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_PermissionDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_PermissionDto",
+      "type": "ApiResponsePermissionDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_PoliciesStatsDto/properties/data",
+          "type": "PoliciesStatsDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_PoliciesStatsDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_PoliciesStatsDto",
+      "type": "ApiResponsePoliciesStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_PolicyBindingDto/properties/data",
+          "type": "PolicyBindingDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_PolicyBindingDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_PolicyBindingDto",
+      "type": "ApiResponsePolicyBindingDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_PolicyDetailDto/properties/data",
+          "type": "PolicyDetailDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_PolicyDetailDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_PolicyDetailDto",
+      "type": "ApiResponsePolicyDetailDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_PolicyDto/properties/data",
+          "type": "PolicyDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_PolicyDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_PolicyDto",
+      "type": "ApiResponsePolicyDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_PolicyTestCaseWriteDto/properties/data",
+          "type": "PolicyTestCaseWriteDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_PolicyTestCaseWriteDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_PolicyTestCaseWriteDto",
+      "type": "ApiResponsePolicyTestCaseWriteDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_PolicyValidationDto/properties/data",
+          "type": "PolicyValidationDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_PolicyValidationDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_PolicyValidationDto",
+      "type": "ApiResponsePolicyValidationDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_PublishPolicyResultDto/properties/data",
+          "type": "PublishPolicyResultDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_PublishPolicyResultDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_PublishPolicyResultDto",
+      "type": "ApiResponsePublishPolicyResultDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_RelationDefinitionDto/properties/data",
+          "type": "RelationDefinitionDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_RelationDefinitionDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_RelationDefinitionDto",
+      "type": "ApiResponseRelationDefinitionDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_RelationTupleDto/properties/data",
+          "type": "RelationTupleDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_RelationTupleDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_RelationTupleDto",
+      "type": "ApiResponseRelationTupleDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_ResourceDto/properties/data",
+          "type": "ResourceDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_ResourceDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_ResourceDto",
+      "type": "ApiResponseResourceDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_ResourceTypeDto/properties/data",
+          "type": "ResourceTypeDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_ResourceTypeDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_ResourceTypeDto",
+      "type": "ApiResponseResourceTypeDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_ResourceTypesStatsDto/properties/data",
+          "type": "ResourceTypesStatsDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_ResourceTypesStatsDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_ResourceTypesStatsDto",
+      "type": "ApiResponseResourceTypesStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_ResourcesStatsDto/properties/data",
+          "type": "ResourcesStatsDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_ResourcesStatsDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_ResourcesStatsDto",
+      "type": "ApiResponseResourcesStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_RevisionResponse/properties/data",
+          "type": "RevisionResponse"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_RevisionResponse/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_RevisionResponse",
+      "type": "ApiResponseRevisionResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_RoleDto/properties/data",
+          "type": "RoleDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_RoleDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_RoleDto",
+      "type": "ApiResponseRoleDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_RolePermissionsDto/properties/data",
+          "type": "RolePermissionsDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_RolePermissionsDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_RolePermissionsDto",
+      "type": "ApiResponseRolePermissionsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_RolesStatsDto/properties/data",
+          "type": "RolesStatsDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_RolesStatsDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_RolesStatsDto",
+      "type": "ApiResponseRolesStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_TokenPair/properties/data",
+          "type": "TokenPair"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_TokenPair/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_TokenPair",
+      "type": "ApiResponseTokenPair"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_UserDto/properties/data",
+          "type": "UserDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_UserDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_UserDto",
+      "type": "ApiResponseUserDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_UserMfaPolicyDto/properties/data",
+          "type": "UserMfaPolicyDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_UserMfaPolicyDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_UserMfaPolicyDto",
+      "type": "ApiResponseUserMfaPolicyDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_UserRolesDto/properties/data",
+          "type": "UserRolesDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_UserRolesDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_UserRolesDto",
+      "type": "ApiResponseUserRolesDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_UsersStatsDto/properties/data",
+          "type": "UsersStatsDto"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_UsersStatsDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_UsersStatsDto",
+      "type": "ApiResponseUsersStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_Value/properties/data",
+          "type": "Option<serde_json::Value>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_Value/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_Value",
+      "type": "ApiResponseValue"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_Vec_PolicyTestCaseDto/properties/data",
+          "type": "Vec<PolicyTestCaseDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_Vec_PolicyTestCaseDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_Vec_PolicyTestCaseDto",
+      "type": "ApiResponseVecPolicyTestCaseDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/ApiResponse_Vec_SessionDto/properties/data",
+          "type": "Vec<SessionDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/ApiResponse_Vec_SessionDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ApiResponse_Vec_SessionDto",
+      "type": "ApiResponseVecSessionDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "attribute_id",
+          "name": "attribute_id",
+          "pointer": "#/components/schemas/AttributeAssignmentDto/properties/attribute_id",
+          "type": "String"
+        },
+        {
+          "json_name": "value",
+          "name": "value",
+          "pointer": "#/components/schemas/AttributeAssignmentDto/properties/value",
+          "type": "Option<serde_json::Value>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AttributeAssignmentDto",
+      "type": "AttributeAssignmentDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/AttributeDto/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/AttributeDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/AttributeDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "index_mode",
+          "name": "index_mode",
+          "pointer": "#/components/schemas/AttributeDto/properties/index_mode",
+          "type": "String"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/AttributeDto/properties/name",
+          "type": "String"
+        },
+        {
+          "json_name": "owner_type",
+          "name": "owner_type",
+          "pointer": "#/components/schemas/AttributeDto/properties/owner_type",
+          "type": "String"
+        },
+        {
+          "json_name": "value_type",
+          "name": "value_type",
+          "pointer": "#/components/schemas/AttributeDto/properties/value_type",
+          "type": "String"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/AttributeDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AttributeDto",
+      "type": "AttributeDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "attributes",
+          "name": "attributes",
+          "pointer": "#/components/schemas/AttributesDto/properties/attributes",
+          "type": "Vec<AttributeAssignmentDto>"
+        },
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/AttributesDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "owner_id",
+          "name": "owner_id",
+          "pointer": "#/components/schemas/AttributesDto/properties/owner_id",
+          "type": "String"
+        },
+        {
+          "json_name": "owner_type",
+          "name": "owner_type",
+          "pointer": "#/components/schemas/AttributesDto/properties/owner_type",
+          "type": "String"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/AttributesDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AttributesDto",
+      "type": "AttributesDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "total",
+          "name": "total",
+          "pointer": "#/components/schemas/AttributesStatsDto/properties/total",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AttributesStatsDto",
+      "type": "AttributesStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "action",
+          "name": "action",
+          "pointer": "#/components/schemas/AuditEventDto/properties/action",
+          "type": "String"
+        },
+        {
+          "json_name": "actor_user_id",
+          "name": "actor_user_id",
+          "pointer": "#/components/schemas/AuditEventDto/properties/actor_user_id",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "created_at_rfc3339",
+          "name": "created_at_rfc3339",
+          "pointer": "#/components/schemas/AuditEventDto/properties/created_at_rfc3339",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/AuditEventDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "metadata",
+          "name": "metadata",
+          "pointer": "#/components/schemas/AuditEventDto/properties/metadata",
+          "type": "std::collections::BTreeMap<String, Option<serde_json::Value>>"
+        },
+        {
+          "json_name": "request_id",
+          "name": "request_id",
+          "pointer": "#/components/schemas/AuditEventDto/properties/request_id",
+          "type": "String"
+        },
+        {
+          "json_name": "result",
+          "name": "result",
+          "pointer": "#/components/schemas/AuditEventDto/properties/result",
+          "type": "String"
+        },
+        {
+          "json_name": "target",
+          "name": "target",
+          "pointer": "#/components/schemas/AuditEventDto/properties/target",
+          "type": "Option<Option<AuditTargetDto>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuditEventDto",
+      "type": "AuditEventDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "denied_today",
+          "name": "denied_today",
+          "pointer": "#/components/schemas/AuditStatsDto/properties/denied_today",
+          "type": "i64"
+        },
+        {
+          "json_name": "today",
+          "name": "today",
+          "pointer": "#/components/schemas/AuditStatsDto/properties/today",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuditStatsDto",
+      "type": "AuditStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "target_id",
+          "name": "target_id",
+          "pointer": "#/components/schemas/AuditTargetDto/properties/target_id",
+          "type": "String"
+        },
+        {
+          "json_name": "target_type",
+          "name": "target_type",
+          "pointer": "#/components/schemas/AuditTargetDto/properties/target_type",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuditTargetDto",
+      "type": "AuditTargetDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "lag_seconds",
+          "name": "lag_seconds",
+          "pointer": "#/components/schemas/AuditWriterSummaryDto/properties/lag_seconds",
+          "type": "Option<Option<i64>>"
+        },
+        {
+          "json_name": "lagging_after_seconds",
+          "name": "lagging_after_seconds",
+          "pointer": "#/components/schemas/AuditWriterSummaryDto/properties/lagging_after_seconds",
+          "type": "i64"
+        },
+        {
+          "json_name": "last_write_at_rfc3339",
+          "name": "last_write_at_rfc3339",
+          "pointer": "#/components/schemas/AuditWriterSummaryDto/properties/last_write_at_rfc3339",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "status",
+          "name": "status",
+          "pointer": "#/components/schemas/AuditWriterSummaryDto/properties/status",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuditWriterSummaryDto",
+      "type": "AuditWriterSummaryDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "ok",
+          "name": "ok",
+          "pointer": "#/components/schemas/AuthOkDto/properties/ok",
+          "type": "bool"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuthOkDto",
+      "type": "AuthOkDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "display_name",
+          "name": "display_name",
+          "pointer": "#/components/schemas/AuthUserDto/properties/display_name",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/AuthUserDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "username",
+          "name": "username",
+          "pointer": "#/components/schemas/AuthUserDto/properties/username",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuthUserDto",
+      "type": "AuthUserDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "matched_policy",
+          "name": "matched_policy",
+          "pointer": "#/components/schemas/AuthzBatchDecision/properties/matched_policy",
+          "type": "Option<Option<AuthzPolicyRef>>"
+        },
+        {
+          "json_name": "reason_code",
+          "name": "reason_code",
+          "pointer": "#/components/schemas/AuthzBatchDecision/properties/reason_code",
+          "type": "String"
+        },
+        {
+          "json_name": "resource",
+          "name": "resource",
+          "pointer": "#/components/schemas/AuthzBatchDecision/properties/resource",
+          "type": "AuthzResourceRef"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuthzBatchDecision",
+      "type": "AuthzBatchDecision"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "detail",
+          "name": "detail",
+          "pointer": "#/components/schemas/AuthzExplainNode/properties/detail",
+          "type": "String"
+        },
+        {
+          "json_name": "kind",
+          "name": "kind",
+          "pointer": "#/components/schemas/AuthzExplainNode/properties/kind",
+          "type": "String"
+        },
+        {
+          "json_name": "node_id",
+          "name": "node_id",
+          "pointer": "#/components/schemas/AuthzExplainNode/properties/node_id",
+          "type": "u32"
+        },
+        {
+          "json_name": "path",
+          "name": "path",
+          "pointer": "#/components/schemas/AuthzExplainNode/properties/path",
+          "type": "Option<Option<Vec<AuthzRelationPathHop>>>"
+        },
+        {
+          "json_name": "result",
+          "name": "result",
+          "pointer": "#/components/schemas/AuthzExplainNode/properties/result",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuthzExplainNode",
+      "type": "AuthzExplainNode"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "nodes",
+          "name": "nodes",
+          "pointer": "#/components/schemas/AuthzPolicyExplanation/properties/nodes",
+          "type": "Vec<AuthzExplainNode>"
+        },
+        {
+          "json_name": "policy",
+          "name": "policy",
+          "pointer": "#/components/schemas/AuthzPolicyExplanation/properties/policy",
+          "type": "AuthzPolicyRef"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuthzPolicyExplanation",
+      "type": "AuthzPolicyExplanation"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/AuthzPolicyRef/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/AuthzPolicyRef/properties/version",
+          "type": "u32"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuthzPolicyRef",
+      "type": "AuthzPolicyRef"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "object_external_id",
+          "name": "object_external_id",
+          "pointer": "#/components/schemas/AuthzRelationPathHop/properties/object_external_id",
+          "type": "String"
+        },
+        {
+          "json_name": "object_type",
+          "name": "object_type",
+          "pointer": "#/components/schemas/AuthzRelationPathHop/properties/object_type",
+          "type": "String"
+        },
+        {
+          "json_name": "relation",
+          "name": "relation",
+          "pointer": "#/components/schemas/AuthzRelationPathHop/properties/relation",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuthzRelationPathHop",
+      "type": "AuthzRelationPathHop"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "external_id",
+          "name": "external_id",
+          "pointer": "#/components/schemas/AuthzResourceRef/properties/external_id",
+          "type": "String"
+        },
+        {
+          "json_name": "resource_type_code",
+          "name": "resource_type_code",
+          "pointer": "#/components/schemas/AuthzResourceRef/properties/resource_type_code",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/AuthzResourceRef",
+      "type": "AuthzResourceRef"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "context",
+          "name": "context",
+          "pointer": "#/components/schemas/BatchCheckRequest/properties/context",
+          "type": "Option<Option<std::collections::BTreeMap<String, Option<serde_json::Value>>>>"
+        },
+        {
+          "json_name": "permission",
+          "name": "permission",
+          "pointer": "#/components/schemas/BatchCheckRequest/properties/permission",
+          "type": "String"
+        },
+        {
+          "json_name": "resources",
+          "name": "resources",
+          "pointer": "#/components/schemas/BatchCheckRequest/properties/resources",
+          "type": "Vec<AuthzResourceRef>"
+        },
+        {
+          "json_name": "subject_id",
+          "name": "subject_id",
+          "pointer": "#/components/schemas/BatchCheckRequest/properties/subject_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/BatchCheckRequest",
+      "type": "BatchCheckRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "allowed",
+          "name": "allowed",
+          "pointer": "#/components/schemas/BatchCheckResponse/properties/allowed",
+          "type": "Vec<AuthzBatchDecision>"
+        },
+        {
+          "json_name": "denied",
+          "name": "denied",
+          "pointer": "#/components/schemas/BatchCheckResponse/properties/denied",
+          "type": "Vec<AuthzBatchDecision>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/BatchCheckResponse",
+      "type": "BatchCheckResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "permission",
+          "name": "permission",
+          "pointer": "#/components/schemas/BindingSpecDto/properties/permission",
+          "type": "String"
+        },
+        {
+          "json_name": "resource_type",
+          "name": "resource_type",
+          "pointer": "#/components/schemas/BindingSpecDto/properties/resource_type",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/BindingSpecDto",
+      "type": "BindingSpecDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "disabled",
+          "name": "disabled",
+          "pointer": "#/components/schemas/BindingsStatsDto/properties/disabled",
+          "type": "i64"
+        },
+        {
+          "json_name": "enabled",
+          "name": "enabled",
+          "pointer": "#/components/schemas/BindingsStatsDto/properties/enabled",
+          "type": "i64"
+        },
+        {
+          "json_name": "total",
+          "name": "total",
+          "pointer": "#/components/schemas/BindingsStatsDto/properties/total",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/BindingsStatsDto",
+      "type": "BindingsStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "cedar_runtime",
+          "name": "cedar_runtime",
+          "pointer": "#/components/schemas/CapabilitiesDto/properties/cedar_runtime",
+          "type": "bool"
+        },
+        {
+          "json_name": "cost_model",
+          "name": "cost_model",
+          "pointer": "#/components/schemas/CapabilitiesDto/properties/cost_model",
+          "type": "bool"
+        },
+        {
+          "json_name": "gaps",
+          "name": "gaps",
+          "pointer": "#/components/schemas/CapabilitiesDto/properties/gaps",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "logical_plan",
+          "name": "logical_plan",
+          "pointer": "#/components/schemas/CapabilitiesDto/properties/logical_plan",
+          "type": "bool"
+        },
+        {
+          "json_name": "optimizer",
+          "name": "optimizer",
+          "pointer": "#/components/schemas/CapabilitiesDto/properties/optimizer",
+          "type": "bool"
+        },
+        {
+          "json_name": "point_plan",
+          "name": "point_plan",
+          "pointer": "#/components/schemas/CapabilitiesDto/properties/point_plan",
+          "type": "bool"
+        },
+        {
+          "json_name": "set_plan",
+          "name": "set_plan",
+          "pointer": "#/components/schemas/CapabilitiesDto/properties/set_plan",
+          "type": "bool"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CapabilitiesDto",
+      "type": "CapabilitiesDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "new_password",
+          "name": "new_password",
+          "pointer": "#/components/schemas/ChangePasswordRequest/properties/new_password",
+          "type": "String"
+        },
+        {
+          "json_name": "reauth",
+          "name": "reauth",
+          "pointer": "#/components/schemas/ChangePasswordRequest/properties/reauth",
+          "type": "ReauthProof"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ChangePasswordRequest",
+      "type": "ChangePasswordRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "context",
+          "name": "context",
+          "pointer": "#/components/schemas/CheckRequest/properties/context",
+          "type": "Option<Option<std::collections::BTreeMap<String, Option<serde_json::Value>>>>"
+        },
+        {
+          "json_name": "permission",
+          "name": "permission",
+          "pointer": "#/components/schemas/CheckRequest/properties/permission",
+          "type": "String"
+        },
+        {
+          "json_name": "resource",
+          "name": "resource",
+          "pointer": "#/components/schemas/CheckRequest/properties/resource",
+          "type": "Option<Option<AuthzResourceRef>>"
+        },
+        {
+          "json_name": "subject_id",
+          "name": "subject_id",
+          "pointer": "#/components/schemas/CheckRequest/properties/subject_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CheckRequest",
+      "type": "CheckRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "decision",
+          "name": "decision",
+          "pointer": "#/components/schemas/CheckResponse/properties/decision",
+          "type": "String"
+        },
+        {
+          "json_name": "matched_policy",
+          "name": "matched_policy",
+          "pointer": "#/components/schemas/CheckResponse/properties/matched_policy",
+          "type": "Option<Option<AuthzPolicyRef>>"
+        },
+        {
+          "json_name": "reason_code",
+          "name": "reason_code",
+          "pointer": "#/components/schemas/CheckResponse/properties/reason_code",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CheckResponse",
+      "type": "CheckResponse"
+    },
+    {
+      "fields": [],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CommitState",
+      "type": "CommitState"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "capabilities",
+          "name": "capabilities",
+          "pointer": "#/components/schemas/CompilePreviewDto/properties/capabilities",
+          "type": "CapabilitiesDto"
+        },
+        {
+          "json_name": "compiled_nodes",
+          "name": "compiled_nodes",
+          "pointer": "#/components/schemas/CompilePreviewDto/properties/compiled_nodes",
+          "type": "u32"
+        },
+        {
+          "json_name": "issues",
+          "name": "issues",
+          "pointer": "#/components/schemas/CompilePreviewDto/properties/issues",
+          "type": "Vec<PolicyIssueDto>"
+        },
+        {
+          "json_name": "ok",
+          "name": "ok",
+          "pointer": "#/components/schemas/CompilePreviewDto/properties/ok",
+          "type": "bool"
+        },
+        {
+          "json_name": "plan",
+          "name": "plan",
+          "pointer": "#/components/schemas/CompilePreviewDto/properties/plan",
+          "type": "String"
+        },
+        {
+          "json_name": "plan_detail",
+          "name": "plan_detail",
+          "pointer": "#/components/schemas/CompilePreviewDto/properties/plan_detail",
+          "type": "Option<Option<PlanDetailDto>>"
+        },
+        {
+          "json_name": "referenced_attributes",
+          "name": "referenced_attributes",
+          "pointer": "#/components/schemas/CompilePreviewDto/properties/referenced_attributes",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "referenced_permissions",
+          "name": "referenced_permissions",
+          "pointer": "#/components/schemas/CompilePreviewDto/properties/referenced_permissions",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "referenced_roles",
+          "name": "referenced_roles",
+          "pointer": "#/components/schemas/CompilePreviewDto/properties/referenced_roles",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "warnings",
+          "name": "warnings",
+          "pointer": "#/components/schemas/CompilePreviewDto/properties/warnings",
+          "type": "Vec<Option<serde_json::Value>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CompilePreviewDto",
+      "type": "CompilePreviewDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/CreateAttributeRequest/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "index_mode",
+          "name": "index_mode",
+          "pointer": "#/components/schemas/CreateAttributeRequest/properties/index_mode",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/CreateAttributeRequest/properties/name",
+          "type": "String"
+        },
+        {
+          "json_name": "owner_type",
+          "name": "owner_type",
+          "pointer": "#/components/schemas/CreateAttributeRequest/properties/owner_type",
+          "type": "String"
+        },
+        {
+          "json_name": "value_type",
+          "name": "value_type",
+          "pointer": "#/components/schemas/CreateAttributeRequest/properties/value_type",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CreateAttributeRequest",
+      "type": "CreateAttributeRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "action",
+          "name": "action",
+          "pointer": "#/components/schemas/CreatePermissionRequest/properties/action",
+          "type": "String"
+        },
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/CreatePermissionRequest/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/CreatePermissionRequest/properties/name",
+          "type": "String"
+        },
+        {
+          "json_name": "resource_type",
+          "name": "resource_type",
+          "pointer": "#/components/schemas/CreatePermissionRequest/properties/resource_type",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CreatePermissionRequest",
+      "type": "CreatePermissionRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "permission",
+          "name": "permission",
+          "pointer": "#/components/schemas/CreatePolicyBindingRequest/properties/permission",
+          "type": "String"
+        },
+        {
+          "json_name": "policy_id",
+          "name": "policy_id",
+          "pointer": "#/components/schemas/CreatePolicyBindingRequest/properties/policy_id",
+          "type": "String"
+        },
+        {
+          "json_name": "priority",
+          "name": "priority",
+          "pointer": "#/components/schemas/CreatePolicyBindingRequest/properties/priority",
+          "type": "i32"
+        },
+        {
+          "json_name": "resource_type",
+          "name": "resource_type",
+          "pointer": "#/components/schemas/CreatePolicyBindingRequest/properties/resource_type",
+          "type": "String"
+        },
+        {
+          "json_name": "version_id",
+          "name": "version_id",
+          "pointer": "#/components/schemas/CreatePolicyBindingRequest/properties/version_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CreatePolicyBindingRequest",
+      "type": "CreatePolicyBindingRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/CreatePolicyRequest/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/CreatePolicyRequest/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "effect",
+          "name": "effect",
+          "pointer": "#/components/schemas/CreatePolicyRequest/properties/effect",
+          "type": "String"
+        },
+        {
+          "json_name": "expression",
+          "name": "expression",
+          "pointer": "#/components/schemas/CreatePolicyRequest/properties/expression",
+          "type": "Option<serde_json::Value>"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/CreatePolicyRequest/properties/name",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CreatePolicyRequest",
+      "type": "CreatePolicyRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/CreateRelationDefinitionRequest/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "object_type",
+          "name": "object_type",
+          "pointer": "#/components/schemas/CreateRelationDefinitionRequest/properties/object_type",
+          "type": "String"
+        },
+        {
+          "json_name": "relation",
+          "name": "relation",
+          "pointer": "#/components/schemas/CreateRelationDefinitionRequest/properties/relation",
+          "type": "String"
+        },
+        {
+          "json_name": "rewrites",
+          "name": "rewrites",
+          "pointer": "#/components/schemas/CreateRelationDefinitionRequest/properties/rewrites",
+          "type": "Option<Vec<RewriteRuleDto>>"
+        },
+        {
+          "json_name": "subject_types",
+          "name": "subject_types",
+          "pointer": "#/components/schemas/CreateRelationDefinitionRequest/properties/subject_types",
+          "type": "Vec<String>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CreateRelationDefinitionRequest",
+      "type": "CreateRelationDefinitionRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "object_id",
+          "name": "object_id",
+          "pointer": "#/components/schemas/CreateRelationTupleRequest/properties/object_id",
+          "type": "String"
+        },
+        {
+          "json_name": "object_type",
+          "name": "object_type",
+          "pointer": "#/components/schemas/CreateRelationTupleRequest/properties/object_type",
+          "type": "String"
+        },
+        {
+          "json_name": "relation",
+          "name": "relation",
+          "pointer": "#/components/schemas/CreateRelationTupleRequest/properties/relation",
+          "type": "String"
+        },
+        {
+          "json_name": "subject_id",
+          "name": "subject_id",
+          "pointer": "#/components/schemas/CreateRelationTupleRequest/properties/subject_id",
+          "type": "String"
+        },
+        {
+          "json_name": "subject_type",
+          "name": "subject_type",
+          "pointer": "#/components/schemas/CreateRelationTupleRequest/properties/subject_type",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CreateRelationTupleRequest",
+      "type": "CreateRelationTupleRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "attributes",
+          "name": "attributes",
+          "pointer": "#/components/schemas/CreateResourceRequest/properties/attributes",
+          "type": "Option<Vec<AttributeAssignmentDto>>"
+        },
+        {
+          "json_name": "external_id",
+          "name": "external_id",
+          "pointer": "#/components/schemas/CreateResourceRequest/properties/external_id",
+          "type": "String"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/CreateResourceRequest/properties/name",
+          "type": "String"
+        },
+        {
+          "json_name": "resource_type_code",
+          "name": "resource_type_code",
+          "pointer": "#/components/schemas/CreateResourceRequest/properties/resource_type_code",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CreateResourceRequest",
+      "type": "CreateResourceRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/CreateResourceTypeRequest/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/CreateResourceTypeRequest/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "existence_hiding",
+          "name": "existence_hiding",
+          "pointer": "#/components/schemas/CreateResourceTypeRequest/properties/existence_hiding",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/CreateResourceTypeRequest/properties/name",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CreateResourceTypeRequest",
+      "type": "CreateResourceTypeRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/CreateRoleRequest/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/CreateRoleRequest/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/CreateRoleRequest/properties/name",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CreateRoleRequest",
+      "type": "CreateRoleRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "display_name",
+          "name": "display_name",
+          "pointer": "#/components/schemas/CreateUserRequest/properties/display_name",
+          "type": "String"
+        },
+        {
+          "json_name": "email",
+          "name": "email",
+          "pointer": "#/components/schemas/CreateUserRequest/properties/email",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "initial_password",
+          "name": "initial_password",
+          "pointer": "#/components/schemas/CreateUserRequest/properties/initial_password",
+          "type": "String"
+        },
+        {
+          "json_name": "role_ids",
+          "name": "role_ids",
+          "pointer": "#/components/schemas/CreateUserRequest/properties/role_ids",
+          "type": "Option<Vec<String>>"
+        },
+        {
+          "json_name": "username",
+          "name": "username",
+          "pointer": "#/components/schemas/CreateUserRequest/properties/username",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/CreateUserRequest",
+      "type": "CreateUserRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "generated_at_rfc3339",
+          "name": "generated_at_rfc3339",
+          "pointer": "#/components/schemas/DashboardSummaryDto/properties/generated_at_rfc3339",
+          "type": "String"
+        },
+        {
+          "json_name": "policies",
+          "name": "policies",
+          "pointer": "#/components/schemas/DashboardSummaryDto/properties/policies",
+          "type": "PoliciesSummaryDto"
+        },
+        {
+          "json_name": "readiness",
+          "name": "readiness",
+          "pointer": "#/components/schemas/DashboardSummaryDto/properties/readiness",
+          "type": "ReadinessSummaryDto"
+        },
+        {
+          "json_name": "sessions",
+          "name": "sessions",
+          "pointer": "#/components/schemas/DashboardSummaryDto/properties/sessions",
+          "type": "SessionsStatsDto"
+        },
+        {
+          "json_name": "users",
+          "name": "users",
+          "pointer": "#/components/schemas/DashboardSummaryDto/properties/users",
+          "type": "UsersStatsDto"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/DashboardSummaryDto",
+      "type": "DashboardSummaryDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "permissions",
+          "name": "permissions",
+          "pointer": "#/components/schemas/EffectivePermissionsDto/properties/permissions",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "snapshot_generation",
+          "name": "snapshot_generation",
+          "pointer": "#/components/schemas/EffectivePermissionsDto/properties/snapshot_generation",
+          "type": "i64"
+        },
+        {
+          "json_name": "user_id",
+          "name": "user_id",
+          "pointer": "#/components/schemas/EffectivePermissionsDto/properties/user_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/EffectivePermissionsDto",
+      "type": "EffectivePermissionsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "challenge_token",
+          "name": "challenge_token",
+          "pointer": "#/components/schemas/EnrollmentStartRequest/properties/challenge_token",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/EnrollmentStartRequest",
+      "type": "EnrollmentStartRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "challenge_expires_in",
+          "name": "challenge_expires_in",
+          "pointer": "#/components/schemas/EnrollmentStartResponse/properties/challenge_expires_in",
+          "type": "i64"
+        },
+        {
+          "json_name": "challenge_token",
+          "name": "challenge_token",
+          "pointer": "#/components/schemas/EnrollmentStartResponse/properties/challenge_token",
+          "type": "String"
+        },
+        {
+          "json_name": "method_id",
+          "name": "method_id",
+          "pointer": "#/components/schemas/EnrollmentStartResponse/properties/method_id",
+          "type": "String"
+        },
+        {
+          "json_name": "provisioning_uri",
+          "name": "provisioning_uri",
+          "pointer": "#/components/schemas/EnrollmentStartResponse/properties/provisioning_uri",
+          "type": "String"
+        },
+        {
+          "json_name": "secret",
+          "name": "secret",
+          "pointer": "#/components/schemas/EnrollmentStartResponse/properties/secret",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/EnrollmentStartResponse",
+      "type": "EnrollmentStartResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "challenge_token",
+          "name": "challenge_token",
+          "pointer": "#/components/schemas/EnrollmentVerifyRequest/properties/challenge_token",
+          "type": "String"
+        },
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/EnrollmentVerifyRequest/properties/code",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/EnrollmentVerifyRequest",
+      "type": "EnrollmentVerifyRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "generation",
+          "name": "generation",
+          "pointer": "#/components/schemas/EnrollmentVerifyResponse/properties/generation",
+          "type": "i32"
+        },
+        {
+          "json_name": "recovery_codes",
+          "name": "recovery_codes",
+          "pointer": "#/components/schemas/EnrollmentVerifyResponse/properties/recovery_codes",
+          "type": "Vec<String>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/EnrollmentVerifyResponse",
+      "type": "EnrollmentVerifyResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "context",
+          "name": "context",
+          "pointer": "#/components/schemas/ExplainRequest/properties/context",
+          "type": "Option<Option<std::collections::BTreeMap<String, Option<serde_json::Value>>>>"
+        },
+        {
+          "json_name": "permission",
+          "name": "permission",
+          "pointer": "#/components/schemas/ExplainRequest/properties/permission",
+          "type": "String"
+        },
+        {
+          "json_name": "resource",
+          "name": "resource",
+          "pointer": "#/components/schemas/ExplainRequest/properties/resource",
+          "type": "Option<Option<AuthzResourceRef>>"
+        },
+        {
+          "json_name": "subject_id",
+          "name": "subject_id",
+          "pointer": "#/components/schemas/ExplainRequest/properties/subject_id",
+          "type": "String"
+        },
+        {
+          "json_name": "trace",
+          "name": "trace",
+          "pointer": "#/components/schemas/ExplainRequest/properties/trace",
+          "type": "Option<Option<ExplainTraceOptions>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ExplainRequest",
+      "type": "ExplainRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "decision",
+          "name": "decision",
+          "pointer": "#/components/schemas/ExplainResponse/properties/decision",
+          "type": "String"
+        },
+        {
+          "json_name": "matched_policy",
+          "name": "matched_policy",
+          "pointer": "#/components/schemas/ExplainResponse/properties/matched_policy",
+          "type": "Option<Option<AuthzPolicyRef>>"
+        },
+        {
+          "json_name": "policies",
+          "name": "policies",
+          "pointer": "#/components/schemas/ExplainResponse/properties/policies",
+          "type": "Vec<AuthzPolicyExplanation>"
+        },
+        {
+          "json_name": "reason_code",
+          "name": "reason_code",
+          "pointer": "#/components/schemas/ExplainResponse/properties/reason_code",
+          "type": "String"
+        },
+        {
+          "json_name": "total_steps",
+          "name": "total_steps",
+          "pointer": "#/components/schemas/ExplainResponse/properties/total_steps",
+          "type": "i64"
+        },
+        {
+          "json_name": "truncated",
+          "name": "truncated",
+          "pointer": "#/components/schemas/ExplainResponse/properties/truncated",
+          "type": "bool"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ExplainResponse",
+      "type": "ExplainResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "max_steps",
+          "name": "max_steps",
+          "pointer": "#/components/schemas/ExplainTraceOptions/properties/max_steps",
+          "type": "Option<Option<i32>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ExplainTraceOptions",
+      "type": "ExplainTraceOptions"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "context_attrs",
+          "name": "context_attrs",
+          "pointer": "#/components/schemas/FactSpecDto/properties/context_attrs",
+          "type": "Option<std::collections::BTreeMap<String, TypedValueDto>>"
+        },
+        {
+          "json_name": "rbac_permissions",
+          "name": "rbac_permissions",
+          "pointer": "#/components/schemas/FactSpecDto/properties/rbac_permissions",
+          "type": "Option<Vec<String>>"
+        },
+        {
+          "json_name": "relation_tuples",
+          "name": "relation_tuples",
+          "pointer": "#/components/schemas/FactSpecDto/properties/relation_tuples",
+          "type": "Option<Vec<RelationTupleSpecDto>>"
+        },
+        {
+          "json_name": "resources",
+          "name": "resources",
+          "pointer": "#/components/schemas/FactSpecDto/properties/resources",
+          "type": "Option<std::collections::BTreeMap<String, ResourceFactDto>>"
+        },
+        {
+          "json_name": "subject_attrs",
+          "name": "subject_attrs",
+          "pointer": "#/components/schemas/FactSpecDto/properties/subject_attrs",
+          "type": "Option<std::collections::BTreeMap<String, TypedValueDto>>"
+        },
+        {
+          "json_name": "subject_resource_attrs",
+          "name": "subject_resource_attrs",
+          "pointer": "#/components/schemas/FactSpecDto/properties/subject_resource_attrs",
+          "type": "Option<std::collections::BTreeMap<String, std::collections::BTreeMap<String, TypedValueDto>>>"
+        },
+        {
+          "json_name": "subject_roles",
+          "name": "subject_roles",
+          "pointer": "#/components/schemas/FactSpecDto/properties/subject_roles",
+          "type": "Option<Vec<String>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/FactSpecDto",
+      "type": "FactSpecDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "generated_at_rfc3339",
+          "name": "generated_at_rfc3339",
+          "pointer": "#/components/schemas/IdentitySnapshotSummaryDto/properties/generated_at_rfc3339",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "generation",
+          "name": "generation",
+          "pointer": "#/components/schemas/IdentitySnapshotSummaryDto/properties/generation",
+          "type": "i64"
+        },
+        {
+          "json_name": "lag_seconds",
+          "name": "lag_seconds",
+          "pointer": "#/components/schemas/IdentitySnapshotSummaryDto/properties/lag_seconds",
+          "type": "Option<Option<i64>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/IdentitySnapshotSummaryDto",
+      "type": "IdentitySnapshotSummaryDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "binding",
+          "name": "binding",
+          "pointer": "#/components/schemas/ImpactAcknowledgementDto/properties/binding",
+          "type": "ImpactBindingDto"
+        },
+        {
+          "json_name": "expires_at",
+          "name": "expires_at",
+          "pointer": "#/components/schemas/ImpactAcknowledgementDto/properties/expires_at",
+          "type": "String"
+        },
+        {
+          "json_name": "issued_at",
+          "name": "issued_at",
+          "pointer": "#/components/schemas/ImpactAcknowledgementDto/properties/issued_at",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ImpactAcknowledgementDto",
+      "type": "ImpactAcknowledgementDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "checksum",
+          "name": "checksum",
+          "pointer": "#/components/schemas/ImpactBaselineDto/properties/checksum",
+          "type": "String"
+        },
+        {
+          "json_name": "generation",
+          "name": "generation",
+          "pointer": "#/components/schemas/ImpactBaselineDto/properties/generation",
+          "type": "i64"
+        },
+        {
+          "json_name": "revision",
+          "name": "revision",
+          "pointer": "#/components/schemas/ImpactBaselineDto/properties/revision",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ImpactBaselineDto",
+      "type": "ImpactBaselineDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "baseline_generation",
+          "name": "baseline_generation",
+          "pointer": "#/components/schemas/ImpactBindingDto/properties/baseline_generation",
+          "type": "i64"
+        },
+        {
+          "json_name": "content_digest",
+          "name": "content_digest",
+          "pointer": "#/components/schemas/ImpactBindingDto/properties/content_digest",
+          "type": "String"
+        },
+        {
+          "json_name": "evaluated",
+          "name": "evaluated",
+          "pointer": "#/components/schemas/ImpactBindingDto/properties/evaluated",
+          "type": "i64"
+        },
+        {
+          "json_name": "mode",
+          "name": "mode",
+          "pointer": "#/components/schemas/ImpactBindingDto/properties/mode",
+          "type": "String"
+        },
+        {
+          "json_name": "policy_id",
+          "name": "policy_id",
+          "pointer": "#/components/schemas/ImpactBindingDto/properties/policy_id",
+          "type": "String"
+        },
+        {
+          "json_name": "risk_fingerprint",
+          "name": "risk_fingerprint",
+          "pointer": "#/components/schemas/ImpactBindingDto/properties/risk_fingerprint",
+          "type": "String"
+        },
+        {
+          "json_name": "version_id",
+          "name": "version_id",
+          "pointer": "#/components/schemas/ImpactBindingDto/properties/version_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ImpactBindingDto",
+      "type": "ImpactBindingDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/ImpactCandidateDto/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "content_digest",
+          "name": "content_digest",
+          "pointer": "#/components/schemas/ImpactCandidateDto/properties/content_digest",
+          "type": "String"
+        },
+        {
+          "json_name": "draft_version",
+          "name": "draft_version",
+          "pointer": "#/components/schemas/ImpactCandidateDto/properties/draft_version",
+          "type": "i64"
+        },
+        {
+          "json_name": "effect",
+          "name": "effect",
+          "pointer": "#/components/schemas/ImpactCandidateDto/properties/effect",
+          "type": "String"
+        },
+        {
+          "json_name": "policy_id",
+          "name": "policy_id",
+          "pointer": "#/components/schemas/ImpactCandidateDto/properties/policy_id",
+          "type": "String"
+        },
+        {
+          "json_name": "version_id",
+          "name": "version_id",
+          "pointer": "#/components/schemas/ImpactCandidateDto/properties/version_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ImpactCandidateDto",
+      "type": "ImpactCandidateDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "allow_to_deny",
+          "name": "allow_to_deny",
+          "pointer": "#/components/schemas/ImpactDifferencesDto/properties/allow_to_deny",
+          "type": "i64"
+        },
+        {
+          "json_name": "deny_to_allow",
+          "name": "deny_to_allow",
+          "pointer": "#/components/schemas/ImpactDifferencesDto/properties/deny_to_allow",
+          "type": "i64"
+        },
+        {
+          "json_name": "unchanged_allow",
+          "name": "unchanged_allow",
+          "pointer": "#/components/schemas/ImpactDifferencesDto/properties/unchanged_allow",
+          "type": "i64"
+        },
+        {
+          "json_name": "unchanged_deny",
+          "name": "unchanged_deny",
+          "pointer": "#/components/schemas/ImpactDifferencesDto/properties/unchanged_deny",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ImpactDifferencesDto",
+      "type": "ImpactDifferencesDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "kind",
+          "name": "kind",
+          "pointer": "#/components/schemas/ImpactModeDto/properties/kind",
+          "type": "String"
+        },
+        {
+          "json_name": "sample_size",
+          "name": "sample_size",
+          "pointer": "#/components/schemas/ImpactModeDto/properties/sample_size",
+          "type": "Option<Option<i64>>"
+        },
+        {
+          "json_name": "stride",
+          "name": "stride",
+          "pointer": "#/components/schemas/ImpactModeDto/properties/stride",
+          "type": "Option<Option<i64>>"
+        },
+        {
+          "json_name": "universe",
+          "name": "universe",
+          "pointer": "#/components/schemas/ImpactModeDto/properties/universe",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ImpactModeDto",
+      "type": "ImpactModeDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "acknowledgement",
+          "name": "acknowledgement",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/acknowledgement",
+          "type": "ImpactAcknowledgementDto"
+        },
+        {
+          "json_name": "affected_resources",
+          "name": "affected_resources",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/affected_resources",
+          "type": "i64"
+        },
+        {
+          "json_name": "affected_subjects",
+          "name": "affected_subjects",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/affected_subjects",
+          "type": "i64"
+        },
+        {
+          "json_name": "baseline",
+          "name": "baseline",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/baseline",
+          "type": "ImpactBaselineDto"
+        },
+        {
+          "json_name": "candidate",
+          "name": "candidate",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/candidate",
+          "type": "ImpactCandidateDto"
+        },
+        {
+          "json_name": "differences",
+          "name": "differences",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/differences",
+          "type": "ImpactDifferencesDto"
+        },
+        {
+          "json_name": "evaluated_at",
+          "name": "evaluated_at",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/evaluated_at",
+          "type": "String"
+        },
+        {
+          "json_name": "mode",
+          "name": "mode",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/mode",
+          "type": "ImpactModeDto"
+        },
+        {
+          "json_name": "query_shape",
+          "name": "query_shape",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/query_shape",
+          "type": "String"
+        },
+        {
+          "json_name": "risk",
+          "name": "risk",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/risk",
+          "type": "RiskAssessmentDto"
+        },
+        {
+          "json_name": "samples",
+          "name": "samples",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/samples",
+          "type": "Vec<ImpactSampleDto>"
+        },
+        {
+          "json_name": "samples_truncated",
+          "name": "samples_truncated",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/samples_truncated",
+          "type": "bool"
+        },
+        {
+          "json_name": "touches_sensitive_permission",
+          "name": "touches_sensitive_permission",
+          "pointer": "#/components/schemas/ImpactPreviewDto/properties/touches_sensitive_permission",
+          "type": "bool"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ImpactPreviewDto",
+      "type": "ImpactPreviewDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "after",
+          "name": "after",
+          "pointer": "#/components/schemas/ImpactSampleDto/properties/after",
+          "type": "String"
+        },
+        {
+          "json_name": "before",
+          "name": "before",
+          "pointer": "#/components/schemas/ImpactSampleDto/properties/before",
+          "type": "String"
+        },
+        {
+          "json_name": "external_id",
+          "name": "external_id",
+          "pointer": "#/components/schemas/ImpactSampleDto/properties/external_id",
+          "type": "Option<String>"
+        },
+        {
+          "json_name": "permission",
+          "name": "permission",
+          "pointer": "#/components/schemas/ImpactSampleDto/properties/permission",
+          "type": "String"
+        },
+        {
+          "json_name": "resource_type",
+          "name": "resource_type",
+          "pointer": "#/components/schemas/ImpactSampleDto/properties/resource_type",
+          "type": "Option<String>"
+        },
+        {
+          "json_name": "subject_id",
+          "name": "subject_id",
+          "pointer": "#/components/schemas/ImpactSampleDto/properties/subject_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ImpactSampleDto",
+      "type": "ImpactSampleDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "context",
+          "name": "context",
+          "pointer": "#/components/schemas/ListResourcesRequest/properties/context",
+          "type": "Option<Option<std::collections::BTreeMap<String, Option<serde_json::Value>>>>"
+        },
+        {
+          "json_name": "cursor",
+          "name": "cursor",
+          "pointer": "#/components/schemas/ListResourcesRequest/properties/cursor",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "limit",
+          "name": "limit",
+          "pointer": "#/components/schemas/ListResourcesRequest/properties/limit",
+          "type": "Option<Option<i32>>"
+        },
+        {
+          "json_name": "permission",
+          "name": "permission",
+          "pointer": "#/components/schemas/ListResourcesRequest/properties/permission",
+          "type": "String"
+        },
+        {
+          "json_name": "resource_type",
+          "name": "resource_type",
+          "pointer": "#/components/schemas/ListResourcesRequest/properties/resource_type",
+          "type": "String"
+        },
+        {
+          "json_name": "subject_id",
+          "name": "subject_id",
+          "pointer": "#/components/schemas/ListResourcesRequest/properties/subject_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ListResourcesRequest",
+      "type": "ListResourcesRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "status",
+          "name": "status",
+          "pointer": "#/components/schemas/LiveResponse/properties/status",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/LiveResponse",
+      "type": "LiveResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "identifier",
+          "name": "identifier",
+          "pointer": "#/components/schemas/LoginRequest/properties/identifier",
+          "type": "String"
+        },
+        {
+          "json_name": "password",
+          "name": "password",
+          "pointer": "#/components/schemas/LoginRequest/properties/password",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/LoginRequest",
+      "type": "LoginRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "access_token",
+          "name": "access_token",
+          "pointer": "#/components/schemas/LoginResponse/properties/access_token",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "challenge_expires_in",
+          "name": "challenge_expires_in",
+          "pointer": "#/components/schemas/LoginResponse/properties/challenge_expires_in",
+          "type": "Option<Option<i64>>"
+        },
+        {
+          "json_name": "challenge_token",
+          "name": "challenge_token",
+          "pointer": "#/components/schemas/LoginResponse/properties/challenge_token",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "expires_in",
+          "name": "expires_in",
+          "pointer": "#/components/schemas/LoginResponse/properties/expires_in",
+          "type": "Option<Option<i64>>"
+        },
+        {
+          "json_name": "methods",
+          "name": "methods",
+          "pointer": "#/components/schemas/LoginResponse/properties/methods",
+          "type": "Option<Option<Vec<String>>>"
+        },
+        {
+          "json_name": "status",
+          "name": "status",
+          "pointer": "#/components/schemas/LoginResponse/properties/status",
+          "type": "LoginStatus"
+        },
+        {
+          "json_name": "token_type",
+          "name": "token_type",
+          "pointer": "#/components/schemas/LoginResponse/properties/token_type",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "user",
+          "name": "user",
+          "pointer": "#/components/schemas/LoginResponse/properties/user",
+          "type": "Option<Option<AuthUserDto>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/LoginResponse",
+      "type": "LoginResponse"
+    },
+    {
+      "fields": [],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/LoginStatus",
+      "type": "LoginStatus"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "reauth",
+          "name": "reauth",
+          "pointer": "#/components/schemas/LogoutAllRequest/properties/reauth",
+          "type": "ReauthProof"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/LogoutAllRequest",
+      "type": "LogoutAllRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "effective_mode",
+          "name": "effective_mode",
+          "pointer": "#/components/schemas/MeMfaDto/properties/effective_mode",
+          "type": "String"
+        },
+        {
+          "json_name": "has_active_method",
+          "name": "has_active_method",
+          "pointer": "#/components/schemas/MeMfaDto/properties/has_active_method",
+          "type": "bool"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MeMfaDto",
+      "type": "MeMfaDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "mfa",
+          "name": "mfa",
+          "pointer": "#/components/schemas/MeResponse/properties/mfa",
+          "type": "MeMfaDto"
+        },
+        {
+          "json_name": "mfa_verified",
+          "name": "mfa_verified",
+          "pointer": "#/components/schemas/MeResponse/properties/mfa_verified",
+          "type": "bool"
+        },
+        {
+          "json_name": "permissions",
+          "name": "permissions",
+          "pointer": "#/components/schemas/MeResponse/properties/permissions",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "session_id",
+          "name": "session_id",
+          "pointer": "#/components/schemas/MeResponse/properties/session_id",
+          "type": "String"
+        },
+        {
+          "json_name": "user",
+          "name": "user",
+          "pointer": "#/components/schemas/MeResponse/properties/user",
+          "type": "AuthUserDto"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MeResponse",
+      "type": "MeResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "authz_revision",
+          "name": "authz_revision",
+          "pointer": "#/components/schemas/Meta/properties/authz_revision",
+          "type": "i64"
+        },
+        {
+          "json_name": "snapshot_generation",
+          "name": "snapshot_generation",
+          "pointer": "#/components/schemas/Meta/properties/snapshot_generation",
+          "type": "Option<Option<i64>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/Meta",
+      "type": "Meta"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "reauth",
+          "name": "reauth",
+          "pointer": "#/components/schemas/MfaDisableRequest/properties/reauth",
+          "type": "ReauthProof"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MfaDisableRequest",
+      "type": "MfaDisableRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "reauth",
+          "name": "reauth",
+          "pointer": "#/components/schemas/MfaEnrollRequest/properties/reauth",
+          "type": "ReauthProof"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MfaEnrollRequest",
+      "type": "MfaEnrollRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "method_id",
+          "name": "method_id",
+          "pointer": "#/components/schemas/MfaEnrollResponse/properties/method_id",
+          "type": "String"
+        },
+        {
+          "json_name": "provisioning_uri",
+          "name": "provisioning_uri",
+          "pointer": "#/components/schemas/MfaEnrollResponse/properties/provisioning_uri",
+          "type": "String"
+        },
+        {
+          "json_name": "secret",
+          "name": "secret",
+          "pointer": "#/components/schemas/MfaEnrollResponse/properties/secret",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MfaEnrollResponse",
+      "type": "MfaEnrollResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/MfaEnrollVerifyRequest/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "reauth",
+          "name": "reauth",
+          "pointer": "#/components/schemas/MfaEnrollVerifyRequest/properties/reauth",
+          "type": "ReauthProof"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MfaEnrollVerifyRequest",
+      "type": "MfaEnrollVerifyRequest"
+    },
+    {
+      "fields": [],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MfaPolicyModeBody",
+      "type": "MfaPolicyModeBody"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "generation",
+          "name": "generation",
+          "pointer": "#/components/schemas/MfaRecoveryCodesResponse/properties/generation",
+          "type": "i32"
+        },
+        {
+          "json_name": "recovery_codes",
+          "name": "recovery_codes",
+          "pointer": "#/components/schemas/MfaRecoveryCodesResponse/properties/recovery_codes",
+          "type": "Vec<String>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MfaRecoveryCodesResponse",
+      "type": "MfaRecoveryCodesResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "challenge_token",
+          "name": "challenge_token",
+          "pointer": "#/components/schemas/MfaRecoveryRequest/properties/challenge_token",
+          "type": "String"
+        },
+        {
+          "json_name": "recovery_code",
+          "name": "recovery_code",
+          "pointer": "#/components/schemas/MfaRecoveryRequest/properties/recovery_code",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MfaRecoveryRequest",
+      "type": "MfaRecoveryRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "reauth",
+          "name": "reauth",
+          "pointer": "#/components/schemas/MfaRegenerateRequest/properties/reauth",
+          "type": "ReauthProof"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MfaRegenerateRequest",
+      "type": "MfaRegenerateRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "available",
+          "name": "available",
+          "pointer": "#/components/schemas/MfaStatusResponse/properties/available",
+          "type": "bool"
+        },
+        {
+          "json_name": "deployment_mode",
+          "name": "deployment_mode",
+          "pointer": "#/components/schemas/MfaStatusResponse/properties/deployment_mode",
+          "type": "String"
+        },
+        {
+          "json_name": "effective_mode",
+          "name": "effective_mode",
+          "pointer": "#/components/schemas/MfaStatusResponse/properties/effective_mode",
+          "type": "String"
+        },
+        {
+          "json_name": "has_active_method",
+          "name": "has_active_method",
+          "pointer": "#/components/schemas/MfaStatusResponse/properties/has_active_method",
+          "type": "bool"
+        },
+        {
+          "json_name": "has_pending_enrollment",
+          "name": "has_pending_enrollment",
+          "pointer": "#/components/schemas/MfaStatusResponse/properties/has_pending_enrollment",
+          "type": "bool"
+        },
+        {
+          "json_name": "unused_recovery_codes",
+          "name": "unused_recovery_codes",
+          "pointer": "#/components/schemas/MfaStatusResponse/properties/unused_recovery_codes",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MfaStatusResponse",
+      "type": "MfaStatusResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "challenge_token",
+          "name": "challenge_token",
+          "pointer": "#/components/schemas/MfaVerifyRequest/properties/challenge_token",
+          "type": "String"
+        },
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/MfaVerifyRequest/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "method",
+          "name": "method",
+          "pointer": "#/components/schemas/MfaVerifyRequest/properties/method",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MfaVerifyRequest",
+      "type": "MfaVerifyRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "replayed",
+          "name": "replayed",
+          "pointer": "#/components/schemas/MutationAckDto/properties/replayed",
+          "type": "bool"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/MutationAckDto",
+      "type": "MutationAckDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "has_more",
+          "name": "has_more",
+          "pointer": "#/components/schemas/Page/properties/has_more",
+          "type": "bool"
+        },
+        {
+          "json_name": "next_cursor",
+          "name": "next_cursor",
+          "pointer": "#/components/schemas/Page/properties/next_cursor",
+          "type": "Option<Option<String>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/Page",
+      "type": "Page"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_AttributeDto/properties/data",
+          "type": "Vec<AttributeDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_AttributeDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_AttributeDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_AttributeDto",
+      "type": "PagedResponseAttributeDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_AuditEventDto/properties/data",
+          "type": "Vec<AuditEventDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_AuditEventDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_AuditEventDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_AuditEventDto",
+      "type": "PagedResponseAuditEventDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_AuthzResourceRef/properties/data",
+          "type": "Vec<AuthzResourceRef>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_AuthzResourceRef/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_AuthzResourceRef/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_AuthzResourceRef",
+      "type": "PagedResponseAuthzResourceRef"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_PermissionDto/properties/data",
+          "type": "Vec<PermissionDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_PermissionDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_PermissionDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_PermissionDto",
+      "type": "PagedResponsePermissionDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_PolicyBindingDto/properties/data",
+          "type": "Vec<PolicyBindingDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_PolicyBindingDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_PolicyBindingDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_PolicyBindingDto",
+      "type": "PagedResponsePolicyBindingDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_PolicyDto/properties/data",
+          "type": "Vec<PolicyDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_PolicyDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_PolicyDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_PolicyDto",
+      "type": "PagedResponsePolicyDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_RelationDefinitionDto/properties/data",
+          "type": "Vec<RelationDefinitionDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_RelationDefinitionDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_RelationDefinitionDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_RelationDefinitionDto",
+      "type": "PagedResponseRelationDefinitionDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_RelationTupleDto/properties/data",
+          "type": "Vec<RelationTupleDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_RelationTupleDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_RelationTupleDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_RelationTupleDto",
+      "type": "PagedResponseRelationTupleDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_ResourceDto/properties/data",
+          "type": "Vec<ResourceDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_ResourceDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_ResourceDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_ResourceDto",
+      "type": "PagedResponseResourceDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_ResourceTypeDto/properties/data",
+          "type": "Vec<ResourceTypeDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_ResourceTypeDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_ResourceTypeDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_ResourceTypeDto",
+      "type": "PagedResponseResourceTypeDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_RoleDto/properties/data",
+          "type": "Vec<RoleDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_RoleDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_RoleDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_RoleDto",
+      "type": "PagedResponseRoleDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_UserDto/properties/data",
+          "type": "Vec<UserDto>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_UserDto/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_UserDto/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_UserDto",
+      "type": "PagedResponseUserDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "data",
+          "name": "data",
+          "pointer": "#/components/schemas/PagedResponse_Value/properties/data",
+          "type": "Vec<Option<serde_json::Value>>"
+        },
+        {
+          "json_name": "meta",
+          "name": "meta",
+          "pointer": "#/components/schemas/PagedResponse_Value/properties/meta",
+          "type": "Option<Option<Meta>>"
+        },
+        {
+          "json_name": "page",
+          "name": "page",
+          "pointer": "#/components/schemas/PagedResponse_Value/properties/page",
+          "type": "Page"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PagedResponse_Value",
+      "type": "PagedResponseValue"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "index_mode",
+          "name": "index_mode",
+          "pointer": "#/components/schemas/PatchAttributeRequest/properties/index_mode",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/PatchAttributeRequest/properties/name",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "owner_type",
+          "name": "owner_type",
+          "pointer": "#/components/schemas/PatchAttributeRequest/properties/owner_type",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "value_type",
+          "name": "value_type",
+          "pointer": "#/components/schemas/PatchAttributeRequest/properties/value_type",
+          "type": "Option<Option<String>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PatchAttributeRequest",
+      "type": "PatchAttributeRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "enabled",
+          "name": "enabled",
+          "pointer": "#/components/schemas/PatchPolicyBindingRequest/properties/enabled",
+          "type": "Option<Option<bool>>"
+        },
+        {
+          "json_name": "priority",
+          "name": "priority",
+          "pointer": "#/components/schemas/PatchPolicyBindingRequest/properties/priority",
+          "type": "Option<Option<i32>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PatchPolicyBindingRequest",
+      "type": "PatchPolicyBindingRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/PatchPolicyRequest/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "effect",
+          "name": "effect",
+          "pointer": "#/components/schemas/PatchPolicyRequest/properties/effect",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "expression",
+          "name": "expression",
+          "pointer": "#/components/schemas/PatchPolicyRequest/properties/expression",
+          "type": "Option<Option<serde_json::Value>>"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/PatchPolicyRequest/properties/name",
+          "type": "Option<Option<String>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PatchPolicyRequest",
+      "type": "PatchPolicyRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/PatchResourceRequest/properties/name",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "status",
+          "name": "status",
+          "pointer": "#/components/schemas/PatchResourceRequest/properties/status",
+          "type": "Option<Option<String>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PatchResourceRequest",
+      "type": "PatchResourceRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/PatchResourceTypeRequest/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "existence_hiding",
+          "name": "existence_hiding",
+          "pointer": "#/components/schemas/PatchResourceTypeRequest/properties/existence_hiding",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/PatchResourceTypeRequest/properties/name",
+          "type": "Option<Option<String>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PatchResourceTypeRequest",
+      "type": "PatchResourceTypeRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/PatchRoleRequest/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/PatchRoleRequest/properties/name",
+          "type": "Option<Option<String>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PatchRoleRequest",
+      "type": "PatchRoleRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "display_name",
+          "name": "display_name",
+          "pointer": "#/components/schemas/PatchUserRequest/properties/display_name",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "email",
+          "name": "email",
+          "pointer": "#/components/schemas/PatchUserRequest/properties/email",
+          "type": "Option<Option<String>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PatchUserRequest",
+      "type": "PatchUserRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "action",
+          "name": "action",
+          "pointer": "#/components/schemas/PermissionDto/properties/action",
+          "type": "String"
+        },
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/PermissionDto/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "deprecated",
+          "name": "deprecated",
+          "pointer": "#/components/schemas/PermissionDto/properties/deprecated",
+          "type": "bool"
+        },
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/PermissionDto/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/PermissionDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/PermissionDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/PermissionDto/properties/name",
+          "type": "String"
+        },
+        {
+          "json_name": "resource_type",
+          "name": "resource_type",
+          "pointer": "#/components/schemas/PermissionDto/properties/resource_type",
+          "type": "String"
+        },
+        {
+          "json_name": "roles_count",
+          "name": "roles_count",
+          "pointer": "#/components/schemas/PermissionDto/properties/roles_count",
+          "type": "i64"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/PermissionDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PermissionDto",
+      "type": "PermissionDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "batch",
+          "name": "batch",
+          "pointer": "#/components/schemas/PlanDetailDto/properties/batch",
+          "type": "String"
+        },
+        {
+          "json_name": "list",
+          "name": "list",
+          "pointer": "#/components/schemas/PlanDetailDto/properties/list",
+          "type": "String"
+        },
+        {
+          "json_name": "logical",
+          "name": "logical",
+          "pointer": "#/components/schemas/PlanDetailDto/properties/logical",
+          "type": "String"
+        },
+        {
+          "json_name": "point",
+          "name": "point",
+          "pointer": "#/components/schemas/PlanDetailDto/properties/point",
+          "type": "String"
+        },
+        {
+          "json_name": "stats_generation",
+          "name": "stats_generation",
+          "pointer": "#/components/schemas/PlanDetailDto/properties/stats_generation",
+          "type": "Option<Option<i64>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PlanDetailDto",
+      "type": "PlanDetailDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "disabled",
+          "name": "disabled",
+          "pointer": "#/components/schemas/PoliciesStatsDto/properties/disabled",
+          "type": "i64"
+        },
+        {
+          "json_name": "drafts",
+          "name": "drafts",
+          "pointer": "#/components/schemas/PoliciesStatsDto/properties/drafts",
+          "type": "i64"
+        },
+        {
+          "json_name": "latest_business_version",
+          "name": "latest_business_version",
+          "pointer": "#/components/schemas/PoliciesStatsDto/properties/latest_business_version",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "published",
+          "name": "published",
+          "pointer": "#/components/schemas/PoliciesStatsDto/properties/published",
+          "type": "i64"
+        },
+        {
+          "json_name": "published_versions",
+          "name": "published_versions",
+          "pointer": "#/components/schemas/PoliciesStatsDto/properties/published_versions",
+          "type": "i64"
+        },
+        {
+          "json_name": "total",
+          "name": "total",
+          "pointer": "#/components/schemas/PoliciesStatsDto/properties/total",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PoliciesStatsDto",
+      "type": "PoliciesStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "drafts",
+          "name": "drafts",
+          "pointer": "#/components/schemas/PoliciesSummaryDto/properties/drafts",
+          "type": "i64"
+        },
+        {
+          "json_name": "latest_business_version",
+          "name": "latest_business_version",
+          "pointer": "#/components/schemas/PoliciesSummaryDto/properties/latest_business_version",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "published_versions",
+          "name": "published_versions",
+          "pointer": "#/components/schemas/PoliciesSummaryDto/properties/published_versions",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PoliciesSummaryDto",
+      "type": "PoliciesSummaryDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "effect",
+          "name": "effect",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/effect",
+          "type": "String"
+        },
+        {
+          "json_name": "enabled",
+          "name": "enabled",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/enabled",
+          "type": "bool"
+        },
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "permission",
+          "name": "permission",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/permission",
+          "type": "String"
+        },
+        {
+          "json_name": "policy_code",
+          "name": "policy_code",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/policy_code",
+          "type": "String"
+        },
+        {
+          "json_name": "policy_id",
+          "name": "policy_id",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/policy_id",
+          "type": "String"
+        },
+        {
+          "json_name": "policy_version_id",
+          "name": "policy_version_id",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/policy_version_id",
+          "type": "String"
+        },
+        {
+          "json_name": "priority",
+          "name": "priority",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/priority",
+          "type": "i32"
+        },
+        {
+          "json_name": "resource_type",
+          "name": "resource_type",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/resource_type",
+          "type": "String"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/PolicyBindingDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PolicyBindingDto",
+      "type": "PolicyBindingDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "draft",
+          "name": "draft",
+          "pointer": "#/components/schemas/PolicyDetailDto/properties/draft",
+          "type": "Option<Option<PolicyVersionDto>>"
+        },
+        {
+          "json_name": "policy",
+          "name": "policy",
+          "pointer": "#/components/schemas/PolicyDetailDto/properties/policy",
+          "type": "PolicyDto"
+        },
+        {
+          "json_name": "published",
+          "name": "published",
+          "pointer": "#/components/schemas/PolicyDetailDto/properties/published",
+          "type": "Option<Option<PolicyVersionDto>>"
+        },
+        {
+          "json_name": "versions",
+          "name": "versions",
+          "pointer": "#/components/schemas/PolicyDetailDto/properties/versions",
+          "type": "Vec<PolicyVersionDto>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PolicyDetailDto",
+      "type": "PolicyDetailDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/PolicyDto/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "current_draft_version_id",
+          "name": "current_draft_version_id",
+          "pointer": "#/components/schemas/PolicyDto/properties/current_draft_version_id",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "current_published_version_id",
+          "name": "current_published_version_id",
+          "pointer": "#/components/schemas/PolicyDto/properties/current_published_version_id",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/PolicyDto/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/PolicyDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/PolicyDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "lifecycle",
+          "name": "lifecycle",
+          "pointer": "#/components/schemas/PolicyDto/properties/lifecycle",
+          "type": "String"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/PolicyDto/properties/name",
+          "type": "String"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/PolicyDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PolicyDto",
+      "type": "PolicyDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/PolicyIssueDto/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "detail",
+          "name": "detail",
+          "pointer": "#/components/schemas/PolicyIssueDto/properties/detail",
+          "type": "String"
+        },
+        {
+          "json_name": "path",
+          "name": "path",
+          "pointer": "#/components/schemas/PolicyIssueDto/properties/path",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PolicyIssueDto",
+      "type": "PolicyIssueDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "expected",
+          "name": "expected",
+          "pointer": "#/components/schemas/PolicyTestCaseDto/properties/expected",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/PolicyTestCaseDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "input",
+          "name": "input",
+          "pointer": "#/components/schemas/PolicyTestCaseDto/properties/input",
+          "type": "PolicyTestCaseInputDto"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/PolicyTestCaseDto/properties/name",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PolicyTestCaseDto",
+      "type": "PolicyTestCaseDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "binding",
+          "name": "binding",
+          "pointer": "#/components/schemas/PolicyTestCaseInputDto/properties/binding",
+          "type": "BindingSpecDto"
+        },
+        {
+          "json_name": "facts",
+          "name": "facts",
+          "pointer": "#/components/schemas/PolicyTestCaseInputDto/properties/facts",
+          "type": "Option<FactSpecDto>"
+        },
+        {
+          "json_name": "request",
+          "name": "request",
+          "pointer": "#/components/schemas/PolicyTestCaseInputDto/properties/request",
+          "type": "Option<RequestSpecDto>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PolicyTestCaseInputDto",
+      "type": "PolicyTestCaseInputDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "case",
+          "name": "case",
+          "pointer": "#/components/schemas/PolicyTestCaseWriteDto/properties/case",
+          "type": "PolicyTestCaseDto"
+        },
+        {
+          "json_name": "policy",
+          "name": "policy",
+          "pointer": "#/components/schemas/PolicyTestCaseWriteDto/properties/policy",
+          "type": "PolicyDto"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PolicyTestCaseWriteDto",
+      "type": "PolicyTestCaseWriteDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "issues",
+          "name": "issues",
+          "pointer": "#/components/schemas/PolicyValidationDto/properties/issues",
+          "type": "Vec<PolicyIssueDto>"
+        },
+        {
+          "json_name": "referenced_attributes",
+          "name": "referenced_attributes",
+          "pointer": "#/components/schemas/PolicyValidationDto/properties/referenced_attributes",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "referenced_permissions",
+          "name": "referenced_permissions",
+          "pointer": "#/components/schemas/PolicyValidationDto/properties/referenced_permissions",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "referenced_roles",
+          "name": "referenced_roles",
+          "pointer": "#/components/schemas/PolicyValidationDto/properties/referenced_roles",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "valid",
+          "name": "valid",
+          "pointer": "#/components/schemas/PolicyValidationDto/properties/valid",
+          "type": "bool"
+        },
+        {
+          "json_name": "warnings",
+          "name": "warnings",
+          "pointer": "#/components/schemas/PolicyValidationDto/properties/warnings",
+          "type": "Vec<Option<serde_json::Value>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PolicyValidationDto",
+      "type": "PolicyValidationDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "created_at_rfc3339",
+          "name": "created_at_rfc3339",
+          "pointer": "#/components/schemas/PolicyVersionDto/properties/created_at_rfc3339",
+          "type": "String"
+        },
+        {
+          "json_name": "effect",
+          "name": "effect",
+          "pointer": "#/components/schemas/PolicyVersionDto/properties/effect",
+          "type": "String"
+        },
+        {
+          "json_name": "expression",
+          "name": "expression",
+          "pointer": "#/components/schemas/PolicyVersionDto/properties/expression",
+          "type": "Option<serde_json::Value>"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/PolicyVersionDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "policy_id",
+          "name": "policy_id",
+          "pointer": "#/components/schemas/PolicyVersionDto/properties/policy_id",
+          "type": "String"
+        },
+        {
+          "json_name": "published_at",
+          "name": "published_at",
+          "pointer": "#/components/schemas/PolicyVersionDto/properties/published_at",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "status",
+          "name": "status",
+          "pointer": "#/components/schemas/PolicyVersionDto/properties/status",
+          "type": "String"
+        },
+        {
+          "json_name": "version_number",
+          "name": "version_number",
+          "pointer": "#/components/schemas/PolicyVersionDto/properties/version_number",
+          "type": "i32"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PolicyVersionDto",
+      "type": "PolicyVersionDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "committed_unpublished_revision",
+          "name": "committed_unpublished_revision",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/committed_unpublished_revision",
+          "type": "Option<Option<i64>>"
+        },
+        {
+          "json_name": "consecutive_recovery_failures",
+          "name": "consecutive_recovery_failures",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/consecutive_recovery_failures",
+          "type": "i64"
+        },
+        {
+          "json_name": "evidence_write_failures_total",
+          "name": "evidence_write_failures_total",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/evidence_write_failures_total",
+          "type": "i64"
+        },
+        {
+          "json_name": "last_failure_at",
+          "name": "last_failure_at",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/last_failure_at",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "last_failure_stage",
+          "name": "last_failure_stage",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/last_failure_stage",
+          "type": "Option<Option<PublicationFailureStage>>"
+        },
+        {
+          "json_name": "last_refusal",
+          "name": "last_refusal",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/last_refusal",
+          "type": "Option<Option<PublicationRefusal>>"
+        },
+        {
+          "json_name": "last_success_at",
+          "name": "last_success_at",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/last_success_at",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "last_success_generation",
+          "name": "last_success_generation",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/last_success_generation",
+          "type": "Option<Option<i64>>"
+        },
+        {
+          "json_name": "publish_attempts_total",
+          "name": "publish_attempts_total",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/publish_attempts_total",
+          "type": "i64"
+        },
+        {
+          "json_name": "publish_failures_total",
+          "name": "publish_failures_total",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/publish_failures_total",
+          "type": "i64"
+        },
+        {
+          "json_name": "recovery_cycles_total",
+          "name": "recovery_cycles_total",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/recovery_cycles_total",
+          "type": "i64"
+        },
+        {
+          "json_name": "recovery_failures_total",
+          "name": "recovery_failures_total",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/recovery_failures_total",
+          "type": "i64"
+        },
+        {
+          "json_name": "recovery_running",
+          "name": "recovery_running",
+          "pointer": "#/components/schemas/PublicationDiagnostics/properties/recovery_running",
+          "type": "bool"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PublicationDiagnostics",
+      "type": "PublicationDiagnostics"
+    },
+    {
+      "fields": [],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PublicationFailureStage",
+      "type": "PublicationFailureStage"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "class",
+          "name": "class",
+          "pointer": "#/components/schemas/PublicationRefusal/properties/class",
+          "type": "String"
+        },
+        {
+          "json_name": "reason_code",
+          "name": "reason_code",
+          "pointer": "#/components/schemas/PublicationRefusal/properties/reason_code",
+          "type": "String"
+        },
+        {
+          "json_name": "revision",
+          "name": "revision",
+          "pointer": "#/components/schemas/PublicationRefusal/properties/revision",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PublicationRefusal",
+      "type": "PublicationRefusal"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "acknowledgement",
+          "name": "acknowledgement",
+          "pointer": "#/components/schemas/PublishPolicyRequest/properties/acknowledgement",
+          "type": "Option<Option<ImpactAcknowledgementDto>>"
+        },
+        {
+          "json_name": "reauth",
+          "name": "reauth",
+          "pointer": "#/components/schemas/PublishPolicyRequest/properties/reauth",
+          "type": "ReauthProof"
+        },
+        {
+          "json_name": "version_id",
+          "name": "version_id",
+          "pointer": "#/components/schemas/PublishPolicyRequest/properties/version_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PublishPolicyRequest",
+      "type": "PublishPolicyRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "acknowledged",
+          "name": "acknowledged",
+          "pointer": "#/components/schemas/PublishPolicyResultDto/properties/acknowledged",
+          "type": "bool"
+        },
+        {
+          "json_name": "bindings_repointed",
+          "name": "bindings_repointed",
+          "pointer": "#/components/schemas/PublishPolicyResultDto/properties/bindings_repointed",
+          "type": "i64"
+        },
+        {
+          "json_name": "checksum",
+          "name": "checksum",
+          "pointer": "#/components/schemas/PublishPolicyResultDto/properties/checksum",
+          "type": "String"
+        },
+        {
+          "json_name": "effect",
+          "name": "effect",
+          "pointer": "#/components/schemas/PublishPolicyResultDto/properties/effect",
+          "type": "String"
+        },
+        {
+          "json_name": "generation",
+          "name": "generation",
+          "pointer": "#/components/schemas/PublishPolicyResultDto/properties/generation",
+          "type": "i64"
+        },
+        {
+          "json_name": "policy_id",
+          "name": "policy_id",
+          "pointer": "#/components/schemas/PublishPolicyResultDto/properties/policy_id",
+          "type": "String"
+        },
+        {
+          "json_name": "revision",
+          "name": "revision",
+          "pointer": "#/components/schemas/PublishPolicyResultDto/properties/revision",
+          "type": "i64"
+        },
+        {
+          "json_name": "version_id",
+          "name": "version_id",
+          "pointer": "#/components/schemas/PublishPolicyResultDto/properties/version_id",
+          "type": "String"
+        },
+        {
+          "json_name": "version_number",
+          "name": "version_number",
+          "pointer": "#/components/schemas/PublishPolicyResultDto/properties/version_number",
+          "type": "i32"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/PublishPolicyResultDto",
+      "type": "PublishPolicyResultDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "detail",
+          "name": "detail",
+          "pointer": "#/components/schemas/ReadinessCheck/properties/detail",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/ReadinessCheck/properties/name",
+          "type": "String"
+        },
+        {
+          "json_name": "ready",
+          "name": "ready",
+          "pointer": "#/components/schemas/ReadinessCheck/properties/ready",
+          "type": "bool"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ReadinessCheck",
+      "type": "ReadinessCheck"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "audit_writer",
+          "name": "audit_writer",
+          "pointer": "#/components/schemas/ReadinessSummaryDto/properties/audit_writer",
+          "type": "AuditWriterSummaryDto"
+        },
+        {
+          "json_name": "identity_snapshot",
+          "name": "identity_snapshot",
+          "pointer": "#/components/schemas/ReadinessSummaryDto/properties/identity_snapshot",
+          "type": "IdentitySnapshotSummaryDto"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ReadinessSummaryDto",
+      "type": "ReadinessSummaryDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "error",
+          "name": "error",
+          "pointer": "#/components/schemas/ReadyFailureBody/properties/error",
+          "type": "ApiErrorPayload"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ReadyFailureBody",
+      "type": "ReadyFailureBody"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "checks",
+          "name": "checks",
+          "pointer": "#/components/schemas/ReadyResponse/properties/checks",
+          "type": "Vec<ReadinessCheck>"
+        },
+        {
+          "json_name": "publication",
+          "name": "publication",
+          "pointer": "#/components/schemas/ReadyResponse/properties/publication",
+          "type": "Option<Option<PublicationDiagnostics>>"
+        },
+        {
+          "json_name": "retained",
+          "name": "retained",
+          "pointer": "#/components/schemas/ReadyResponse/properties/retained",
+          "type": "Option<Option<RetainedStateCounts>>"
+        },
+        {
+          "json_name": "status",
+          "name": "status",
+          "pointer": "#/components/schemas/ReadyResponse/properties/status",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ReadyResponse",
+      "type": "ReadyResponse"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "mfa_code",
+          "name": "mfa_code",
+          "pointer": "#/components/schemas/ReauthProof/properties/mfa_code",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "password",
+          "name": "password",
+          "pointer": "#/components/schemas/ReauthProof/properties/password",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ReauthProof",
+      "type": "ReauthProof"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "created_at_rfc3339",
+          "name": "created_at_rfc3339",
+          "pointer": "#/components/schemas/RelationDefinitionDto/properties/created_at_rfc3339",
+          "type": "String"
+        },
+        {
+          "json_name": "created_by",
+          "name": "created_by",
+          "pointer": "#/components/schemas/RelationDefinitionDto/properties/created_by",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/RelationDefinitionDto/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/RelationDefinitionDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "object_type",
+          "name": "object_type",
+          "pointer": "#/components/schemas/RelationDefinitionDto/properties/object_type",
+          "type": "String"
+        },
+        {
+          "json_name": "relation",
+          "name": "relation",
+          "pointer": "#/components/schemas/RelationDefinitionDto/properties/relation",
+          "type": "String"
+        },
+        {
+          "json_name": "rewrites",
+          "name": "rewrites",
+          "pointer": "#/components/schemas/RelationDefinitionDto/properties/rewrites",
+          "type": "Vec<RewriteRuleDto>"
+        },
+        {
+          "json_name": "subject_types",
+          "name": "subject_types",
+          "pointer": "#/components/schemas/RelationDefinitionDto/properties/subject_types",
+          "type": "Vec<String>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RelationDefinitionDto",
+      "type": "RelationDefinitionDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "created_at_rfc3339",
+          "name": "created_at_rfc3339",
+          "pointer": "#/components/schemas/RelationTupleDto/properties/created_at_rfc3339",
+          "type": "String"
+        },
+        {
+          "json_name": "created_by",
+          "name": "created_by",
+          "pointer": "#/components/schemas/RelationTupleDto/properties/created_by",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/RelationTupleDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "object_id",
+          "name": "object_id",
+          "pointer": "#/components/schemas/RelationTupleDto/properties/object_id",
+          "type": "String"
+        },
+        {
+          "json_name": "object_type",
+          "name": "object_type",
+          "pointer": "#/components/schemas/RelationTupleDto/properties/object_type",
+          "type": "String"
+        },
+        {
+          "json_name": "relation",
+          "name": "relation",
+          "pointer": "#/components/schemas/RelationTupleDto/properties/relation",
+          "type": "String"
+        },
+        {
+          "json_name": "subject_id",
+          "name": "subject_id",
+          "pointer": "#/components/schemas/RelationTupleDto/properties/subject_id",
+          "type": "String"
+        },
+        {
+          "json_name": "subject_type",
+          "name": "subject_type",
+          "pointer": "#/components/schemas/RelationTupleDto/properties/subject_type",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RelationTupleDto",
+      "type": "RelationTupleDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "relation",
+          "name": "relation",
+          "pointer": "#/components/schemas/RelationTupleSpecDto/properties/relation",
+          "type": "String"
+        },
+        {
+          "json_name": "resource",
+          "name": "resource",
+          "pointer": "#/components/schemas/RelationTupleSpecDto/properties/resource",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RelationTupleSpecDto",
+      "type": "RelationTupleSpecDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "attributes",
+          "name": "attributes",
+          "pointer": "#/components/schemas/ReplaceAttributesRequest/properties/attributes",
+          "type": "Vec<AttributeAssignmentDto>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ReplaceAttributesRequest",
+      "type": "ReplaceAttributesRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "permission_ids",
+          "name": "permission_ids",
+          "pointer": "#/components/schemas/ReplaceRolePermissionsRequest/properties/permission_ids",
+          "type": "Vec<String>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ReplaceRolePermissionsRequest",
+      "type": "ReplaceRolePermissionsRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "role_ids",
+          "name": "role_ids",
+          "pointer": "#/components/schemas/ReplaceUserRolesRequest/properties/role_ids",
+          "type": "Vec<String>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ReplaceUserRolesRequest",
+      "type": "ReplaceUserRolesRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "permission",
+          "name": "permission",
+          "pointer": "#/components/schemas/RequestSpecDto/properties/permission",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "resource",
+          "name": "resource",
+          "pointer": "#/components/schemas/RequestSpecDto/properties/resource",
+          "type": "Option<Option<String>>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RequestSpecDto",
+      "type": "RequestSpecDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "new_password",
+          "name": "new_password",
+          "pointer": "#/components/schemas/ResetPasswordRequest/properties/new_password",
+          "type": "String"
+        },
+        {
+          "json_name": "reauth",
+          "name": "reauth",
+          "pointer": "#/components/schemas/ResetPasswordRequest/properties/reauth",
+          "type": "ReauthProof"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ResetPasswordRequest",
+      "type": "ResetPasswordRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/ResourceDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "external_id",
+          "name": "external_id",
+          "pointer": "#/components/schemas/ResourceDto/properties/external_id",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/ResourceDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/ResourceDto/properties/name",
+          "type": "String"
+        },
+        {
+          "json_name": "resource_type_code",
+          "name": "resource_type_code",
+          "pointer": "#/components/schemas/ResourceDto/properties/resource_type_code",
+          "type": "String"
+        },
+        {
+          "json_name": "status",
+          "name": "status",
+          "pointer": "#/components/schemas/ResourceDto/properties/status",
+          "type": "String"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/ResourceDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ResourceDto",
+      "type": "ResourceDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "attrs",
+          "name": "attrs",
+          "pointer": "#/components/schemas/ResourceFactDto/properties/attrs",
+          "type": "Option<std::collections::BTreeMap<String, TypedValueDto>>"
+        },
+        {
+          "json_name": "type",
+          "name": "type_",
+          "pointer": "#/components/schemas/ResourceFactDto/properties/type",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ResourceFactDto",
+      "type": "ResourceFactDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/ResourceTypeDto/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/ResourceTypeDto/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/ResourceTypeDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "existence_hiding",
+          "name": "existence_hiding",
+          "pointer": "#/components/schemas/ResourceTypeDto/properties/existence_hiding",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/ResourceTypeDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/ResourceTypeDto/properties/name",
+          "type": "String"
+        },
+        {
+          "json_name": "resources_count",
+          "name": "resources_count",
+          "pointer": "#/components/schemas/ResourceTypeDto/properties/resources_count",
+          "type": "i64"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/ResourceTypeDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ResourceTypeDto",
+      "type": "ResourceTypeDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "total",
+          "name": "total",
+          "pointer": "#/components/schemas/ResourceTypesStatsDto/properties/total",
+          "type": "i64"
+        },
+        {
+          "json_name": "with_existence_hiding",
+          "name": "with_existence_hiding",
+          "pointer": "#/components/schemas/ResourceTypesStatsDto/properties/with_existence_hiding",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ResourceTypesStatsDto",
+      "type": "ResourceTypesStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "active",
+          "name": "active",
+          "pointer": "#/components/schemas/ResourcesStatsDto/properties/active",
+          "type": "i64"
+        },
+        {
+          "json_name": "archived",
+          "name": "archived",
+          "pointer": "#/components/schemas/ResourcesStatsDto/properties/archived",
+          "type": "i64"
+        },
+        {
+          "json_name": "total",
+          "name": "total",
+          "pointer": "#/components/schemas/ResourcesStatsDto/properties/total",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ResourcesStatsDto",
+      "type": "ResourcesStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "compiled_policies",
+          "name": "compiled_policies",
+          "pointer": "#/components/schemas/RetainedStateCounts/properties/compiled_policies",
+          "type": "i64"
+        },
+        {
+          "json_name": "permissions",
+          "name": "permissions",
+          "pointer": "#/components/schemas/RetainedStateCounts/properties/permissions",
+          "type": "u32"
+        },
+        {
+          "json_name": "resources",
+          "name": "resources",
+          "pointer": "#/components/schemas/RetainedStateCounts/properties/resources",
+          "type": "i64"
+        },
+        {
+          "json_name": "role_permission_pairs",
+          "name": "role_permission_pairs",
+          "pointer": "#/components/schemas/RetainedStateCounts/properties/role_permission_pairs",
+          "type": "i64"
+        },
+        {
+          "json_name": "roles",
+          "name": "roles",
+          "pointer": "#/components/schemas/RetainedStateCounts/properties/roles",
+          "type": "i64"
+        },
+        {
+          "json_name": "subject_resource_attributes",
+          "name": "subject_resource_attributes",
+          "pointer": "#/components/schemas/RetainedStateCounts/properties/subject_resource_attributes",
+          "type": "i64"
+        },
+        {
+          "json_name": "subjects",
+          "name": "subjects",
+          "pointer": "#/components/schemas/RetainedStateCounts/properties/subjects",
+          "type": "u32"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RetainedStateCounts",
+      "type": "RetainedStateCounts"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "db_revision",
+          "name": "db_revision",
+          "pointer": "#/components/schemas/RevisionResponse/properties/db_revision",
+          "type": "i64"
+        },
+        {
+          "json_name": "snapshot_generation",
+          "name": "snapshot_generation",
+          "pointer": "#/components/schemas/RevisionResponse/properties/snapshot_generation",
+          "type": "i64"
+        },
+        {
+          "json_name": "status",
+          "name": "status",
+          "pointer": "#/components/schemas/RevisionResponse/properties/status",
+          "type": "RevisionStatus"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RevisionResponse",
+      "type": "RevisionResponse"
+    },
+    {
+      "fields": [],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RevisionStatus",
+      "type": "RevisionStatus"
+    },
+    {
+      "fields": [],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RewriteRuleDto",
+      "type": "RewriteRuleDto"
+    },
+    {
+      "fields": [
+        {
+          "discriminator": "direct",
+          "name": "kind",
+          "pointer": "#/components/schemas/RewriteRuleDto/oneOf/0/properties/kind",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RewriteRuleDto/oneOf/0",
+      "type": "RewriteRuleDto::Direct"
+    },
+    {
+      "fields": [
+        {
+          "discriminator": "include",
+          "name": "kind",
+          "pointer": "#/components/schemas/RewriteRuleDto/oneOf/1/properties/kind",
+          "type": "String"
+        },
+        {
+          "json_name": "relation",
+          "name": "relation",
+          "pointer": "#/components/schemas/RewriteRuleDto/oneOf/1/properties/relation",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RewriteRuleDto/oneOf/1",
+      "type": "RewriteRuleDto::Include"
+    },
+    {
+      "fields": [
+        {
+          "discriminator": "inherit",
+          "name": "kind",
+          "pointer": "#/components/schemas/RewriteRuleDto/oneOf/2/properties/kind",
+          "type": "String"
+        },
+        {
+          "json_name": "parent_object_type",
+          "name": "parent_object_type",
+          "pointer": "#/components/schemas/RewriteRuleDto/oneOf/2/properties/parent_object_type",
+          "type": "String"
+        },
+        {
+          "json_name": "parent_relation",
+          "name": "parent_relation",
+          "pointer": "#/components/schemas/RewriteRuleDto/oneOf/2/properties/parent_relation",
+          "type": "String"
+        },
+        {
+          "json_name": "relation",
+          "name": "relation",
+          "pointer": "#/components/schemas/RewriteRuleDto/oneOf/2/properties/relation",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RewriteRuleDto/oneOf/2",
+      "type": "RewriteRuleDto::Inherit"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "fingerprint",
+          "name": "fingerprint",
+          "pointer": "#/components/schemas/RiskAssessmentDto/properties/fingerprint",
+          "type": "String"
+        },
+        {
+          "json_name": "high_risk",
+          "name": "high_risk",
+          "pointer": "#/components/schemas/RiskAssessmentDto/properties/high_risk",
+          "type": "bool"
+        },
+        {
+          "json_name": "reasons",
+          "name": "reasons",
+          "pointer": "#/components/schemas/RiskAssessmentDto/properties/reasons",
+          "type": "Vec<RiskReasonDto>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RiskAssessmentDto",
+      "type": "RiskAssessmentDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/RiskReasonDto/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "detail",
+          "name": "detail",
+          "pointer": "#/components/schemas/RiskReasonDto/properties/detail",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RiskReasonDto",
+      "type": "RiskReasonDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/RoleDto/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "description",
+          "name": "description",
+          "pointer": "#/components/schemas/RoleDto/properties/description",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "enabled",
+          "name": "enabled",
+          "pointer": "#/components/schemas/RoleDto/properties/enabled",
+          "type": "bool"
+        },
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/RoleDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/RoleDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "is_system",
+          "name": "is_system",
+          "pointer": "#/components/schemas/RoleDto/properties/is_system",
+          "type": "bool"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/RoleDto/properties/name",
+          "type": "String"
+        },
+        {
+          "json_name": "permissions_count",
+          "name": "permissions_count",
+          "pointer": "#/components/schemas/RoleDto/properties/permissions_count",
+          "type": "i64"
+        },
+        {
+          "json_name": "users_count",
+          "name": "users_count",
+          "pointer": "#/components/schemas/RoleDto/properties/users_count",
+          "type": "i64"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/RoleDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RoleDto",
+      "type": "RoleDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/RolePermissionsDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "permission_ids",
+          "name": "permission_ids",
+          "pointer": "#/components/schemas/RolePermissionsDto/properties/permission_ids",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "role_id",
+          "name": "role_id",
+          "pointer": "#/components/schemas/RolePermissionsDto/properties/role_id",
+          "type": "String"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/RolePermissionsDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RolePermissionsDto",
+      "type": "RolePermissionsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "custom",
+          "name": "custom",
+          "pointer": "#/components/schemas/RolesStatsDto/properties/custom",
+          "type": "i64"
+        },
+        {
+          "json_name": "deprecated_permission_refs",
+          "name": "deprecated_permission_refs",
+          "pointer": "#/components/schemas/RolesStatsDto/properties/deprecated_permission_refs",
+          "type": "i64"
+        },
+        {
+          "json_name": "enabled",
+          "name": "enabled",
+          "pointer": "#/components/schemas/RolesStatsDto/properties/enabled",
+          "type": "i64"
+        },
+        {
+          "json_name": "system",
+          "name": "system",
+          "pointer": "#/components/schemas/RolesStatsDto/properties/system",
+          "type": "i64"
+        },
+        {
+          "json_name": "total",
+          "name": "total",
+          "pointer": "#/components/schemas/RolesStatsDto/properties/total",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/RolesStatsDto",
+      "type": "RolesStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "created_at_rfc3339",
+          "name": "created_at_rfc3339",
+          "pointer": "#/components/schemas/SessionDto/properties/created_at_rfc3339",
+          "type": "String"
+        },
+        {
+          "json_name": "current",
+          "name": "current",
+          "pointer": "#/components/schemas/SessionDto/properties/current",
+          "type": "bool"
+        },
+        {
+          "json_name": "device_label",
+          "name": "device_label",
+          "pointer": "#/components/schemas/SessionDto/properties/device_label",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "expires_at_rfc3339",
+          "name": "expires_at_rfc3339",
+          "pointer": "#/components/schemas/SessionDto/properties/expires_at_rfc3339",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/SessionDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "status",
+          "name": "status",
+          "pointer": "#/components/schemas/SessionDto/properties/status",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/SessionDto",
+      "type": "SessionDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "active",
+          "name": "active",
+          "pointer": "#/components/schemas/SessionsStatsDto/properties/active",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/SessionsStatsDto",
+      "type": "SessionsStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "mode",
+          "name": "mode",
+          "pointer": "#/components/schemas/SetUserMfaPolicyRequest/properties/mode",
+          "type": "Option<MfaPolicyModeBody>"
+        },
+        {
+          "json_name": "reauth",
+          "name": "reauth",
+          "pointer": "#/components/schemas/SetUserMfaPolicyRequest/properties/reauth",
+          "type": "ReauthProof"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/SetUserMfaPolicyRequest",
+      "type": "SetUserMfaPolicyRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "authz_revision",
+          "name": "authz_revision",
+          "pointer": "#/components/schemas/SetupAdminDto/properties/authz_revision",
+          "type": "i64"
+        },
+        {
+          "json_name": "mfa_binding_required",
+          "name": "mfa_binding_required",
+          "pointer": "#/components/schemas/SetupAdminDto/properties/mfa_binding_required",
+          "type": "bool"
+        },
+        {
+          "json_name": "role",
+          "name": "role",
+          "pointer": "#/components/schemas/SetupAdminDto/properties/role",
+          "type": "String"
+        },
+        {
+          "json_name": "snapshot_generation",
+          "name": "snapshot_generation",
+          "pointer": "#/components/schemas/SetupAdminDto/properties/snapshot_generation",
+          "type": "i64"
+        },
+        {
+          "json_name": "user_id",
+          "name": "user_id",
+          "pointer": "#/components/schemas/SetupAdminDto/properties/user_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/SetupAdminDto",
+      "type": "SetupAdminDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "display_name",
+          "name": "display_name",
+          "pointer": "#/components/schemas/SetupAdminRequest/properties/display_name",
+          "type": "String"
+        },
+        {
+          "json_name": "email",
+          "name": "email",
+          "pointer": "#/components/schemas/SetupAdminRequest/properties/email",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "password",
+          "name": "password",
+          "pointer": "#/components/schemas/SetupAdminRequest/properties/password",
+          "type": "String"
+        },
+        {
+          "json_name": "username",
+          "name": "username",
+          "pointer": "#/components/schemas/SetupAdminRequest/properties/username",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/SetupAdminRequest",
+      "type": "SetupAdminRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "required",
+          "name": "required",
+          "pointer": "#/components/schemas/SetupStatusDto/properties/required",
+          "type": "bool"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/SetupStatusDto",
+      "type": "SetupStatusDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "access_token",
+          "name": "access_token",
+          "pointer": "#/components/schemas/TokenPair/properties/access_token",
+          "type": "String"
+        },
+        {
+          "json_name": "expires_in",
+          "name": "expires_in",
+          "pointer": "#/components/schemas/TokenPair/properties/expires_in",
+          "type": "i64"
+        },
+        {
+          "json_name": "token_type",
+          "name": "token_type",
+          "pointer": "#/components/schemas/TokenPair/properties/token_type",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/TokenPair",
+      "type": "TokenPair"
+    },
+    {
+      "fields": [],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/TypedValueDto",
+      "type": "TypedValueDto"
+    },
+    {
+      "fields": [
+        {
+          "discriminator": "bool",
+          "name": "type",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/0/properties/type",
+          "type": "String"
+        },
+        {
+          "json_name": "value",
+          "name": "value",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/0/properties/value",
+          "type": "bool"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/TypedValueDto/oneOf/0",
+      "type": "TypedValueDto::Bool"
+    },
+    {
+      "fields": [
+        {
+          "discriminator": "i64",
+          "name": "type",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/1/properties/type",
+          "type": "String"
+        },
+        {
+          "json_name": "value",
+          "name": "value",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/1/properties/value",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/TypedValueDto/oneOf/1",
+      "type": "TypedValueDto::I64"
+    },
+    {
+      "fields": [
+        {
+          "discriminator": "u64",
+          "name": "type",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/2/properties/type",
+          "type": "String"
+        },
+        {
+          "json_name": "value",
+          "name": "value",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/2/properties/value",
+          "type": "u64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/TypedValueDto/oneOf/2",
+      "type": "TypedValueDto::U64"
+    },
+    {
+      "fields": [
+        {
+          "discriminator": "string",
+          "name": "type",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/3/properties/type",
+          "type": "String"
+        },
+        {
+          "json_name": "value",
+          "name": "value",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/3/properties/value",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/TypedValueDto/oneOf/3",
+      "type": "TypedValueDto::String"
+    },
+    {
+      "fields": [
+        {
+          "discriminator": "timestamp",
+          "name": "type",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/4/properties/type",
+          "type": "String"
+        },
+        {
+          "json_name": "value",
+          "name": "value",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/4/properties/value",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/TypedValueDto/oneOf/4",
+      "type": "TypedValueDto::Timestamp"
+    },
+    {
+      "fields": [
+        {
+          "discriminator": "string_set",
+          "name": "type",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/5/properties/type",
+          "type": "String"
+        },
+        {
+          "json_name": "value",
+          "name": "value",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/5/properties/value",
+          "type": "Vec<String>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/TypedValueDto/oneOf/5",
+      "type": "TypedValueDto::StringSet"
+    },
+    {
+      "fields": [
+        {
+          "discriminator": "int_set",
+          "name": "type",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/6/properties/type",
+          "type": "String"
+        },
+        {
+          "json_name": "value",
+          "name": "value",
+          "pointer": "#/components/schemas/TypedValueDto/oneOf/6/properties/value",
+          "type": "Vec<i64>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/TypedValueDto/oneOf/6",
+      "type": "TypedValueDto::IntSet"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "expected",
+          "name": "expected",
+          "pointer": "#/components/schemas/UpsertPolicyTestCaseRequest/properties/expected",
+          "type": "String"
+        },
+        {
+          "json_name": "input",
+          "name": "input",
+          "pointer": "#/components/schemas/UpsertPolicyTestCaseRequest/properties/input",
+          "type": "PolicyTestCaseInputDto"
+        },
+        {
+          "json_name": "name",
+          "name": "name",
+          "pointer": "#/components/schemas/UpsertPolicyTestCaseRequest/properties/name",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/UpsertPolicyTestCaseRequest",
+      "type": "UpsertPolicyTestCaseRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "auth_version",
+          "name": "auth_version",
+          "pointer": "#/components/schemas/UserDto/properties/auth_version",
+          "type": "i64"
+        },
+        {
+          "json_name": "created_at_rfc3339",
+          "name": "created_at_rfc3339",
+          "pointer": "#/components/schemas/UserDto/properties/created_at_rfc3339",
+          "type": "String"
+        },
+        {
+          "json_name": "display_name",
+          "name": "display_name",
+          "pointer": "#/components/schemas/UserDto/properties/display_name",
+          "type": "String"
+        },
+        {
+          "json_name": "email",
+          "name": "email",
+          "pointer": "#/components/schemas/UserDto/properties/email",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/UserDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "id",
+          "name": "id",
+          "pointer": "#/components/schemas/UserDto/properties/id",
+          "type": "String"
+        },
+        {
+          "json_name": "last_login_at_rfc3339",
+          "name": "last_login_at_rfc3339",
+          "pointer": "#/components/schemas/UserDto/properties/last_login_at_rfc3339",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "mfa_enabled",
+          "name": "mfa_enabled",
+          "pointer": "#/components/schemas/UserDto/properties/mfa_enabled",
+          "type": "bool"
+        },
+        {
+          "json_name": "roles_count",
+          "name": "roles_count",
+          "pointer": "#/components/schemas/UserDto/properties/roles_count",
+          "type": "i64"
+        },
+        {
+          "json_name": "sessions_count",
+          "name": "sessions_count",
+          "pointer": "#/components/schemas/UserDto/properties/sessions_count",
+          "type": "i64"
+        },
+        {
+          "json_name": "status",
+          "name": "status",
+          "pointer": "#/components/schemas/UserDto/properties/status",
+          "type": "String"
+        },
+        {
+          "json_name": "username",
+          "name": "username",
+          "pointer": "#/components/schemas/UserDto/properties/username",
+          "type": "String"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/UserDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/UserDto",
+      "type": "UserDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "deployment_mode",
+          "name": "deployment_mode",
+          "pointer": "#/components/schemas/UserMfaPolicyDto/properties/deployment_mode",
+          "type": "String"
+        },
+        {
+          "json_name": "effective_mode",
+          "name": "effective_mode",
+          "pointer": "#/components/schemas/UserMfaPolicyDto/properties/effective_mode",
+          "type": "String"
+        },
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/UserMfaPolicyDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "override_mode",
+          "name": "override_mode",
+          "pointer": "#/components/schemas/UserMfaPolicyDto/properties/override_mode",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "user_id",
+          "name": "user_id",
+          "pointer": "#/components/schemas/UserMfaPolicyDto/properties/user_id",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/UserMfaPolicyDto",
+      "type": "UserMfaPolicyDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "etag",
+          "name": "etag",
+          "pointer": "#/components/schemas/UserRolesDto/properties/etag",
+          "type": "String"
+        },
+        {
+          "json_name": "role_ids",
+          "name": "role_ids",
+          "pointer": "#/components/schemas/UserRolesDto/properties/role_ids",
+          "type": "Vec<String>"
+        },
+        {
+          "json_name": "user_id",
+          "name": "user_id",
+          "pointer": "#/components/schemas/UserRolesDto/properties/user_id",
+          "type": "String"
+        },
+        {
+          "json_name": "version",
+          "name": "version",
+          "pointer": "#/components/schemas/UserRolesDto/properties/version",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/UserRolesDto",
+      "type": "UserRolesDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "active",
+          "name": "active",
+          "pointer": "#/components/schemas/UsersStatsDto/properties/active",
+          "type": "i64"
+        },
+        {
+          "json_name": "disabled",
+          "name": "disabled",
+          "pointer": "#/components/schemas/UsersStatsDto/properties/disabled",
+          "type": "i64"
+        },
+        {
+          "json_name": "locked",
+          "name": "locked",
+          "pointer": "#/components/schemas/UsersStatsDto/properties/locked",
+          "type": "i64"
+        },
+        {
+          "json_name": "mfa_enabled",
+          "name": "mfa_enabled",
+          "pointer": "#/components/schemas/UsersStatsDto/properties/mfa_enabled",
+          "type": "i64"
+        },
+        {
+          "json_name": "new_today",
+          "name": "new_today",
+          "pointer": "#/components/schemas/UsersStatsDto/properties/new_today",
+          "type": "i64"
+        },
+        {
+          "json_name": "total",
+          "name": "total",
+          "pointer": "#/components/schemas/UsersStatsDto/properties/total",
+          "type": "i64"
+        },
+        {
+          "json_name": "total_prev_week",
+          "name": "total_prev_week",
+          "pointer": "#/components/schemas/UsersStatsDto/properties/total_prev_week",
+          "type": "i64"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/UsersStatsDto",
+      "type": "UsersStatsDto"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "binding",
+          "name": "binding",
+          "pointer": "#/components/schemas/ValidatePolicyRequest/properties/binding",
+          "type": "Option<Option<BindingSpecDto>>"
+        },
+        {
+          "json_name": "code",
+          "name": "code",
+          "pointer": "#/components/schemas/ValidatePolicyRequest/properties/code",
+          "type": "String"
+        },
+        {
+          "json_name": "effect",
+          "name": "effect",
+          "pointer": "#/components/schemas/ValidatePolicyRequest/properties/effect",
+          "type": "String"
+        },
+        {
+          "json_name": "expression",
+          "name": "expression",
+          "pointer": "#/components/schemas/ValidatePolicyRequest/properties/expression",
+          "type": "Option<serde_json::Value>"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/ValidatePolicyRequest",
+      "type": "ValidatePolicyRequest"
+    },
+    {
+      "fields": [
+        {
+          "json_name": "message",
+          "name": "message",
+          "pointer": "#/components/schemas/Violation/properties/message",
+          "type": "String"
+        },
+        {
+          "json_name": "path",
+          "name": "path",
+          "pointer": "#/components/schemas/Violation/properties/path",
+          "type": "Option<Option<String>>"
+        },
+        {
+          "json_name": "reason",
+          "name": "reason",
+          "pointer": "#/components/schemas/Violation/properties/reason",
+          "type": "String"
+        }
+      ],
+      "file": "sdks/rust/src/generated/models.rs",
+      "pointer": "#/components/schemas/Violation",
+      "type": "Violation"
+    }
+  ]
+}

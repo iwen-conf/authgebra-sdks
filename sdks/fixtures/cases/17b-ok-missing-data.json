@@ -1,0 +1,22 @@
+{
+  "id": "17b-ok-missing-data",
+  "description": "200 但缺 data：协议错误，不得返回空结果",
+  "operation": "authz.check",
+  "request": {},
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-request-id": "req-abcdefgh"
+    },
+    "body": {
+      "meta": {
+        "authz_revision": 1
+      }
+    }
+  },
+  "expect": {
+    "kind": "protocol_error",
+    "error": "malformed_success_body",
+    "status": 200
+  }
+}

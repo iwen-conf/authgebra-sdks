@@ -1,0 +1,34 @@
+{
+  "id": "19-invalid-trace-and-request-id-headers",
+  "operation": "authz.check",
+  "request": {},
+  "response": {
+    "status": 403,
+    "headers": {
+      "x-request-id": "bad id\twith ctrl",
+      "x-trace-id": "NOT-HEX",
+      "traceparent": "00-zz-zz-01"
+    },
+    "body": {
+      "error": {
+        "code": "FORBIDDEN",
+        "message": "m",
+        "request_id": "req-abcdefgh",
+        "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736"
+      }
+    }
+  },
+  "expect": {
+    "kind": "api_error",
+    "status": 403,
+    "code": "FORBIDDEN",
+    "known_code": true,
+    "request_id": "req-abcdefgh",
+    "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
+    "retryable": null,
+    "retry_after_seconds": null,
+    "commit_state": null,
+    "request_id_header_valid": false
+  },
+  "description": "非法 X-Request-ID/X-Trace-ID/traceparent 头被忽略，回退到合法的 body 值，不崩溃"
+}

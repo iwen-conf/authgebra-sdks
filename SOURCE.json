@@ -1,0 +1,1101 @@
+{
+  "version": "0.1.0",
+  "contract_sha256": "907bd9616dba9993c479cf551bc1e69ac046776b72dd58f5af1138be10c34c25",
+  "source_commit": "fedea17a51e538c2d2291d2b5414c9a504a18c50",
+  "files": [
+    {
+      "path": ".github/workflows/sdk.yml",
+      "sha256": "e79df1d406df62907fd6cf324e65ed29fd7096b329bd10c15a92f1380f10f1af"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "2f38107a910781967d39e0adbb0af2d5566c07bb0446ffa62a53184d05dd96d7"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "807f508c010d769c207b0b6392a1d050dd06da096177ccb55d379941da8321cf"
+    },
+    {
+      "path": "README.md",
+      "sha256": "92098f166ff2c5bf0edb087b662d353f5428dd4b58e26c54f1287055ad19c599"
+    },
+    {
+      "path": "scripts/ci/sdk-type-coverage.py",
+      "sha256": "52c486bc5c505b88f5a34cf87e9fa775449d404d3af795b08f42c7e05e2383ee"
+    },
+    {
+      "path": "scripts/ci/test_sdk_type_coverage.py",
+      "sha256": "f1af7bfd7dfcfa5a33caf41894a06c62d50860a16ac05eb7e2edc182998d1ade"
+    },
+    {
+      "path": "scripts/ci/test_sdk_types.py",
+      "sha256": "5778f527ec5333de3f41e04d0ec8242e69b474a62bf1531564f4cebf298ee36f"
+    },
+    {
+      "path": "sdks/DISTRIBUTION.md",
+      "sha256": "f57a0953b850b023b8d236ee288f21dcbdcd35e2c187812ed703fc4761aa167a"
+    },
+    {
+      "path": "sdks/README.md",
+      "sha256": "44b3f3c913a1a7c6d9b12c2db9bfcad63fd4317cb00416ca8d095b2e425d8f52"
+    },
+    {
+      "path": "sdks/STATUS.md",
+      "sha256": "8e404e641fc2daa7baef0aaaf0dd840c6c428e164eff31d32d38001cef23b413"
+    },
+    {
+      "path": "sdks/contracts/README.md",
+      "sha256": "b4e0cb8db9522d24b3443463d8ba6536a4dd742342125a8ba0fe982506e6281d"
+    },
+    {
+      "path": "sdks/contracts/openapi.json",
+      "sha256": "907bd9616dba9993c479cf551bc1e69ac046776b72dd58f5af1138be10c34c25"
+    },
+    {
+      "path": "sdks/contracts/openapi.sha256",
+      "sha256": "8937f20763ca7411491eefddd665ee581d3a282b1e530b6d0778fc91c9fd8c40"
+    },
+    {
+      "path": "sdks/contracts/type-coverage.json",
+      "sha256": "2d3582e78a339b73c380266e30f894c33485f5364a1ef209ccae347a5763df16"
+    },
+    {
+      "path": "sdks/csharp/.gitignore",
+      "sha256": "8e013a32e39d82bd8262b4bfd1012d7aabc6f7dbd95781f86bf305274389148f"
+    },
+    {
+      "path": "sdks/csharp/Authgebra.sln",
+      "sha256": "d240958eeff758ada341d9cb9a1dc0b31cf727737ba06aed61f3bb6fd05af349"
+    },
+    {
+      "path": "sdks/csharp/CHANGELOG.md",
+      "sha256": "1f4d4eafb88e9e08ea112b6127fd211abdde3c799ab1c2ae374032b6487dae72"
+    },
+    {
+      "path": "sdks/csharp/LICENSE",
+      "sha256": "807f508c010d769c207b0b6392a1d050dd06da096177ccb55d379941da8321cf"
+    },
+    {
+      "path": "sdks/csharp/README.md",
+      "sha256": "2d2882a8b3de74170fd5e9fffb1c282dfe899eef44195e6c03f3514e8d1eb10f"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/AdminClient.cs",
+      "sha256": "c0dddbb16bf18072ce32cc0bfaec2fab18e8b66130e2689ae46b38c4eac49ade"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/ApiResult.cs",
+      "sha256": "35d00ddda2cb2f7a496f68187b5b06aa414974abc50566d3abc295d4157890ba"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/Authgebra.Client.csproj",
+      "sha256": "b35d989f4784566cdcdcb882d87b12b93f4fe38fda7ed88000d39d6718c8566a"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/AuthgebraClient.cs",
+      "sha256": "fa09bc9a9b987b9fdc43fdaa4e838fdff13a6c7f0e332d0cb5d19c61f0affb5d"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/AuthgebraClientOptions.cs",
+      "sha256": "4df6125889ef37c8cd511a447ca658288a1781f774baaed4e5440d925a041508"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/AuthorizationClient.cs",
+      "sha256": "6dceb758f811b3bde88428f688f3c942d54d26697bad8c091bcfe83a92766e53"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/ContractModel.cs",
+      "sha256": "0c8097d7520128ef714b7f2059c158aa81cf83cc733846edd6c1b5767aff5d65"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/Exceptions.cs",
+      "sha256": "740f5c8893386246a6c1cf57ae43d23c38b48f1312813345101af0892edf52e0"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/Generated/Api.g.cs",
+      "sha256": "1e5d145f4ab2247e6061429f23b47b7f8c2b0a60bb8d766eb689053cfa7a263d"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/Generated/Models.g.cs",
+      "sha256": "825bd1f05d01cb4b0f404b05b43da7393e73d11d6af4738a20dad35f2366b2aa"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/Generated/Models.provenance.json",
+      "sha256": "9313c2145c92f9a406854b08a71152bbbb3b35abdc792dbc9aa9d5f1109d6161"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/ITokenProvider.cs",
+      "sha256": "dd2fa3c84a9a2ff6f0690bcaa6d8b0927e7821abb674ed6db991cb38fef29709"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/Json.cs",
+      "sha256": "841faac4be8525e45c4ebc9af81ddf7df7873adbbbf54d48816854e5a4c98aae"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/JsonValue.cs",
+      "sha256": "57d205ed1408e69613b2367d76d8ed7d2398401f49d0ba88281ccc5d10f89068"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/Optional.cs",
+      "sha256": "fa55cc0be616c26f702041391b31b031d1ba548064fb5ce35821a02248f485b0"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/RequestOptions.cs",
+      "sha256": "1d0bba8a65513bad88bdd7f5a282610d84ad819440a324fff3ac4a7f4c8b2619"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/RequestSpec.cs",
+      "sha256": "fb9a1a2d5ce6bf533dd78813f8f8d86e95091bef04d40d8ea3af274a0a16882c"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/RetryPolicy.cs",
+      "sha256": "b1075aad2cd1713cf4d19cf69c5f2d5b6e5213c5f613b00c03173b5a3516e467"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/ServiceCollectionExtensions.cs",
+      "sha256": "87fe5b460b5a5f316f6580a7eadf55c121808d9fdc8c3cf99c4553963afb927c"
+    },
+    {
+      "path": "sdks/csharp/src/Authgebra.Client/Tracing.cs",
+      "sha256": "23215403f43b10b3c21a302bc8624543d7a8288da350c96b13d56dab783f6227"
+    },
+    {
+      "path": "sdks/csharp/tests/Authgebra.Client.Tests/Authgebra.Client.Tests.csproj",
+      "sha256": "4ed84cf71f23c0f92332729f9b81593b59bd94c5c7c56fb591cb19e2e782e01e"
+    },
+    {
+      "path": "sdks/csharp/tests/Authgebra.Client.Tests/BehaviorTests.cs",
+      "sha256": "3bf77c8f1c1dc7d03fd605dd33c25ed6a724794934cd90eed57bba3ea6d122e2"
+    },
+    {
+      "path": "sdks/csharp/tests/Authgebra.Client.Tests/ContractTests.cs",
+      "sha256": "da53fc2a3f53513601fefa80bd4fdeb049fecc7dc9fb4f2066557d3fe78f16c3"
+    },
+    {
+      "path": "sdks/csharp/tests/Authgebra.Client.Tests/DependencyInjectionTests.cs",
+      "sha256": "5bf03c84644d27293219d5f123a158e5f1d67d1022bcc9b5c2e228be236a1d4e"
+    },
+    {
+      "path": "sdks/csharp/tests/Authgebra.Client.Tests/FixtureTests.cs",
+      "sha256": "3c99f1176707b2bb14910bf2ef87265ffaef88cd7e2246c148e747e78f2bdb96"
+    },
+    {
+      "path": "sdks/csharp/tests/Authgebra.Client.Tests/IntegrationTests.cs",
+      "sha256": "abe4ce578cd3471d46ce4147e54806dd3d13b2e81241da7ef5d2ee3a759a1397"
+    },
+    {
+      "path": "sdks/csharp/tests/Authgebra.Client.Tests/ModelGenerationTests.cs",
+      "sha256": "dd9077ff206003838c2d3b003acb7e47d9ab0690ca99d2a0004d5bd55a6a9c97"
+    },
+    {
+      "path": "sdks/csharp/tests/Authgebra.Client.Tests/PagerTests.cs",
+      "sha256": "385f361fb8ebc4ff3691392266c8bddcb1588e9363141b41880e7f15c3029ab1"
+    },
+    {
+      "path": "sdks/csharp/tests/Authgebra.Client.Tests/Support.cs",
+      "sha256": "9000a72404feead582c2e395d8c45fa57f7027d85595444db69b76b24b50c5c4"
+    },
+    {
+      "path": "sdks/csharp/tests/Authgebra.Client.Tests/TlsTests.cs",
+      "sha256": "b3bc31c39f5ae8f0c0e97c11d89cb3681f48eb00540c28537d9aeb23890efc9c"
+    },
+    {
+      "path": "sdks/csharp/tools/gen.py",
+      "sha256": "41d2c739a0b4ee8b493a1cda96315033cc0606978e7a9c79ac904752f0801bad"
+    },
+    {
+      "path": "sdks/csharp/tools/test_gen.py",
+      "sha256": "f187657584898786ea9cdb545bc710796a5c6a021b62afe70a7b6a2ee02db2a6"
+    },
+    {
+      "path": "sdks/fixtures/cases/01-deny-is-success.json",
+      "sha256": "58783537e1b7298086fe44898b018128616056aa1bb5e804fe023b3f5fb48b6b"
+    },
+    {
+      "path": "sdks/fixtures/cases/02-401-token-expired.json",
+      "sha256": "66e93d516376e591e9df717609bfcd86bbe42cf318a01112c36a54246b5a43c9"
+    },
+    {
+      "path": "sdks/fixtures/cases/03-403-forbidden.json",
+      "sha256": "d4f4033c8882f2fa8ff0442b7cc49d92d6a9e41610b15f8990ead95205df1668"
+    },
+    {
+      "path": "sdks/fixtures/cases/04-409-revision-conflict.json",
+      "sha256": "20780373f8052a118eaf44f57b9d1d626f98d91abada3c76263aa46e570008b3"
+    },
+    {
+      "path": "sdks/fixtures/cases/05-409-cursor-stale.json",
+      "sha256": "62505ea1bc8ac53dbfe3607e99d6b9a889c706101b829028d5cdd8af188afcc3"
+    },
+    {
+      "path": "sdks/fixtures/cases/06-409-idempotency-conflict.json",
+      "sha256": "af325420c7dfde3d518ab49f09e7718396b6ec0564382c8d79316618cf6251f3"
+    },
+    {
+      "path": "sdks/fixtures/cases/07-412-missing-if-match.json",
+      "sha256": "92b6c8b470dab92ebc4eb5c10a4cb74f634e0c6ee5492e96c0c612ae7dd7bcea"
+    },
+    {
+      "path": "sdks/fixtures/cases/08-422-multi-violation.json",
+      "sha256": "e57ca14b4a4baa627cca065d24a14dc5ff364502c6cb764710f46f52e6f1ea42"
+    },
+    {
+      "path": "sdks/fixtures/cases/09-429-retry-after.json",
+      "sha256": "93b9954508ff8496db694e9c9b7c2ff1f1d03327ed7e8e0ed69866b291ed52d2"
+    },
+    {
+      "path": "sdks/fixtures/cases/10-503-not-ready.json",
+      "sha256": "d6317c41f2a78a869fcbdb09e2c76b325c097e3accb5194d290d7aee4b3ff6cb"
+    },
+    {
+      "path": "sdks/fixtures/cases/11-503-authz-reload-pending.json",
+      "sha256": "984ea7a17c55d6afe650f83036c6bc69134a9817708595ffd76e4f297ad2b42e"
+    },
+    {
+      "path": "sdks/fixtures/cases/12-503-identity-reload-pending.json",
+      "sha256": "0bc8d0c5469127b63f3223368a8e4713283b511703ecf78c32d33c406f5dbed6"
+    },
+    {
+      "path": "sdks/fixtures/cases/13-500-internal.json",
+      "sha256": "ab702f4e166e35ee8af8cbd4e6f506a71dca122e1fee75f494fd542aa0738041"
+    },
+    {
+      "path": "sdks/fixtures/cases/14-transport-timeout-read.json",
+      "sha256": "cf8a11adca8aee4ea5234c4af4574123c6a0063f9234c70649ef8103651dcb11"
+    },
+    {
+      "path": "sdks/fixtures/cases/14b-transport-timeout-write.json",
+      "sha256": "2f53c2015494ce81e7f2e7afc513c81449771ceadb34a9d90d775c111d2beb41"
+    },
+    {
+      "path": "sdks/fixtures/cases/15-transport-reset-write.json",
+      "sha256": "dea2afafe5104fc2c6fe21739d07231e5762b801cd1db301a908fb3678d6951a"
+    },
+    {
+      "path": "sdks/fixtures/cases/16-non-json.json",
+      "sha256": "3f6f35efc4d870d6683dfdbdd9fa601cf6d569dc3e843e2574dbb5e39fc743df"
+    },
+    {
+      "path": "sdks/fixtures/cases/17-missing-required.json",
+      "sha256": "a69d1f7d5c9c496929e3250cebb58bfa214ce7835562857d09d2d0d84000f4e4"
+    },
+    {
+      "path": "sdks/fixtures/cases/17b-ok-missing-data.json",
+      "sha256": "8c15e87af446b80d3d297b7944e9e35b03f3c9824a4d5105cf686f4c61a1b74f"
+    },
+    {
+      "path": "sdks/fixtures/cases/18-unknown-error-code.json",
+      "sha256": "40619d2752d033d340fd15c6b74b13970c925bb26f3d6a9716ed4c0c7f90be9d"
+    },
+    {
+      "path": "sdks/fixtures/cases/19-invalid-trace-and-request-id-headers.json",
+      "sha256": "616d2e98b4cb7349bb58258250cba69d6007940e74f68e1bf0e20d892b553fec"
+    },
+    {
+      "path": "sdks/fixtures/cases/20-request-id-mismatch.json",
+      "sha256": "d8778a9e8af8729874c9f2bae6723ac9065c4160c7663500cdd5f9bc7a7d6000"
+    },
+    {
+      "path": "sdks/fixtures/cases/21-precision-bigint-revision.json",
+      "sha256": "4606aeabce4cd46d434053c0992af9cb96698603646b5badecf1a9d46e3c75a8"
+    },
+    {
+      "path": "sdks/fixtures/cases/22-unicode-roundtrip.json",
+      "sha256": "c75c460f79457a8c9941bce00378e60d724e1f6d1ed500a3867e0e8d59407861"
+    },
+    {
+      "path": "sdks/fixtures/cases/23-authz-meta-absent-on-admin-read.json",
+      "sha256": "f174c14ac9c1545460059e3f67cfdfc35d3eff86acd3b8e33644ada394f69cf2"
+    },
+    {
+      "path": "sdks/fixtures/request-semantics.json",
+      "sha256": "5cc21db862c42ba847763822f6ba0609ded863f25289b8484d2c2619f51e1ede"
+    },
+    {
+      "path": "sdks/go/CHANGELOG.md",
+      "sha256": "325b4262fe01370d95fe28dcc1cc9368538e9c534b4d4dea74e0a443fac15119"
+    },
+    {
+      "path": "sdks/go/LICENSE",
+      "sha256": "807f508c010d769c207b0b6392a1d050dd06da096177ccb55d379941da8321cf"
+    },
+    {
+      "path": "sdks/go/LICENSE.md",
+      "sha256": "e1a4c11401ca2b8899325d4883e7bc6ba418243db642cfdfbcc0cb056df224f9"
+    },
+    {
+      "path": "sdks/go/README.md",
+      "sha256": "18a3cdb8453f43f74851021d8a2845cc9ffb157a7dc823e8dfbad73e4b33e50c"
+    },
+    {
+      "path": "sdks/go/authorization.go",
+      "sha256": "4f64f6ef608f82a2cafe3d01c6cd4207ed5b63b21168f08d706899c004023f8e"
+    },
+    {
+      "path": "sdks/go/authorization_test.go",
+      "sha256": "ee69d9fff6c3aa693057a4b3dc812d47423b5593dbd8b58e7ef8aeae8282cfd2"
+    },
+    {
+      "path": "sdks/go/client.go",
+      "sha256": "f5afb24ee16326a1e29c6ba719a4350cfaad61b494be1c1c72854aa9f14d2db5"
+    },
+    {
+      "path": "sdks/go/client_test.go",
+      "sha256": "08ed592c5123ed841caad4a963f9ecacebdc2c39d0ed618a9cb7aecec51fe420"
+    },
+    {
+      "path": "sdks/go/config.go",
+      "sha256": "a11349cafea1a79a5e67e52b0c7edd8f9c6bb22ca2d2d3169205cf2c8bcd3f68"
+    },
+    {
+      "path": "sdks/go/conformance_test.go",
+      "sha256": "9954c91c6db817f280db71f72769b6db4fc2b58e21d787f3f3bf469aaa00538b"
+    },
+    {
+      "path": "sdks/go/coverage_test.go",
+      "sha256": "ca3fb5ba71e9e22d611ed3aa0299496c4ef38a0c7c571babc3a7163cbaeceb2b"
+    },
+    {
+      "path": "sdks/go/doc.go",
+      "sha256": "6226430619200fb6b00092747d3a297f5e0c3863feb01df65a99baab51a1645f"
+    },
+    {
+      "path": "sdks/go/errors.go",
+      "sha256": "334eb463358a76c9f6726252daf255023bad26699f5b0e1a19a6c25caa1d2f75"
+    },
+    {
+      "path": "sdks/go/examples/batch/main.go",
+      "sha256": "09cd9d6a7c5d304bfdaf7743bb61e6a03cb61d55b8829fa071fcd5cd37690c72"
+    },
+    {
+      "path": "sdks/go/examples/check/main.go",
+      "sha256": "f4f753350f474ec0fa609351cd8baba3e86b85e2aef8b36cefe199faa57e135b"
+    },
+    {
+      "path": "sdks/go/examples/idempotent_write/main.go",
+      "sha256": "4b83f2e68fbf6d7c9a77be596d55ba1b8c34747b07b855d8141e0c841a989b82"
+    },
+    {
+      "path": "sdks/go/examples/paginate/main.go",
+      "sha256": "9c7abdd009010cb7afa000f33a76d274a49dda32bb70648bdc50a5e23d34fd17"
+    },
+    {
+      "path": "sdks/go/go.mod",
+      "sha256": "68073d688722cb4e14c29e05df2a3c56ac665e24ddc8f76052bf9c52b16ec190"
+    },
+    {
+      "path": "sdks/go/iam_constraints_test.go",
+      "sha256": "2b4a58edc4fc65874f99f3dbdae2d8d75f3336b99b6e57c69b5e2cb008286204"
+    },
+    {
+      "path": "sdks/go/inflight_integration_test.go",
+      "sha256": "9fb5dc1a79941166547d0a4d2dd488a9abf64481fd595eaccebe8a0e3db23999"
+    },
+    {
+      "path": "sdks/go/integration_test.go",
+      "sha256": "86f987a611c7a7939d39c7bbfb4760f28bc5c6d41569471240197ded062590c3"
+    },
+    {
+      "path": "sdks/go/internal/gen/main.go",
+      "sha256": "45b2207e596d4f30edcd01d0631d8b722d14f7ffc3a8175ca9c1439845d552c4"
+    },
+    {
+      "path": "sdks/go/internal/gen/main_test.go",
+      "sha256": "0ce9f8636e9a78184d3f03b5cb31c5c85c8909a5ddd63f2cad8822bc4b8c908c"
+    },
+    {
+      "path": "sdks/go/internal/gen/models.go",
+      "sha256": "92d024c2a5a242b97f9027548bb5be8cfa2a023c5c8a6d04a8b72b3674292b26"
+    },
+    {
+      "path": "sdks/go/internal/gen/provenance.go",
+      "sha256": "8edf6d1c12ed606dc655d6decf443d4ce60b8437f6d756b32e9ae85ed5354c40"
+    },
+    {
+      "path": "sdks/go/internal/gen/request_json.go",
+      "sha256": "b0d39d4c587af8127258acfd99a148bb825fd50274d26a9d92acd6e1cfaad18e"
+    },
+    {
+      "path": "sdks/go/internal/gen/serialization_tests.go",
+      "sha256": "4ce0da6b00690a0d3b53179e8d9406353ff0d35d04728fc912832811eb0265a4"
+    },
+    {
+      "path": "sdks/go/json_value.go",
+      "sha256": "1d6817a309f8789bfe2280bfbf7a816de62c188c5e221e3858b2e9fa2327803a"
+    },
+    {
+      "path": "sdks/go/model_semantics_test.go",
+      "sha256": "3c9bcd18a0feb6dea15a13f6c7b055b1dfe61d3e94973b70f0f29c24cf45f232"
+    },
+    {
+      "path": "sdks/go/models.provenance.json",
+      "sha256": "1416ceb9c925a7cbc67bb2f6d8156bd36c8272c7213314db454987ea94182ae6"
+    },
+    {
+      "path": "sdks/go/models_gen.go",
+      "sha256": "944da4c734e616d540a9a56b39b9f865730be6465e20db2496bc5f681a204d50"
+    },
+    {
+      "path": "sdks/go/models_serialization_gen_test.go",
+      "sha256": "df7a05ac895c4d6fb0a2d3b2c06d4e04645926cb65de20c6247001deceabc57a"
+    },
+    {
+      "path": "sdks/go/nil_field_test.go",
+      "sha256": "1ddaf57249a509bf0e238fc42ca3d48c9b07161e7c686c8d9a906ddd933a3660"
+    },
+    {
+      "path": "sdks/go/ops_gen.go",
+      "sha256": "1faeaefecbc48fc9ebfb6b5444ed4e10be6462e43c8112f9f80c5525ef9e4cb9"
+    },
+    {
+      "path": "sdks/go/patch.go",
+      "sha256": "b884894fe27727bd9e0da7f6d0690fed0212c7815d90a28310c840da96ac8694"
+    },
+    {
+      "path": "sdks/go/patch_null_test.go",
+      "sha256": "663dc7e6dd6dae05b66b9a0e8944b458eada87d83459b7a3e98549eb89471fe9"
+    },
+    {
+      "path": "sdks/go/response_shape_test.go",
+      "sha256": "3d328b54399163b0b55a8f1aaa2e78ff71bd80fa1bc60a138908722187ded903"
+    },
+    {
+      "path": "sdks/go/result.go",
+      "sha256": "49e36800b6af74ea8b1954de0214ffe18ab8bfd4d3d2781612d9f71193c042a3"
+    },
+    {
+      "path": "sdks/go/testutil_test.go",
+      "sha256": "5268b7e463ac1b02526415a101d5abc5acca9ef02137973da77464fba53d853a"
+    },
+    {
+      "path": "sdks/go/tls_classification_test.go",
+      "sha256": "6126dded37e2fae5d2a1d7247158fcec44104de07bec500826ef135ed2b63163"
+    },
+    {
+      "path": "sdks/go/tls_integration_test.go",
+      "sha256": "98d0958b41d10316fcbada7d36799fb5cc334770813dbbc007a60eeb83cc575f"
+    },
+    {
+      "path": "sdks/go/trace.go",
+      "sha256": "c751b504dacb561d99497a2ffb610d8c6d71a1bf2d56b4de72fba04d7a1d1271"
+    },
+    {
+      "path": "sdks/go/trace_boundary_test.go",
+      "sha256": "407d99c0ad78578f6bc10660cd8b062bb64b4f7ea381feed8cf493a682ba5eba"
+    },
+    {
+      "path": "sdks/go/trace_test.go",
+      "sha256": "d04941e55d7cd9cac3d572c22de45acd0f25e9caebb423cc9a874333b547ecbf"
+    },
+    {
+      "path": "sdks/go/wire_encoding_test.go",
+      "sha256": "b07a7efe923ab3a4cca1a4a2acee907c48497d99bb1ee7857057f42faced5134"
+    },
+    {
+      "path": "sdks/java/.gitignore",
+      "sha256": "b53ee26e6ff1da219b0563333a76d2c9ec19eec713d6ee54e11a1edacb0e9f3d"
+    },
+    {
+      "path": "sdks/java/CHANGELOG.md",
+      "sha256": "4a5c2c2aa149d8ff0d280f915f033b59d37712bbc9a1048a281a2e95e9c5aa1e"
+    },
+    {
+      "path": "sdks/java/LICENSE",
+      "sha256": "807f508c010d769c207b0b6392a1d050dd06da096177ccb55d379941da8321cf"
+    },
+    {
+      "path": "sdks/java/README.md",
+      "sha256": "cf1c01b4c9d43283b4e14345a79e470e305af10753c281d794e1eb424034ecaf"
+    },
+    {
+      "path": "sdks/java/examples/CheckExample.java",
+      "sha256": "17436c89a716f28fe392fe67a6e5b044d05b30eb8406562124bdf61d465a5e5a"
+    },
+    {
+      "path": "sdks/java/examples/IdempotentWriteExample.java",
+      "sha256": "3a88c8caacb4b3485ec714b6efa6a5cc7f34b441d4740ff7e84130df8ead83ab"
+    },
+    {
+      "path": "sdks/java/examples/PaginationExample.java",
+      "sha256": "a66f6c864e77f7f305668ec200508b1112d9a80c37b1dbf49ffa4efe03bdb42d"
+    },
+    {
+      "path": "sdks/java/pom.xml",
+      "sha256": "cf719d5f56f6afeb48fe57f35a83e951bdb7fcebf75adfb111dc79cf269a4d8c"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/AdminClient.java",
+      "sha256": "d6399da4e9e821407014f56d7be6a64916c74309e44a8e9e6b518965b0f69ae8"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/ApiException.java",
+      "sha256": "3e6ca4dde22c42cbe0f48e0435f31133777ec20d4819babc4d99e94f74b23566"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/AuthgebraClient.java",
+      "sha256": "5e2a176bd43d28283803312ee28a53d974e02c66900caa5ecf32bba87712ccbd"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/AuthgebraException.java",
+      "sha256": "50a668c7786ab57318e66f67c483f7b54ab47a7e8850de8420e4337c921e42bd"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/AuthgebraLogger.java",
+      "sha256": "9f49c87773377ccff20e09758ec8b04814412ab9553967d94a9730830c24b16f"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/AuthorizationClient.java",
+      "sha256": "09ab8327b3de54c01cdd8fd34ca2d68158cc85cb5c3231e22c77a9ae079dc45f"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/CallOptions.java",
+      "sha256": "33b057f3bbec783447fa3589949abb0e21fc9cc99d8b9cf24f5562b5bfaa5dca"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/CommitState.java",
+      "sha256": "a2d06bd3a9a9a5bc9e9e74b49cf287c97231da27736654724e503dd3d5864221"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/Config.java",
+      "sha256": "6d118d671806e2e6ed65936fabfb329e4c5cf92652d8daa5e9319234e50445aa"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/CursorStaleException.java",
+      "sha256": "6dfd3c334ad58162ea8e8e35cfde7d82b40ea8e591d106c4ea90b4c996442b9f"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/Decision.java",
+      "sha256": "c6a87358f539776ad9e58f80a95c53b70eadc694ab55dfc06bab9533b78afea8"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/ErrorCodes.java",
+      "sha256": "f3664d09fd72b83cb9bbe83a502a9f1c5b89017273448567734ecb0b11fc9dc9"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/Http.java",
+      "sha256": "1cfc7f09a1156ea34b6304b7f52a1ce094448eb6c6498afa0e74162572abda99"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/JsonField.java",
+      "sha256": "beb00e881cb9309eb8279dfd257ad724df2bce831a559e7572d695554c4b6c3f"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/Models.java",
+      "sha256": "0904011385bb24b13ac30982e3de8ce42f4c8fa90cffe959136d06d4950c24f9"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/OpenApiDigest.java",
+      "sha256": "677af7bf722958ff5763a55fb3bb1d6e129496e1173b95443e42a2963e0208e1"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/PagedData.java",
+      "sha256": "cc300dc7dce8c06bcccb0b326f83cfb05256ffad6ee48e33ef1ad8d7c3270e41"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/ProtocolException.java",
+      "sha256": "5439bee425b3156595aa1ca4e7db3cb8690763d435f25e02993c7430db26f4ed"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/Query.java",
+      "sha256": "8e5c6b074964bbec98fc7b8463ec1f191181bf04446b16f0ef5a798a30fe63e5"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/RawClient.java",
+      "sha256": "b57c61f098f1ca391e5a2167d80d52aed780950c7b3f9a017ed84805d0b8b3ad"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/Result.java",
+      "sha256": "9452fe083bc553b6a900547c054e3d4057b143a855f508b311b986e298bd2f08"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/RetryPolicy.java",
+      "sha256": "0139c066ad53015ae19b67b9ba606fb0259c350fd4a149b5a0244c7cd6821f6d"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/TokenProvider.java",
+      "sha256": "e5e654b1e45ee7bab753df065fab22973b7b8edb80020fa35cc87e50509a4414"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/TraceContext.java",
+      "sha256": "9f9f5c4675a4dd27b8da6b2a28726791280b0ae6e5cfcbfbc235426f959d5aeb"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/TransportException.java",
+      "sha256": "023fb79efbcd2fa8c30d5ef9d6f4973302c36f4aed48b94064de9e6743c64788"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/Version.java",
+      "sha256": "f1ff57ca0dae680baebd451271f052d4cef71df35b03a2e604f5b738e3f9757a"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/Violation.java",
+      "sha256": "5604a3884fce0fbfa8425290e71267cf079ed7c526ad0fefd292a25ce1273f5b"
+    },
+    {
+      "path": "sdks/java/src/main/java/com/authgebra/client/models.provenance.json",
+      "sha256": "56a5248789f1b3d3f6485fcb62516be9ac12aa749463c46da2784e76089e664e"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/ContractCoverageTest.java",
+      "sha256": "ff644550b82ab8ab8500b966c39de4794588eaf2e9f384ded3acef4403f217b1"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/ExamplesCompileTest.java",
+      "sha256": "565c626d54ed86aa8093d43c0d1db23ac80692666cfcda9ad4313ec3af4ada96"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/FieldPresenceTest.java",
+      "sha256": "0b55aa7a7b378de65270eaa28304dc801599dedc7967790d27b082fa8b2c30a8"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/FixtureConformanceTest.java",
+      "sha256": "fa594e789acd8cd9a792080bb30e31b7ee13b68e32e1ac3732e81313bda2cde7"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/GeneratedArtifactMutationTest.java",
+      "sha256": "2fe4cb9e9d34a213bde50ca6e4277aab9a4f4d0407b21e8758b63a3d2ffd8e99"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/IamConstraintTest.java",
+      "sha256": "915d8635807c4c10e47988f0952660a0ac444a51f8f9b101124a250e9026ac57"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/IntegrationTest.java",
+      "sha256": "0f47e62c3c742153454811cbeacfff3c61be8451b67766f2e0de06ac91ce30c4"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/ModelFieldCoverageTest.java",
+      "sha256": "9e0397c90df35051b8dd109a4257ffcb0e204cf966ff264b488e08c6830a8a37"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/ModelSemanticsTest.java",
+      "sha256": "c447c3c33898f0d437c985da1f7b607b8909a26afae038cbfc640101d19d0061"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/PaginationTest.java",
+      "sha256": "82e5ec0368c8a74bd7a1fd4dd895ab9f757aec1534c61bc3ba710c744237f7aa"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/PatchNullTest.java",
+      "sha256": "96757efd84fab35672216f3bd7ab08dc17807b9e397fff488bfc1a306083b759"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/RetryAndSafetyTest.java",
+      "sha256": "3e23e77c71cd8f2588a46bfa7f720319ffa3c0c86348607d2538b7a9d08a6465"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/ScalarProtocolTest.java",
+      "sha256": "5d6dad26336dbb972a5f4e1a82ffa720591735a829ce7fa5e64547b77e4dd6e5"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/TestServers.java",
+      "sha256": "068191163586090e6d0a4ce9f55560a6a5ce5fcc4f291fc4d014fa51bb05b4f0"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/TlsIntegrationTest.java",
+      "sha256": "5cb036aa96a69a5dc033b7eaeec8236b0328a499c01b96a5ce16798889e647b7"
+    },
+    {
+      "path": "sdks/java/src/test/java/com/authgebra/client/TraceContextTest.java",
+      "sha256": "03cd2d8ef2c1a37465bd5d6ed214eff1d8ae87eb43426944c2858edba1bc83dd"
+    },
+    {
+      "path": "sdks/java/tools/Generate.java",
+      "sha256": "791b7146d4a0611d0198239fe4d579ed3f087086e1c0a1b28743c30cc859e5a2"
+    },
+    {
+      "path": "sdks/mise.toml",
+      "sha256": "ade9d4b703988700097c4eee55cc15a123fc86fc2cdf85206391987a9e928e85"
+    },
+    {
+      "path": "sdks/python/.gitignore",
+      "sha256": "0addff64ea424313fbc5615ce90043c1f68d76b38c5244f5dc76f46b09445143"
+    },
+    {
+      "path": "sdks/python/CHANGELOG.md",
+      "sha256": "3427490884d50299ad1c3084b6587b5e9f671f9413c2ec8803c00daa90615229"
+    },
+    {
+      "path": "sdks/python/LICENSE",
+      "sha256": "807f508c010d769c207b0b6392a1d050dd06da096177ccb55d379941da8321cf"
+    },
+    {
+      "path": "sdks/python/README.md",
+      "sha256": "d3dabb1e78ac7841ea25bf3ac295e955ba27f73fe85e6ba5b15720b503f38441"
+    },
+    {
+      "path": "sdks/python/examples/async_check.py",
+      "sha256": "2cd6a2459a26d775c100342c33b8665144edaf16592734bdb1afec57fc76fb28"
+    },
+    {
+      "path": "sdks/python/examples/idempotent_write.py",
+      "sha256": "5da1bd618222e81b9d9799dcc9f4253c07846e0dbb91b811269d898dee7bb22a"
+    },
+    {
+      "path": "sdks/python/examples/quickstart.py",
+      "sha256": "7671feeedfc176a7cb6dfcfa6cdb445aa817884be627767486831fc017b426f8"
+    },
+    {
+      "path": "sdks/python/pyproject.toml",
+      "sha256": "5d3f5529f891762479af112f7f0e97c91a9b02783507c89d0d76beb66a4f99e2"
+    },
+    {
+      "path": "sdks/python/src/authgebra/__init__.py",
+      "sha256": "e47ab0cc9642a7b2eec00c24ce82b0c22c57d9878b1025c86dd694b4546fa871"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_core.py",
+      "sha256": "1b97b947fb9f1b0446574124eaf6737f4bc2841e91f15fbbdd028be925c8e4a8"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_generated/__init__.py",
+      "sha256": "be61a8646001ebb85a6e4af14681da65541423f4fa3044e6c0965904a84f3cbc"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_generated/aio.py",
+      "sha256": "70ad8286b17be461f370d857a0c31ea001c6f10dfd6b27aaee028af874c4ad2a"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_generated/codes.py",
+      "sha256": "0f5a0a073193d3059e8a392599f43409a47156b0395b4a62a1744819e313a779"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_generated/models.py",
+      "sha256": "81009f540ac3b08d4cd43a75c7268fbfa326eb5f0356f512d9155590fcdc05e9"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_generated/operations.py",
+      "sha256": "d2be885e97973b6f04688f9a1d3cfd9a1ff8228f3d633406b54dafe805525af5"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_generated/provenance.json",
+      "sha256": "ddd0b65f6c6e491c37e2623a147b4fab7e00e6bd486da78b49d8291acf48f0fd"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_generated/sync.py",
+      "sha256": "3a0856243e80bbaad68357fcbd9cd23dba98da21a4d104f32ff89513d1272cf4"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_model.py",
+      "sha256": "5cc5c494e4ab61ba8b5233c538b3ee7ea5f846a2489358054ab18aecb3532337"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_parse.py",
+      "sha256": "18d1b6f05d783f6c1b47a604c19faf2272aaa0b356f47d7986c15370897964b2"
+    },
+    {
+      "path": "sdks/python/src/authgebra/_version.py",
+      "sha256": "f8db1efeb0dc6941aa9379b8a21647df6035369e618d6baa616e83c8364f99ed"
+    },
+    {
+      "path": "sdks/python/src/authgebra/aclient.py",
+      "sha256": "fa9e3d1a8d1725695b802b8baa137c5bf4e5476d69db33d588a9e0199628a91f"
+    },
+    {
+      "path": "sdks/python/src/authgebra/client.py",
+      "sha256": "79d0c7801d9c114b47e90a1690b4d9ab2cbbe5d34f74fce8c6c4300a6528b63e"
+    },
+    {
+      "path": "sdks/python/src/authgebra/config.py",
+      "sha256": "ba7ebc20415c6f45a44576ee22a13ea0481613e17c11a73daa3a2b94dc74c1cb"
+    },
+    {
+      "path": "sdks/python/src/authgebra/errors.py",
+      "sha256": "2788d39a5c6a118ed1753cb23ac1131018dc97111cd849f7ffaa8692154f8649"
+    },
+    {
+      "path": "sdks/python/src/authgebra/models.py",
+      "sha256": "2afb61f67253bedb034fbe3d979bed1f01a7d4e6472decbb5e328f0d39d5cd8b"
+    },
+    {
+      "path": "sdks/python/src/authgebra/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "sdks/python/tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "sdks/python/tests/conftest.py",
+      "sha256": "139c3d3d261bcfc754ef8314da5823c87bdcf690d7d77788e04a7058160aa19d"
+    },
+    {
+      "path": "sdks/python/tests/test_behavior.py",
+      "sha256": "d3aecf8185e10fbf44faa481728f405e1b0dc3441b06ac13425948e6fbc7919f"
+    },
+    {
+      "path": "sdks/python/tests/test_examples.py",
+      "sha256": "cee761d0f842e6c1533ca2d2ed6e5838e041419636bbdc3791c285faa669f1ab"
+    },
+    {
+      "path": "sdks/python/tests/test_fixtures.py",
+      "sha256": "ad7233133bf3ce81138723a5f95bb66a526270fc7c0bc5346edbb4be366c93e1"
+    },
+    {
+      "path": "sdks/python/tests/test_integration.py",
+      "sha256": "5999cdf263c359fca3366d81dd1b634e0a83318a071b8a55c126f40d1491abf1"
+    },
+    {
+      "path": "sdks/python/tests/test_operations.py",
+      "sha256": "bc61af3d404e70358077b2435f066c16ba9effc1ee25480e343e54b30f2201df"
+    },
+    {
+      "path": "sdks/python/tests/test_tls.py",
+      "sha256": "465db7924036093f9544b4b673227ff8c182af9ed847cf1dfcf41ba5a9e56622"
+    },
+    {
+      "path": "sdks/python/tests/test_typed_models.py",
+      "sha256": "9b4c8669ac1a111a2cfb919e86e264614e87f4dcaa23e4b680977403b8f69bbe"
+    },
+    {
+      "path": "sdks/python/tools/generate.py",
+      "sha256": "407d6d8ea43c22e343f756a5a6959176f1c827fe6e91c82dfbcbfe2762343db6"
+    },
+    {
+      "path": "sdks/rust/.gitignore",
+      "sha256": "ec95c4bb36d804419bee0c1d80eb111b8ea0ce2d15b00de2ac3730959e3b4dcf"
+    },
+    {
+      "path": "sdks/rust/CHANGELOG.md",
+      "sha256": "a4100b0dc39534aabb29a5026f01f88b7d698ea8cb94208a60d89e028d96fce5"
+    },
+    {
+      "path": "sdks/rust/Cargo.toml",
+      "sha256": "6545cc1c54cfb6cc539215073a9098b1e8086722e340add4b769c207e4a4d29b"
+    },
+    {
+      "path": "sdks/rust/LICENSE",
+      "sha256": "807f508c010d769c207b0b6392a1d050dd06da096177ccb55d379941da8321cf"
+    },
+    {
+      "path": "sdks/rust/README.md",
+      "sha256": "5cecf5dcda9555477a70faf7a1c201db511aed5747dff24d52ce5c6dcbe43c9e"
+    },
+    {
+      "path": "sdks/rust/examples/check.rs",
+      "sha256": "ccadf49614f215ba8afbab7ec0e5094769ebb41a2f0214c7898ce150da257cf5"
+    },
+    {
+      "path": "sdks/rust/examples/idempotent_write.rs",
+      "sha256": "7c2fc2a0b15c8fcca585c3c6b21930aae2ce874feab0cadce6eb06bbff977767"
+    },
+    {
+      "path": "sdks/rust/examples/pagination.rs",
+      "sha256": "86f39ac44b3358a1ab9eae863562c6e10fa503b5e7dfeee29b1fd4698622f438"
+    },
+    {
+      "path": "sdks/rust/src/admin.rs",
+      "sha256": "d90c4d597912acd8078056bb0cf9953cfcea3c3ad154edc41de7da7afb4ff57c"
+    },
+    {
+      "path": "sdks/rust/src/authorization.rs",
+      "sha256": "14aaa7ba21ec15b4576823a24c3309754a7f6cbfb6d45f99580dfa312c7b3090"
+    },
+    {
+      "path": "sdks/rust/src/client.rs",
+      "sha256": "6c3bcb5969c23eeff522229c0d4270a6cf4e4711523002f418047f0390c8b7d8"
+    },
+    {
+      "path": "sdks/rust/src/config.rs",
+      "sha256": "098fccf84c5c1e85026290f925bed7bd484f3e1ab54b5f3d12024e7dc7e628c4"
+    },
+    {
+      "path": "sdks/rust/src/error.rs",
+      "sha256": "7840feb6b32f1fcaef5fbeddee81b0cdfac8b6d1290673204fcd506220c9501d"
+    },
+    {
+      "path": "sdks/rust/src/generated/admin.rs",
+      "sha256": "5b9e7b274efd993dc9630d3540d85f1cdfdf06e619cacd6350a63a27f4f564eb"
+    },
+    {
+      "path": "sdks/rust/src/generated/mod.rs",
+      "sha256": "a3242224940efaf7c74f8fd1d428691b62a764d168cf502aa50842befedb3aea"
+    },
+    {
+      "path": "sdks/rust/src/generated/model_tests.rs",
+      "sha256": "975066478986bc4f270934f056d8954c999e94beaf955abe4a61a263aab1e7d0"
+    },
+    {
+      "path": "sdks/rust/src/generated/models.provenance.json",
+      "sha256": "47c25130be75fb7c4bc47ca5342c08fcd7d387158c405fe134b54360a5bbae74"
+    },
+    {
+      "path": "sdks/rust/src/generated/models.rs",
+      "sha256": "ad6b2edc8564a483889e9e05ee7a48fafdda0e4571c3b7e64f958c7dd0372d33"
+    },
+    {
+      "path": "sdks/rust/src/lib.rs",
+      "sha256": "5a2bcfb96c1aedb48458e9c63ef4aa2348b1b6cbb5cd0fe8fcbccb688b913700"
+    },
+    {
+      "path": "sdks/rust/src/models.rs",
+      "sha256": "5ab966a4ca40300ec2d0ffeb6b0c468dc32d4900f3ba2e5399c5127c3637b6c9"
+    },
+    {
+      "path": "sdks/rust/src/serde_helpers.rs",
+      "sha256": "c8e4530b09018777f22dcb4977e0280ec16dab44976ee6f6a41ac09c624dc37f"
+    },
+    {
+      "path": "sdks/rust/src/trace.rs",
+      "sha256": "390577227f71a4f359fa195061386a8b4968b4a5c8981f8d4f65c7d3479857c9"
+    },
+    {
+      "path": "sdks/rust/tests/behavior.rs",
+      "sha256": "cafa82bcb172f293c3c496d5d22fbfdbf441f54c87a948ed9b8f8e429a6f224e"
+    },
+    {
+      "path": "sdks/rust/tests/common/mod.rs",
+      "sha256": "8ebb71a80d7e6ac8904791bde9ff06922e37b2a5798d5afd22fa210454f63777"
+    },
+    {
+      "path": "sdks/rust/tests/conformance.rs",
+      "sha256": "9662cff7814adfbc49b1caed07e984f308b8bd566c834bb68e42a4676a9ae761"
+    },
+    {
+      "path": "sdks/rust/tests/coverage.rs",
+      "sha256": "d56c9e5f941583efb8d10fcb85b214f99b9ed0e3edb6f3f83843be268ef824a2"
+    },
+    {
+      "path": "sdks/rust/tests/integration.rs",
+      "sha256": "60d0ed6399c40c5b3f498647204589dd84a6ba9b4f06fe4674a708a086eff9af"
+    },
+    {
+      "path": "sdks/rust/tests/model_semantics.rs",
+      "sha256": "7b65c74f4370a87693bf53a9f4919ff95556f68434f198402463baba3f48a53e"
+    },
+    {
+      "path": "sdks/rust/tests/tls.rs",
+      "sha256": "21eeb1b2f1cc42327b4038bd488871197d7164c3c699a65aa6aaba9fa42d3a24"
+    },
+    {
+      "path": "sdks/rust/tools/gen.py",
+      "sha256": "ead311ca345daec67f9b89c285a113df7f85f76c3d55189ecdce507a0d27b6ab"
+    },
+    {
+      "path": "sdks/rust/tools/test_gen.py",
+      "sha256": "f8681b96d934f2e3c4e01643aae80a00068eb6ad78dd29db9eb99064ec59d6fd"
+    },
+    {
+      "path": "sdks/zig/.gitignore",
+      "sha256": "7fd232855f2f4ef8558ac58c660ad6c9095a39e81f6170091a91327592a67098"
+    },
+    {
+      "path": "sdks/zig/CHANGELOG.md",
+      "sha256": "3768ce1d1134536121857df7eafc6b2dc63f3494a7908cd5d938491919f0467b"
+    },
+    {
+      "path": "sdks/zig/LICENSE",
+      "sha256": "807f508c010d769c207b0b6392a1d050dd06da096177ccb55d379941da8321cf"
+    },
+    {
+      "path": "sdks/zig/README.md",
+      "sha256": "8c5cca68071b0b1fa35e4028ee68232ca597db0775f6e4cfc1e0f9874725688c"
+    },
+    {
+      "path": "sdks/zig/build.zig",
+      "sha256": "89fb93c3ce7de409e4ab2e51653cf38363d30044f88ee608ebfb749c415a2f38"
+    },
+    {
+      "path": "sdks/zig/build.zig.zon",
+      "sha256": "270a6d37c6341351fbe9b521995bf64dfc8f3464c054b8716b119fad62d7d067"
+    },
+    {
+      "path": "sdks/zig/examples/check.zig",
+      "sha256": "b3c7eafba02aaef88811eb65e92860a1e2acdf56119a761a0bc4ce648810dd2b"
+    },
+    {
+      "path": "sdks/zig/src/admin.zig",
+      "sha256": "3e1f50efe9d9e2dc1e5a2cd4ec2d386a2fc46b2d96261dd02147993541b0a9b7"
+    },
+    {
+      "path": "sdks/zig/src/admin_ops.zig",
+      "sha256": "43e44f1b6bbe683e9f49097a86b4613d1343a812b3ada08c9b5e2003dca17fcf"
+    },
+    {
+      "path": "sdks/zig/src/authorization.zig",
+      "sha256": "7dfa480e56c152490439bed49d22e1d1d5299d6af7b69c92a6032a9ca5fa197e"
+    },
+    {
+      "path": "sdks/zig/src/behavior_test.zig",
+      "sha256": "200b53e3433b479535c0b476e734fc9ae79531e1a5290b190126c4f82fbdcb50"
+    },
+    {
+      "path": "sdks/zig/src/client.zig",
+      "sha256": "ebb561227fe1e6ec64701a50df65791ae7d5478fd5895e805fe730628649e7d6"
+    },
+    {
+      "path": "sdks/zig/src/conformance_test.zig",
+      "sha256": "fcd7a426016ee46b16b48e4ed93dccae35cb1feb247f1151d94da9af0ae84f19"
+    },
+    {
+      "path": "sdks/zig/src/errors.zig",
+      "sha256": "a5cd51085b08a22efca9d6944d46763f78404866a0e28f71f82ea78e9b0c5eee"
+    },
+    {
+      "path": "sdks/zig/src/integration_test.zig",
+      "sha256": "2dc073482015f27593bf59c37afe8a878380789837680b789654f852be10143b"
+    },
+    {
+      "path": "sdks/zig/src/mock.zig",
+      "sha256": "fd8802eb741400bd0fa06763ee7121f29541627446d162b17691592acef6513a"
+    },
+    {
+      "path": "sdks/zig/src/model_roundtrip_test.zig",
+      "sha256": "bac415e845bde1d365a8f7f3356a5b481e65c728756908f730119488559de400"
+    },
+    {
+      "path": "sdks/zig/src/model_support.zig",
+      "sha256": "eefece26facd0cf2da3c52390dbf56db7def46535bab47932dde3278cc5cf490"
+    },
+    {
+      "path": "sdks/zig/src/model_test.zig",
+      "sha256": "34a6eee48f40e01be6bff430702913c178de94d0d1599edff33bf4ca9331ace7"
+    },
+    {
+      "path": "sdks/zig/src/models.provenance.json",
+      "sha256": "736f6fcb3bdf2cece89a49c58bc5a6a19de0ec6e61f9b2f3352ffffd4bb8ec80"
+    },
+    {
+      "path": "sdks/zig/src/models.zig",
+      "sha256": "31c1c997c8681c8750c1f1770c5aa169da2936e08e37192bcc1f9319ccf1a44d"
+    },
+    {
+      "path": "sdks/zig/src/root.zig",
+      "sha256": "4fb459104f55856ce0a8dd2422bca40ff10fc623c2a5e3822439b636c8e48707"
+    },
+    {
+      "path": "sdks/zig/src/tests.zig",
+      "sha256": "a87b57588c43c67295556daa4da081395e37834160a4514025190930f4c01f13"
+    },
+    {
+      "path": "sdks/zig/src/tls_test.zig",
+      "sha256": "10e8d47d3edd2e8be5bd99f2889e41624aa59d2f68d8d6aa1bb85ce0a73593cb"
+    },
+    {
+      "path": "sdks/zig/src/trace.zig",
+      "sha256": "a43be3e3546c128420775b600cd25dc7ed19d1e0e93401e824ecae9c19f47d89"
+    },
+    {
+      "path": "sdks/zig/src/transport.zig",
+      "sha256": "6ea22575991ea318548938eaa49e8e5fb3429bc8e0cc04477b17f3c7761acc32"
+    },
+    {
+      "path": "sdks/zig/tools/gen_admin.py",
+      "sha256": "675424c8a8084b5a5341452e6fe61bd75d5518d37d4144a4cf4cbbe639a68f6a"
+    },
+    {
+      "path": "sdks/zig/tools/model_gen.py",
+      "sha256": "2368ddac73f8e1f75dacb24ce784531af44a685f0900832072a6cfb743a8b05e"
+    },
+    {
+      "path": "sdks/zig/tools/test_gen_admin.py",
+      "sha256": "4ca5ac376105fad2e749cad372c10c078a318b5a4bf6dea38a3e78a4d2931cac"
+    },
+    {
+      "path": "SDK-SIGNING-KEY.asc",
+      "sha256": "9d4708deee0b54f775d2a4810909996cb5b4f1f7b2379f583b8e015fac24141e"
+    }
+  ],
+  "export_policy": "SDK source, reviewed contracts and fixtures only; SDK-only public documentation; no server or private history.",
+  "signing_key_fingerprint": "8AD333B2299768BD48C59B3826FB55A540AA6F51"
+}

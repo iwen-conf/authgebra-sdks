@@ -1,0 +1,58 @@
+name: SDK contract and native checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  sdk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sdks
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: jdx/mise-action@5228313ee0372e111a38da051671ca30fc5a96db
+        with:
+          version: "2026.8.14"
+          working_directory: sdks
+      - name: Independent schema and field checks
+        run: |
+          mise exec -- python3 ../scripts/ci/test_sdk_types.py
+          mise exec -- python3 ../scripts/ci/sdk-type-coverage.py --check
+          mise exec -- python3 ../scripts/ci/test_sdk_type_coverage.py
+      - name: Go
+        run: |
+          cd go
+          mise exec -- go run ./internal/gen --check
+          mise exec -- go vet ./...
+          mise exec -- go test -race ./...
+      - name: Python
+        run: |
+          mise exec -- python3 python/tools/generate.py --check
+          mise exec -- python3 -m venv python/.venv
+          python/.venv/bin/python -m pip install -e 'python[dev]'
+          cd python
+          .venv/bin/python -m pytest -q tests
+          .venv/bin/mypy --strict src tests tools examples
+      - name: Java 17
+        run: |
+          cd java
+          mise exec -- java tools/Generate.java --check
+          mise exec -- mvn -B test
+      - name: C# .NET 8
+        run: |
+          mise exec -- python3 csharp/tools/gen.py --check
+          mise exec -- python3 csharp/tools/test_gen.py
+          mise exec -- dotnet test csharp/tests/Authgebra.Client.Tests -c Release
+      - name: Zig 0.17.0
+        run: |
+          mise exec -- python3 zig/tools/gen_admin.py --check
+          mise exec -- python3 zig/tools/test_gen_admin.py
+          cd zig
+          mise exec -- zig build test --summary all
+      - name: Rust MSRV on Linux
+        run: |
+          mise exec -- python3 rust/tools/gen.py --check
+          mise exec -- python3 rust/tools/test_gen.py
+          mise install rust@1.85.1
+          cd rust
+          mise exec rust@1.85.1 -- cargo test --all-targets

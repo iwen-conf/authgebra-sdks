@@ -1,0 +1,33 @@
+[package]
+name = "authgebra-client"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Official Rust client for the Authgebra /api/v1 HTTP API (thin wrapper; no authorization logic)"
+license-file = "LICENSE"
+repository = "https://github.com/iwen-conf/authgebra-sdks"
+readme = "README.md"
+
+# Standalone: this crate is NOT a member of the server package.
+[workspace]
+
+[features]
+default = ["rustls"]
+rustls = ["reqwest/rustls-tls"]
+tracing = ["dep:tracing"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["http2"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["time"] }
+url = "2"
+getrandom = "0.3"
+tracing = { version = "0.1", optional = true }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "io-util", "time", "sync"] }
+
+[lints.rust]
+unsafe_code = "forbid"

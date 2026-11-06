@@ -1,0 +1,19 @@
+{
+  "id": "21-precision-bigint-revision",
+  "description": "超出 JS 安全整数的 revision 不得丢精度",
+  "operation": "authz.check",
+  "request": {},
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-request-id": "req-abcdefgh"
+    },
+    "body_raw": "{\"data\":{\"decision\":\"allow\",\"reason_code\":\"allow\"},\"meta\":{\"authz_revision\":9223372036854775807,\"snapshot_generation\":9007199254740993}}"
+  },
+  "expect": {
+    "kind": "ok",
+    "decision": "allow",
+    "authz_revision": "9223372036854775807",
+    "snapshot_generation": "9007199254740993"
+  }
+}

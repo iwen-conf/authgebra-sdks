@@ -1,0 +1,32 @@
+{
+  "id": "12-503-identity-reload-pending",
+  "operation": "auth.change_password",
+  "request": {},
+  "response": {
+    "status": 503,
+    "headers": {
+      "x-request-id": "req-abcdefgh"
+    },
+    "body": {
+      "error": {
+        "code": "IDENTITY_RELOAD_PENDING",
+        "message": "m",
+        "request_id": "req-abcdefgh",
+        "retryable": false,
+        "commit_state": "committed_unpublished"
+      }
+    }
+  },
+  "expect": {
+    "kind": "api_error",
+    "status": 503,
+    "code": "IDENTITY_RELOAD_PENDING",
+    "known_code": true,
+    "request_id": "req-abcdefgh",
+    "trace_id": null,
+    "retryable": false,
+    "retry_after_seconds": null,
+    "commit_state": "committed_unpublished"
+  },
+  "description": "503 IDENTITY_RELOAD_PENDING：已提交未发布，绝不重发"
+}

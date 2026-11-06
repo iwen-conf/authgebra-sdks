@@ -1,0 +1,29 @@
+{
+  "id": "22-unicode-roundtrip",
+  "description": "Unicode/emoji 请求体原样序列化（UTF-8，不转义成乱码）",
+  "operation": "users.create",
+  "request": {
+    "method": "POST",
+    "path": "/api/v1/users",
+    "idempotency_key": "idem-0002",
+    "body": {
+      "username": "用户-é-😀"
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "x-request-id": "req-abcdefgh"
+    },
+    "body": {
+      "data": {
+        "username": "用户-é-😀"
+      }
+    }
+  },
+  "expect": {
+    "kind": "ok",
+    "echo_username": "用户-é-😀",
+    "request_body_utf8_exact": true
+  }
+}

@@ -1,0 +1,128 @@
+# authgebra-client (Rust)
+
+Official Rust client for the Authgebra `/api/v1` HTTP API. It is a thin typed wrapper: **it does
+no authorization logic**; every decision is computed by the server.
+
+| | |
+|---|---|
+| Status | **INTEGRATION_TESTED** — [evidence and limits](../DISTRIBUTION.md); 0.1.0 git dependency and .crate distribution; crates.io tracked separately |
+| MSRV | Rust 1.85 (edition 2024); rustc 1.85.1 and 1.99.0 on Linux (see Status) |
+| Server contract | `/api/v1`; generated from `sdks/contracts/openapi.json`, sha256 `907bd9616dba9993c479cf551bc1e69ac046776b72dd58f5af1138be10c34c25` |
+| TLS | rustls (default feature `rustls`); certificate verification is always on |
+| Runtime | Tokio (via reqwest) |
+| License | Proprietary (`LICENSE`) |
+
+## Install
+
+Use the public SDK-only repository (no access to the server repository is needed):
+
+```toml
+authgebra-client = { git = "https://github.com/iwen-conf/authgebra-sdks", tag = "v0.1.0" }
+```
+
+## Quick start
+
+```rust
+use authgebra_client::models::{CheckRequest, ResourceRef};
+use authgebra_client::Client;
+
+let client = Client::builder()
+    .base_url("https://authz.example.com")
+    .bearer_token(std::env::var("AUTHGEBRA_TOKEN")?) // or .token_provider(Arc<dyn TokenProvider>)
+    .build()?;
+
+let r = client.authorization().check(&CheckRequest {
+    subject_id: subject.into(),
+    permission: "document:read".into(),
+    resource: Some(ResourceRef { resource_type_code: "document".into(), external_id: "doc-123".into() }),
+    context: None,
+}).await?;
+println!("{} rev={:?} trace={:?}", r.data.decision, r.meta.map(|m| m.authz_revision), r.trace_id);
+```
+
+`examples/` has runnable programs for check, pagination and idempotent writes.
+Build one `Client` per process and clone it: it owns the connection pool. Provide your own
+`reqwest::Client` with `ClientBuilder::http_client` for custom roots or proxies.
+
+## What is an error and what is not
+
+* `decision = deny` is `Ok(..)`. It is a finished decision.
+* `NOT_READY` (503) is `Err(Error::Api(..))`: the system could not produce a trustworthy
+  decision. The SDK never turns it into a deny. Apply your own fail-closed rule and keep the
+  error (it carries `request_id`/`trace_id`).
+* `Error::Transport` — no answer (timeout, reset, connect, TLS). `Error::Protocol` — an answer
+  that cannot be understood (not JSON, missing `data`, missing `error.code`, too large).
+
+Branch on `ApiError::code` / `known_code`, never on `message`. An unknown code from a newer
+server is preserved in `code` with `known_code == None`.
+
+## Retries
+
+* Reads (GET and the decision POSTs): up to 2 retries on `RATE_LIMITED` (honours `Retry-After`,
+  capped), `NOT_READY` and timeouts/connection failures, with jittered backoff. Never
+  `CURSOR_STALE`, `FORBIDDEN`, auth errors or validation errors. There is no unlimited setting.
+* Writes: **never resent by default.** Opt in per call with
+  `CallOptions::new().idempotency_key(k).retry_writes(true)`; the same key and the same bytes
+  are resent (`retry_writes` without a key is rejected before anything is sent).
+* `AUTHZ_RELOAD_PENDING` / `IDENTITY_RELOAD_PENDING`: **never resent, even when opted in.** The
+  error has `commit_state() == Some(CommittedUnpublished)`: the mutation already happened but
+  the new state is not yet published. Do not report "authorization is in effect" until
+  `authorization().revision()` shows the snapshot caught up.
+* A write that times out or loses the connection has `commit_state() == Some(Unknown)`
+  (inferred by the SDK, not claimed by the server): it may or may not have been applied.
+  Reconcile with the same idempotency key or by reading the entity. A connect/TLS failure
+  carries no such claim (nothing was processed).
+
+## Tracing
+
+Each call sends `X-Request-ID` (generated unless you pass one) and a W3C `traceparent` (a new
+root unless you pass `CallOptions::trace`). Responses expose `request_id` and `trace_id`; on
+`ApiError`, `request_id` is the `X-Request-ID` header when valid (else the body value) and
+`request_id_mismatch` flags a header/body disagreement. Request id, trace id and span id are
+different identifiers and are never mixed. Enable feature `tracing` for debug events (they carry
+ids only, never tokens or bodies).
+
+## Pagination
+
+`authorization().list_resources_pager(request)` yields one page per `next_page().await`.
+It returns `CURSOR_STALE` to you (restarting is your decision), refuses to merge pages whose
+`snapshot_generation` differs (`Error::GenerationChanged`), stops at `max_pages` (default 1000)
+and fetches nothing until polled; dropping the future cancels the in-flight request.
+
+## Versions and precision
+
+`authz_revision` / `snapshot_generation` are `i64`, parsed from the raw bytes (tested at
+`i64::MAX`/`MIN`). Admin reads return no `meta`; `Response::meta` is `None` and
+`authz_revision()` is `None` — never `0`.
+
+## Admin API
+
+`client.admin()` exposes every operation in the OpenAPI export as `AdminClient::<operationId>(args, &opts)`,
+generated by `python3 tools/gen.py ../contracts/openapi.json src/generated` (then run `cargo fmt`; the committed files are rustfmt-formatted). Request and
+response bodies, nested objects and tagged unions have named serde models. Only schema locations
+that permit arbitrary JSON use `serde_json::Value`; every exception has a source pointer and a
+roundtrip test in `models.provenance.json`. String enums retain an `Unknown(String)` arm.
+Each operation has a concrete named result alias. Three-state nullable fields use
+`Option<Option<T>>`; optional nonnullable fields reject explicit null, and required nullable
+fields reject missing keys. `validate()` checks machine constraints without inserting defaults.
+
+`python3 tools/gen.py --check` regenerates into a temporary directory, formats and compares every
+model, operation, provenance and test-registry byte without changing the workspace. Run Rust
+compilation on the registered Linux host, including the Rust 1.85.1 MSRV.
+
+## Safety defaults
+
+TLS verification cannot be disabled by this crate; plain `http://` is refused except to
+loopback unless `allow_insecure_http(true)`; redirects are not followed; timeouts are finite
+(connect 5 s, total 30 s); responses are capped at 8 MiB; tokens are redacted from `Debug` and
+errors and sent as a sensitive header.
+
+## Tests
+
+```
+cargo test                       # fixtures, behaviour, OpenAPI coverage
+cargo clippy --all-targets -- -D warnings
+```
+The shared fixtures live in `../fixtures`, the OpenAPI export in `../contracts`; override with
+`AUTHGEBRA_SDK_FIXTURES` / `AUTHGEBRA_SDK_CONTRACTS` when the crate is built elsewhere.
+Do not build this repository's Rust on a developer Mac; use the build host.

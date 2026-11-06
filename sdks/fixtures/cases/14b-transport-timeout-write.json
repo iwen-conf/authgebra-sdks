@@ -1,0 +1,20 @@
+{
+  "id": "14b-transport-timeout-write",
+  "description": "写请求超时：提交状态 unknown，不得假设未提交，不得自动重发（无幂等键）",
+  "operation": "users.create",
+  "request": {
+    "method": "POST",
+    "path": "/api/v1/users",
+    "idempotency_key": null,
+    "body": {
+      "username": "alice"
+    }
+  },
+  "fault": "timeout",
+  "expect": {
+    "kind": "transport_error",
+    "error": "timeout",
+    "commit_state": "unknown",
+    "auto_resent": false
+  }
+}

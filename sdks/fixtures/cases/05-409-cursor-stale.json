@@ -1,0 +1,31 @@
+{
+  "id": "05-409-cursor-stale",
+  "operation": "authz.list_resources",
+  "request": {},
+  "response": {
+    "status": 409,
+    "headers": {
+      "x-request-id": "req-abcdefgh"
+    },
+    "body": {
+      "error": {
+        "code": "CURSOR_STALE",
+        "message": "m",
+        "request_id": "req-abcdefgh",
+        "retryable": false
+      }
+    }
+  },
+  "expect": {
+    "kind": "api_error",
+    "status": 409,
+    "code": "CURSOR_STALE",
+    "known_code": true,
+    "request_id": "req-abcdefgh",
+    "trace_id": null,
+    "retryable": false,
+    "retry_after_seconds": null,
+    "commit_state": null
+  },
+  "description": "409 CURSOR_STALE 必须显式抛出，不自动重来"
+}

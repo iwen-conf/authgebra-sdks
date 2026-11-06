@@ -1,0 +1,30 @@
+{
+  "id": "07-412-missing-if-match",
+  "operation": "users.update",
+  "request": {},
+  "response": {
+    "status": 412,
+    "headers": {
+      "x-request-id": "req-abcdefgh"
+    },
+    "body": {
+      "error": {
+        "code": "PRECONDITION_FAILED",
+        "message": "m",
+        "request_id": "req-abcdefgh"
+      }
+    }
+  },
+  "expect": {
+    "kind": "api_error",
+    "status": 412,
+    "code": "PRECONDITION_FAILED",
+    "known_code": true,
+    "request_id": "req-abcdefgh",
+    "trace_id": null,
+    "retryable": null,
+    "retry_after_seconds": null,
+    "commit_state": null
+  },
+  "description": "412 PRECONDITION_FAILED"
+}

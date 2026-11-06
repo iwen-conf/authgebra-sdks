@@ -1,0 +1,63 @@
+{
+  "id": "08-422-multi-violation",
+  "operation": "authz.check",
+  "request": {},
+  "response": {
+    "status": 422,
+    "headers": {
+      "x-request-id": "req-abcdefgh"
+    },
+    "body": {
+      "error": {
+        "code": "VALIDATION_ERROR",
+        "message": "request validation failed",
+        "request_id": "req-abcdefgh",
+        "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
+        "details": {
+          "violations": [
+            {
+              "path": "/context/region",
+              "reason": "unknown_context_key",
+              "message": "context attribute is not registered"
+            },
+            {
+              "path": "/permission",
+              "reason": "too_long",
+              "message": "too long"
+            },
+            {
+              "reason": "invalid_value",
+              "message": "bad"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "expect": {
+    "kind": "api_error",
+    "status": 422,
+    "code": "VALIDATION_ERROR",
+    "known_code": true,
+    "request_id": "req-abcdefgh",
+    "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
+    "retryable": null,
+    "retry_after_seconds": null,
+    "commit_state": null,
+    "violations": [
+      {
+        "path": "/context/region",
+        "reason": "unknown_context_key"
+      },
+      {
+        "path": "/permission",
+        "reason": "too_long"
+      },
+      {
+        "path": null,
+        "reason": "invalid_value"
+      }
+    ]
+  },
+  "description": "422 多字段校验失败：violations 保序，缺 path 的项 path=null"
+}

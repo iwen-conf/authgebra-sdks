@@ -1,0 +1,24 @@
+{
+  "id": "23-authz-meta-absent-on-admin-read",
+  "description": "管理读取无 meta：SDK 暴露 authz_revision=null，绝不填 0",
+  "operation": "users.list",
+  "request": {},
+  "response": {
+    "status": 200,
+    "headers": {
+      "x-request-id": "req-abcdefgh"
+    },
+    "body": {
+      "data": [],
+      "page": {
+        "next_cursor": null,
+        "has_more": false
+      }
+    }
+  },
+  "expect": {
+    "kind": "ok",
+    "authz_revision": null,
+    "has_more": false
+  }
+}
