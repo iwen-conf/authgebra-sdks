@@ -14,6 +14,8 @@ jobs:
         with:
           version: "2026.8.14"
           working_directory: sdks
+      - name: Install the formatter required by the Rust generator
+        run: rustup component add --toolchain 1.98.0 rustfmt
       - name: Independent schema and field checks
         run: |
           mise exec -- python3 ../scripts/ci/test_sdk_types.py

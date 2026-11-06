@@ -5,7 +5,7 @@
   "files": [
     {
       "path": ".github/workflows/sdk.yml",
-      "sha256": "e79df1d406df62907fd6cf324e65ed29fd7096b329bd10c15a92f1380f10f1af"
+      "sha256": "7978275cab3efdc9f87d0e269c8e0fe5dbc894969160b01c20d4b349992af27a"
     },
     {
       "path": ".gitignore",
